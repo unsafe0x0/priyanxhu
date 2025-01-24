@@ -46,13 +46,13 @@ const GetInTouch = () => {
             {`You can also email me at `}
             <Link
               href="mailto:bluetooxth@gmail.com"
-              className="text-cyan-500 underline"
+              className="text-cyan-500 underline underline-offset-8"
             >
               {`Bluetooxth@gmail.com`}
             </Link>
           </p>
         </div>
-        <p className="text-lg font-normal text-zinc-200">
+        <p className="text-lg font-normal text-zinc-300">
           {`Or you can fill out the form below and I will get back to you as soon as possible.`}
         </p>
         <form
