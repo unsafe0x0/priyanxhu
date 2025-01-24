@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-4">
-        <h2 className="text-2xl font-normal text-zinc-100 underline underline-offset-8 decoration-wavy decoration-green-500">
+        <h2 className="text-2xl font-normal text-zinc-100 underline underline-offset-8 decoration-wavy decoration-cyan-500">
           Tech Stack
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch justify-start w-full">

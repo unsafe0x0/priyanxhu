@@ -47,17 +47,12 @@ const Hero = () => {
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-2">
         <div className="md:grid-cols-1 flex flex-col">
           <h2 className="text-2xl font-medium text-zinc-100">
-            <span>
-              {`I'm`} {` `}
-            </span>
-            <span className="underline underline-offset-8 decoration-wavy decoration-green-500">
-              Priyanshu Chahar
-            </span>
+            <span>{`I'm Priyannshu Chahar`}</span>
           </h2>
           <p className="text-md text-zinc-200">
             {`3rd-year CS student, passionate about devlopment, problem-solving and learning new things.`}
           </p>
-          <p className="text-sm text-green-500 flex items-center gap-1">
+          <p className="text-sm text-cyan-500 flex items-center gap-1">
             <GoDotFill /> {`Currently i am learning AiML`}
           </p>
           <div className="flex flex-wrap justify-start items-center gap-3 mt-2">

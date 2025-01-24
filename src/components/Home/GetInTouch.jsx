@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { LuSendHorizontal } from "react-icons/lu";
 import axios from "axios";
+import Link from "next/link";
 
 const GetInTouch = () => {
   const [name, setName] = useState("");
@@ -31,9 +32,26 @@ const GetInTouch = () => {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-4">
-        <h3 className="text-2xl font-normal text-zinc-100 underline underline-offset-8 decoration-wavy decoration-green-500">
+        <h3 className="text-2xl font-normal text-zinc-100 underline underline-offset-8 decoration-wavy decoration-cyan-500">
           Get in touch
         </h3>
+        <div className="flex flex-col justify-start items-start gap-2">
+          <p className="text-lg font-normal text-zinc-200">
+            {`Have a question or want to work together?`}
+          </p>
+          <p className="text-lg font-normal text-zinc-200">
+            {`Feel free to reach out to me.`}
+          </p>
+          <p className="text-lg font-normal text-zinc-200">
+            {`You can also email me at `}
+            <Link href="mailto:bluetooxth@gmail.com" className="text-cyan-500">
+              {`Bluetooxth@gmail.com`}
+            </Link>
+          </p>
+        </div>
+        <p className="text-xl font-normal text-zinc-200">
+          {`Or you can fill out the form below and I will get back to you as soon as possible.`}
+        </p>
         <form
           action=""
           method="post"
@@ -49,7 +67,7 @@ const GetInTouch = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full px-2 py-2 border md:border-2 border-zinc-800 md:py-2 rounded-md bg-zinc-900 text-zinc-200 transition-all duration-300 ease-in-out outline-hidden focus:border-green-500 text-md font-normal"
+              className="w-full px-2 py-2 border md:border-2 border-zinc-800 md:py-2 rounded-md bg-zinc-900 text-zinc-200 transition-all duration-300 ease-in-out outline-hidden focus:border-cyan-500 text-md font-normal"
             />
           </div>
           <div className="flex flex-col justify-start items-start gap-2 w-full">
@@ -62,7 +80,7 @@ const GetInTouch = () => {
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-2 py-2 border md:border-2 border-zinc-800 md:py-2 rounded-md bg-zinc-900 text-zinc-200 transition-all duration-300 ease-in-out outline-hidden focus:border-green-500 text-md font-normal"
+              className="w-full px-2 py-2 border md:border-2 border-zinc-800 md:py-2 rounded-md bg-zinc-900 text-zinc-200 transition-all duration-300 ease-in-out outline-hidden focus:border-cyan-500 text-md font-normal"
             />
           </div>
           <div className="flex flex-col justify-start items-start gap-2 w-full">
@@ -78,13 +96,13 @@ const GetInTouch = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              className="w-full px-2 py-2 border md:border-2 border-zinc-800 md:py-2 rounded-md bg-zinc-900 text-zinc-200 transition-all duration-300 ease-in-out outline-hidden focus:border-green-500 text-md font-normal resize-none"
+              className="w-full px-2 py-2 border md:border-2 border-zinc-800 md:py-2 rounded-md bg-zinc-900 text-zinc-200 transition-all duration-300 ease-in-out outline-hidden focus:border-cyan-500 text-md font-normal resize-none"
             ></textarea>
           </div>
           <button
             type="submit"
             onClick={handleSubmit}
-            className="px-5 py-[6px] md:py-2 rounded-md bg-gradient-to-br from-green-600 to-green-700 text-zinc-200 text-md font-normal transition-all duration-300 ease-in-out flex items-center gap-2 border md:border-2 border-green-500 cursor-pointer"
+            className="px-5 py-[6px] md:py-2 rounded-md bg-gradient-to-br from-cyan-600 to-cyan-700 text-zinc-200 text-md font-normal transition-all duration-300 ease-in-out flex items-center gap-2 border md:border-2 border-cyan-500 cursor-pointer"
           >
             {button} <LuSendHorizontal />
           </button>

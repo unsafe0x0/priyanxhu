@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-4">
-        <h2 className="text-2xl font-normal text-zinc-100 underline underline-offset-8 decoration-wavy decoration-green-500">
+        <h2 className="text-2xl font-normal text-zinc-100 underline underline-offset-8 decoration-wavy decoration-cyan-500">
           Things i worked on
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch justify-start w-full">
@@ -20,7 +20,7 @@ const Projects = () => {
               <div className="flex justify-between items-center w-full">
                 <Link
                   href={project.link}
-                  className="text-xl font-normal text-zinc-200 border-b md:border-b-2 border-transparent hover:border-green-500 flex items-center gap-1 transition-all duration-300 ease-in-out"
+                  className="text-xl font-normal text-zinc-200 border-b md:border-b-2 border-transparent hover:border-cyan-500 flex items-center gap-1 transition-all duration-300 ease-in-out"
                 >
                   <RiExternalLinkFill />
                   {project.name}
