@@ -21,101 +21,76 @@ import { TbBrandReactNative } from "react-icons/tb";
 
 const skills = [
   {
-    category: "Programming Languages",
-    skills: [
-      {
-        skillName: "JavaScript",
-        skillIcon: <FaJsSquare />,
-      },
-      {
-        skillName: "Golang",
-        skillIcon: <FaGolang />,
-      },
-      {
-        skillName: "C++",
-        skillIcon: <SiCplusplus />,
-      },
-      {
-        skillName: "Python",
-        skillIcon: <SiPython />,
-      },
-    ],
+    skillName: "JavaScript",
+    skillIcon: <FaJsSquare />,
   },
   {
-    category: "Frontend Development",
-    skills: [
-      {
-        skillName: "ReactJS",
-        skillIcon: <FaReact />,
-      },
-      {
-        skillName: "NextJS",
-        skillIcon: <SiNextdotjs />,
-      },
-      {
-        skillName: "TailwindCSS",
-        skillIcon: <SiTailwindcss />,
-      },
-      {
-        skillName: "React Native",
-        skillIcon: <TbBrandReactNative />,
-      },
-    ],
+    skillName: "Golang",
+    skillIcon: <FaGolang />,
   },
   {
-    category: "Backend Development",
-    skills: [
-      {
-        skillName: "NodeJS",
-        skillIcon: <FaNodeJs />,
-      },
-      {
-        skillName: "Bun",
-        skillIcon: <SiBun />,
-      },
-      {
-        skillName: "ExpressJS",
-        skillIcon: <SiExpress />,
-      },
-      {
-        skillName: "Prisma",
-        skillIcon: <TbBrandPrisma />,
-      },
-    ],
+    skillName: "C++",
+    skillIcon: <SiCplusplus />,
   },
   {
-    category: "Databases",
-    skills: [
-      {
-        skillName: "PostgreSQL",
-        skillIcon: <SiPostgresql />,
-      },
-      {
-        skillName: "MongoDB",
-        skillIcon: <SiMongodb />,
-      },
-    ],
+    skillName: "Python",
+    skillIcon: <SiPython />,
   },
   {
-    category: "Tools",
-    skills: [
-      {
-        skillName: "Git",
-        skillIcon: <FaGitAlt />,
-      },
-      {
-        skillName: "Github",
-        skillIcon: <FaGithub />,
-      },
-      {
-        skillName: "Postman",
-        skillIcon: <SiPostman />,
-      },
-      {
-        skillName: "Linux",
-        skillIcon: <FaLinux />,
-      },
-    ],
+    skillName: "ReactJS",
+    skillIcon: <FaReact />,
+  },
+  {
+    skillName: "NextJS",
+    skillIcon: <SiNextdotjs />,
+  },
+  {
+    skillName: "TailwindCSS",
+    skillIcon: <SiTailwindcss />,
+  },
+  {
+    skillName: "React Native",
+    skillIcon: <TbBrandReactNative />,
+  },
+  {
+    skillName: "NodeJS",
+    skillIcon: <FaNodeJs />,
+  },
+  {
+    skillName: "Bun",
+    skillIcon: <SiBun />,
+  },
+  {
+    skillName: "ExpressJS",
+    skillIcon: <SiExpress />,
+  },
+  {
+    skillName: "Prisma",
+    skillIcon: <TbBrandPrisma />,
+  },
+  {
+    skillName: "PostgreSQL",
+    skillIcon: <SiPostgresql />,
+  },
+  {
+    skillName: "MongoDB",
+    skillIcon: <SiMongodb />,
+  },
+  {
+    skillName: "Git",
+    skillIcon: <FaGitAlt />,
+  },
+  {
+    skillName: "Github",
+    skillIcon: <FaGithub />,
+  },
+  {
+    skillName: "Postman",
+    skillIcon: <SiPostman />,
+  },
+  {
+    skillName: "Linux",
+    skillIcon: <FaLinux />,
   },
 ];
 
