@@ -46,10 +46,10 @@ const Hero = () => {
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-2">
         <div className="md:grid-cols-1 flex flex-col">
-          <h2 className="text-2xl font-medium text-zinc-300">
+          <h2 className="text-2xl font-medium text-slate-200">
             <span>{`I'm Priyanshu Chahar`}</span>
           </h2>
-          <p className="text-md text-zinc-400">
+          <p className="text-md text-slate-300">
             {`3rd-year CS student, passionate about devlopment, problem-solving and learning new things.`}
           </p>
           <p className="text-sm text-cyan-500 flex items-center gap-1">
@@ -60,7 +60,7 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-zinc-300 p-2 rounded-md bg-zinc-900 border md:border-2 border-zinc-800 font-normal"
+                className="text-2xl text-slate-200 p-2 rounded-md bg-zinc-900 border md:border-2 border-zinc-800 font-normal"
               >
                 {social.icon}
               </Link>
