@@ -43,10 +43,10 @@ const Hero = () => {
   ];
 
   return (
-    <section className="flex justify-center items-center w-full">
+    <section className="flex justify-center items-center w-full font-[family-name:var(--font-secondary)]">
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-2">
         <div className="md:grid-cols-1 flex flex-col">
-          <h2 className="text-2xl font-medium text-slate-200">
+          <h2 className="text-2xl font-medium text-slate-200 font-[family-name:var(--font-primary)]">
             <span>{`I'm Priyanshu Chahar`}</span>
           </h2>
           <p className="text-md text-slate-300">

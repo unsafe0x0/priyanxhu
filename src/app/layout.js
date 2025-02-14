@@ -1,9 +1,15 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-const font = Poppins({
+const primary = Bricolage_Grotesque({
   subsets: ["latin"],
+  variable: ["--font-primary"],
+  weight: ["400"],
+});
+const secondary = Poppins({
+  subsets: ["latin"],
+  variable: ["--font-secondary"],
   weight: ["400"],
 });
 
@@ -28,7 +34,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={`${primary.variable} ${secondary.variable} antialiased`}>
         {children}
         <Footer />
       </body>
