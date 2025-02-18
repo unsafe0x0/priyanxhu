@@ -3,7 +3,7 @@ import skills from "@/data/Skills";
 
 const Skills = () => {
   return (
-    <section className="flex justify-center items-center w-full font-[family-name:var(--font-secondary)]">
+    <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-4">
         <h2 className="text-2xl font-normal text-slate-200 underline underline-offset-8 decoration-wavy decoration-cyan-500 font-[family-name:var(--font-primary)]">
           Tech Stack
