@@ -1,7 +1,6 @@
 import { Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 
 const primary = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -36,7 +35,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${primary.variable} ${secondary.variable} antialiased`}>
-        <Navbar />
         {children}
         <Footer />
       </body>

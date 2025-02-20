@@ -20,7 +20,7 @@ const Projects = () => {
               <div className="flex justify-between items-center w-full">
                 <Link
                   href={project.link}
-                  className="text-xl font-normal text-slate-200 border-b md:border-b-2 border-transparent hover:border-zinc-800 flex items-center gap-1 transition-all duration-300 ease-in-out"
+                  className="text-xl font-normal text-slate-200 border-b md:border-b-2 border-transparent hover:border-zinc-600 flex items-center gap-1 transition-all duration-300 ease-in-out"
                 >
                   <RiExternalLinkFill />
                   {project.name}

@@ -36,13 +36,13 @@ const GetInTouch = () => {
           Get in touch
         </h3>
         <div className="flex flex-col justify-start items-start gap-2">
-          <p className="text-sm font-normal text-slate-300">
+          <p className="text-md font-normal text-slate-300">
             {`Have a question or want to work together?`}
           </p>
-          <p className="text-sm font-normal text-slate-300">
+          <p className="text-md font-normal text-slate-300">
             {`Feel free to reach out to me.`}
           </p>
-          <p className="text-sm font-normal text-slate-300">
+          <p className="text-md font-normal text-slate-300">
             {`You can also email me at `}
             <Link
               href="mailto:bluetooxth@gmail.com"
@@ -52,7 +52,7 @@ const GetInTouch = () => {
             </Link>
           </p>
         </div>
-        <p className="text-sm font-normal text-slate-300">
+        <p className="text-md font-normal text-slate-300">
           {`Or you can fill out the form below and I will get back to you as soon as possible.`}
         </p>
         <form

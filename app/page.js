@@ -17,7 +17,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <main className="space-y-12 py-14 font-[family-name:var(--font-secondary)]">
+      <main className="space-y-12 py-12 font-[family-name:var(--font-secondary)]">
         <Hero />
         <Skills />
         <Projects />
