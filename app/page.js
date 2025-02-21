@@ -5,6 +5,7 @@ import Projects from "@/components/Home/Projects";
 import Skills from "@/components/Home/Skills";
 import React, { useEffect } from "react";
 import axios from "axios";
+import GithubContribution from "@/components/Home/GithubContribution";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -17,9 +18,10 @@ const LandingPage = () => {
 
   return (
     <>
-      <main className="space-y-12 py-12 font-[family-name:var(--font-secondary)]">
+      <main className="space-y-12 py-12 flex flex-col justify-start items-center font-[family-name:var(--font-secondary)]">
         <Hero />
         <Skills />
+        <GithubContribution />
         <Projects />
         <GetInTouch />
       </main>

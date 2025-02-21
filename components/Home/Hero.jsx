@@ -60,18 +60,18 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-slate-200 p-2 rounded-md bg-zinc-900 border md:border-2 border-zinc-800 font-normal"
+                className="text-2xl text-slate-200 p-2 rounded-lg bg-zinc-900 border md:border-2 border-zinc-800 font-normal"
               >
                 {social.icon}
               </Link>
             ))}
           </div>
         </div>
-        <div className="h-40 w-40 rounded-lg overflow-hidden flex justify-center items-center">
+        <div className="h-40 w-40 rounded-xl overflow-hidden flex justify-center items-center">
           <img
             src="https://avatars.githubusercontent.com/u/165533860?v=4"
             alt=""
-            className="h-full w-full rounded-lg object-cover grayscale hover:grayscale-0
+            className="h-full w-full rounded-xl object-cover grayscale hover:grayscale-0
             transition-all duration-300 ease-in-out"
           />
         </div>
