@@ -50,17 +50,14 @@ const Hero = () => {
             <span>{`I'm Priyanshu Chahar`}</span>
           </h2>
           <p className="text-md text-slate-300">
-            {`3rd-year CS student, passionate about devlopment, problem-solving and learning new things.`}
-          </p>
-          <p className="text-sm text-cyan-500 flex items-center gap-1">
-            <GoDotFill /> {`Currently i am learning AiML`}
+            {`3rd-year CS student with specialization in AiML, passionate about devlopment, problem-solving and learning new things.`}
           </p>
           <div className="flex flex-wrap justify-start items-center gap-3 mt-2">
             {socials.map((social, index) => (
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-slate-100 p-2 rounded-lg bg-zinc-900 border md:border-2 border-zinc-800 font-normal"
+                className="text-2xl text-slate-100 p-2 rounded-lg bg-zinc-900 border md:border-2 border-zinc-800 hover:border-green-500 transition-colors duration-300 ease-in-out font-normal"
               >
                 {social.icon}
               </Link>

@@ -10,6 +10,7 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiExpress,
+  SiHono,
   SiMongodb,
   SiPython,
   SiPostman,
@@ -63,6 +64,10 @@ const skills = [
   {
     skillName: "ExpressJS",
     skillIcon: <SiExpress />,
+  },
+  {
+    skillName: "Hono",
+    skillIcon: <SiHono />,
   },
   {
     skillName: "Prisma",

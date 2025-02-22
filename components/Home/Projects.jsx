@@ -8,19 +8,19 @@ const Projects = () => {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-4">
-        <h2 className="text-2xl font-normal text-slate-100 underline underline-offset-8 decoration-wavy decoration-cyan-500 font-[family-name:var(--font-primary)]">
-          Things i worked on
+        <h2 className="text-3xl font-normal text-slate-100 font-[family-name:var(--font-primary)]">
+          Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch justify-start w-full">
           {projexts.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-lg bg-zinc-900 border md:border-2 border-zinc-800 overflow-hidden"
+              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-lg bg-zinc-900 border md:border-2 border-zinc-800 hover:border-green-500 transition-colors duration-300 ease-in-out overflow-hidden"
             >
               <div className="flex justify-between items-center w-full">
                 <Link
                   href={project.link}
-                  className="text-xl font-normal text-slate-100 border-b md:border-b-2 border-transparent hover:border-cyan-500 flex items-center gap-1 transition-all duration-300 ease-in-out"
+                  className="text-xl font-normal text-slate-200 border-b md:border-b-2 border-transparent hover:border-green-600 flex items-center gap-1 transition-all duration-300 ease-in-out"
                 >
                   <RiExternalLinkFill />
                   {project.name}

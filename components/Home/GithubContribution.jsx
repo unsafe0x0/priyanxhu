@@ -12,7 +12,7 @@ const GithubContribution = () => {
         fontSize={16}
         blockSize={12}
         theme={{
-          dark: ["#18181b", "#0b5f78", "#0f7595", "#1692b8", "#27d3f3"],
+          dark: ["#18181b", "#0e4429", "#146d32", "#26a641", "#39d353"],
         }}
       />
     </section>
