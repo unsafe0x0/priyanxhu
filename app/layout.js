@@ -1,4 +1,4 @@
-import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { Noto_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
@@ -7,7 +7,7 @@ const primary = Bricolage_Grotesque({
   variable: "--font-primary",
   weight: "400",
 });
-const secondary = Inter({
+const secondary = Noto_Sans({
   subsets: ["latin"],
   variable: "--font-secondary",
   weight: "400",
