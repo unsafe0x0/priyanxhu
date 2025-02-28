@@ -1,25 +1,21 @@
 @import "tailwindcss";
 
-@layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-zinc-300, currentColor);
-    }
+@theme {
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
 }
 
 :root {
-    --background: #111113;
-    --foreground: #ffffff;
+  --background: #111113;
+  --foreground: #ffffff;
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-secondary);
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

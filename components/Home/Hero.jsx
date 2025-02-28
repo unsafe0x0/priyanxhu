@@ -46,10 +46,10 @@ const Hero = () => {
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-2">
         <div className="md:grid-cols-1 flex flex-col">
-          <h2 className="text-2xl font-medium text-white font-[family-name:var(--font-primary)]">
+          <h2 className="text-2xl font-medium text-zinc-100 font-primary">
             <span>{`I'm Priyanshu Chahar`}</span>
           </h2>
-          <p className="text-md text-slate-200">
+          <p className="text-md text-zinc-300">
             {`3rd-year CS student with specialization in AiML, passionate about devlopment, problem-solving and learning new things.`}
           </p>
           <div className="flex flex-wrap justify-start items-center gap-3 mt-2">
@@ -57,7 +57,7 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-white p-2 rounded-lg bg-[#111113] border md:border-2 border-[#212121] hover:border-green-500 transition-colors duration-300 ease-in-out font-normal"
+                className="text-2xl text-zinc-100 p-2 rounded-lg bg-[#151515] border md:border-2 border-[#282828] hover:border-green-500 transition-colors duration-300 ease-in-out font-normal"
               >
                 {social.icon}
               </Link>
@@ -69,8 +69,7 @@ const Hero = () => {
             src="https://avatars.githubusercontent.com/u/165533860?v=4"
             alt=""
             draggable="false"
-            className="h-full w-full rounded-xl object-cover grayscale hover:grayscale-0
-            transition-all duration-300 ease-in-out"
+            className="h-full w-full rounded-xl object-cover transition-all duration-300 ease-in-out"
           />
         </div>
       </div>

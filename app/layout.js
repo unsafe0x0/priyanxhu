@@ -1,4 +1,4 @@
-import { Sora, Bricolage_Grotesque } from "next/font/google";
+import { Inter, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
@@ -7,7 +7,7 @@ const primary = Bricolage_Grotesque({
   variable: "--font-primary",
   weight: "400",
 });
-const secondary = Sora({
+const secondary = Inter({
   subsets: ["latin"],
   variable: "--font-secondary",
   weight: "400",
