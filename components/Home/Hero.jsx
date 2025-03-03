@@ -57,7 +57,7 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-zinc-100 p-2 rounded-md bg-zinc-950 border md:border-2 border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out font-normal"
+                className="text-2xl text-zinc-100 p-2 rounded-md bg-zinc-950 border  border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out font-normal"
               >
                 {social.icon}
               </Link>

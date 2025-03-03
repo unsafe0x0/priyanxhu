@@ -15,7 +15,7 @@ const Projects = () => {
           {projexts.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border md:border-2 border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
+              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border  border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
             >
               <div className="flex justify-between items-center w-full">
                 <h2 className="text-xl text-zinc-100 select-none">{project.name}</h2>

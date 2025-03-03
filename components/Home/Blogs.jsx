@@ -15,7 +15,7 @@ const Blogs = () => {
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border md:border-2 border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
+              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border  border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
             >
               <h2 className="text-xl font-normal text-zinc-200 z-10">
                 {blog.name}
@@ -24,7 +24,7 @@ const Blogs = () => {
               <p className="text-sm font-normal text-zinc-300 self-end">
                 {blog.date}
               </p>
-              <button className="px-3 py-1.5 rounded-md bg-white hover:bg-zinc-100 text-zinc-800 text-md font-medium transition-all duration-300 ease-in-out border md:border-2 border-zinc-7000 cursor-pointer">
+              <button className="px-3 py-1.5 rounded-md bg-white hover:bg-zinc-100 text-zinc-800 text-md font-medium transition-all duration-300 ease-in-out border  border-zinc-7000 cursor-pointer">
                 <Link
                   href={blog.url}
                   target="_blank"
