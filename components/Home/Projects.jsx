@@ -2,7 +2,7 @@ import React from "react";
 import projexts from "@/data/Projects";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-import { RiExternalLinkFill } from "react-icons/ri";
+import { GiWireframeGlobe } from "react-icons/gi";
 
 const Projects = () => {
   return (
@@ -15,23 +15,24 @@ const Projects = () => {
           {projexts.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-lg bg-[#151515] border md:border-2 border-[#282828] hover:border-green-500 transition-colors duration-300 ease-in-out overflow-hidden relative"
+              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border md:border-2 border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
             >
-              <div className="absolute z-0 top-0 right-0 w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full blur-3xl"></div>
               <div className="flex justify-between items-center w-full">
-                <Link
-                  href={project.link}
-                  className="text-xl font-normal text-zinc-200 border-b md:border-b-2 border-transparent hover:border-green-600 flex items-center gap-1 transition-all duration-300 ease-in-out"
-                >
-                  {project.name}
-                  <RiExternalLinkFill />
-                </Link>
-                <Link
-                  href={project.github}
-                  className="text-xl font-normal text-zinc-100 p-2 bg-[#212121] rounded-lg z-10"
-                >
-                  <FaGithub />
-                </Link>
+                <h2 className="text-xl text-zinc-100 select-none">{project.name}</h2>
+                <div className="flex justify-start items-center gap-2">
+                  <Link
+                    href={project.link}
+                    className="text-xl font-normal text-zinc-100 p-1.5 bg-zinc-800 rounded-md"
+                  >
+                    <GiWireframeGlobe />
+                  </Link>
+                  <Link
+                    href={project.github}
+                    className="text-xl font-normal text-zinc-100 p-1.5 bg-zinc-800 rounded-md"
+                  >
+                    <FaGithub />
+                  </Link>
+                </div>
               </div>
               <p className="text-md font-normal text-zinc-300">
                 {project.desc}
@@ -40,7 +41,7 @@ const Projects = () => {
                 {project.tech.map((tech, index) => (
                   <li
                     key={index}
-                    className="text-lg font-normal text-zinc-100 p-1 rounded-lg bg-[#212121]"
+                    className="text-lg font-normal text-zinc-100 p-1 rounded-md bg-zinc-800"
                   >
                     {tech}
                   </li>

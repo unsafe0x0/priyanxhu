@@ -35,11 +35,11 @@ const Hero = () => {
       link: "https://discord.com/users/bluetooxth",
       icon: <FaDiscord />,
     },
-    {
-      name: "YouTube",
-      link: "https://www.youtube.com/@bluetooxth",
-      icon: <FaYoutube />,
-    },
+    // {
+    //   name: "YouTube",
+    //   link: "https://www.youtube.com/@bluetooxth",
+    //   icon: <FaYoutube />,
+    // },
   ];
 
   return (
@@ -47,7 +47,7 @@ const Hero = () => {
       <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-start items-start w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-2">
         <div className="md:grid-cols-1 flex flex-col">
           <h2 className="text-2xl font-medium text-zinc-100 font-primary">
-            <span>{`I'm Priyanshu Chahar`}</span>
+            <span>{`Hi, I'm Priyanshu`}</span>
           </h2>
           <p className="text-md text-zinc-300">
             {`3rd-year CS student with specialization in AiML, passionate about devlopment, problem-solving and learning new things.`}
@@ -57,7 +57,7 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-zinc-100 p-2 rounded-lg bg-[#151515] border md:border-2 border-[#282828] hover:border-green-500 transition-colors duration-300 ease-in-out font-normal"
+                className="text-2xl text-zinc-100 p-2 rounded-md bg-zinc-950 border md:border-2 border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out font-normal"
               >
                 {social.icon}
               </Link>

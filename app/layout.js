@@ -5,12 +5,12 @@ import Footer from "@/components/Footer";
 const primary = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-primary",
-  weight: "400",
+  weight: ["400"],
 });
 const secondary = Noto_Sans({
   subsets: ["latin"],
   variable: "--font-secondary",
-  weight: "400",
+  weight: ["400"],
 });
 
 export const metadata = {

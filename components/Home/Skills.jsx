@@ -12,7 +12,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex justify-center items-center gap-1 border md:border-2 border-[#282828] hover:border-green-500 transition-colors duration-300 ease-in-out rounded-lg py-1.5 px-3 bg-[#151515] text-zinc-300"
+              className="flex justify-center items-center gap-1 border md:border-2 border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out rounded-md py-1 px-3 bg-zinc-950 text-zinc-300 select-none"
             >
               {skill.skillIcon} {skill.skillName}
             </div>

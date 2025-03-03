@@ -19,6 +19,7 @@ import { FaGolang } from "react-icons/fa6";
 import { TbBrandPrisma } from "react-icons/tb";
 import { SiPostgresql, SiCplusplus, SiBun } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+import { GiBearFace } from "react-icons/gi";
 
 const skills = [
   {
@@ -68,6 +69,10 @@ const skills = [
   {
     skillName: "Hono",
     skillIcon: <SiHono />,
+  },
+  {
+    skillName: "Zustand",
+    skillIcon: <GiBearFace />,
   },
   {
     skillName: "Prisma",
