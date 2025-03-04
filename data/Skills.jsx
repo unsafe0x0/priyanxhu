@@ -14,6 +14,7 @@ import {
   SiMongodb,
   SiPython,
   SiPostman,
+  SiExpo,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { TbBrandPrisma } from "react-icons/tb";
@@ -53,6 +54,10 @@ const skills = [
   {
     skillName: "React Native",
     skillIcon: <TbBrandReactNative />,
+  },
+  {
+    skillName: "Expo",
+    skillIcon: <SiExpo />,
   },
   {
     skillName: "NodeJS",

@@ -6,7 +6,6 @@ import Skills from "@/components/Home/Skills";
 import React, { useEffect } from "react";
 import axios from "axios";
 import GithubContribution from "@/components/Home/GithubContribution";
-import Blogs from "@/components/Home/Blogs";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -19,12 +18,11 @@ const LandingPage = () => {
 
   return (
     <>
-      <main className="space-y-12 py-12 flex flex-col justify-start items-center">
+      <main className="space-y-12 py-8 flex flex-col justify-start items-center">
         <Hero />
         <Skills />
         <GithubContribution />
         <Projects />
-        <Blogs />
         <GetInTouch />
       </main>
     </>

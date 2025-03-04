@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center items-center w-full bg-zinc-900 py-1 text-zinc-300 font-[family-name:var(--font-secondary)]">
-      <div className="flex flex-col justify-center items-center w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] px-2 md:px-0 gap-2">
+    <footer className="flex justify-center items-center w-full bg-zinc-900 py-1 text-zinc-300">
+      <div className="flex flex-col justify-center items-center w-[95vw] md:w-[80vw] lg:w-[60vw] xl:w-[50vw] gap-2">
         <p className="text-sm md:text-md font-medium">
-          {`Made with ❤️ by Priyanshu Chahar`}
+          {`Made with ❤️ by Priyanshu`}
         </p>
       </div>
     </footer>
