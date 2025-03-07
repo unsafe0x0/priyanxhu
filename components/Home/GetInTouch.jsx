@@ -66,7 +66,7 @@ const GetInTouch = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-zinc-700 rounded-md bg-zinc-950 text-zinc-100 transition-all duration-300 ease-in-out outline-hidden focus:border-zinc-100 text-md font-normal"
+              className="w-full px-3 py-2 border border-zinc-700 rounded-md bg-zinc-900 text-zinc-100 transition-all duration-300 ease-in-out outline-hidden focus:border-zinc-100 text-md font-normal"
             />
           </div>
           <div className="flex flex-col justify-start items-start gap-2 w-full">
@@ -79,7 +79,7 @@ const GetInTouch = () => {
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 border border-zinc-700 rounded-md bg-zinc-950 text-zinc-100 transition-all duration-300 ease-in-out outline-hidden focus:border-zinc-100 text-md font-normal"
+              className="w-full px-3 py-2 border border-zinc-700 rounded-md bg-zinc-900 text-zinc-100 transition-all duration-300 ease-in-out outline-hidden focus:border-zinc-100 text-md font-normal"
             />
           </div>
           <div className="flex flex-col justify-start items-start gap-2 w-full">
@@ -95,7 +95,7 @@ const GetInTouch = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-zinc-700 rounded-md bg-zinc-950 text-zinc-100 transition-all duration-300 ease-in-out outline-hidden focus:border-zinc-100 text-md font-normal resize-none"
+              className="w-full px-3 py-2 border border-zinc-700 rounded-md bg-zinc-900 text-zinc-100 transition-all duration-300 ease-in-out outline-hidden focus:border-zinc-100 text-md font-normal resize-none"
             ></textarea>
           </div>
           <button

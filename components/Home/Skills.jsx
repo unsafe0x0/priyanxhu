@@ -11,7 +11,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex justify-center items-center gap-1 border border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out rounded-md py-1 px-3 bg-zinc-950 text-zinc-300 select-none"
+              className="flex justify-center items-center gap-1 bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out rounded-md py-1 px-3 text-zinc-300 select-none"
             >
               {skill.skillIcon} {skill.skillName}
             </div>

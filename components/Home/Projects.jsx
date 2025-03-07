@@ -14,7 +14,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
+              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out overflow-hidden"
             >
               <div className="flex justify-between items-center w-full">
                 <h2 className="text-xl font-medium text-zinc-100 select-none">
@@ -23,13 +23,13 @@ const Projects = () => {
                 <div className="flex justify-start items-center gap-2">
                   <Link
                     href={project.link}
-                    className="text-xl text-zinc-100 p-1.5 bg-zinc-800 rounded-md"
+                    className="text-xl text-zinc-100 p-1.5 bg-zinc-950 rounded-md"
                   >
                     <GiWireframeGlobe />
                   </Link>
                   <Link
                     href={project.github}
-                    className="text-xl text-zinc-100 p-1.5 bg-zinc-800 rounded-md"
+                    className="text-xl text-zinc-100 p-1.5 bg-zinc-950 rounded-md"
                   >
                     <FaGithub />
                   </Link>
@@ -42,7 +42,7 @@ const Projects = () => {
                 {project.tech.map((tech, index) => (
                   <li
                     key={index}
-                    className="text-md font-normal text-zinc-100 p-1 rounded-md bg-zinc-800"
+                    className="text-md font-normal text-zinc-100 p-1 rounded-md bg-zinc-950"
                   >
                     {tech}
                   </li>

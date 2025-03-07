@@ -6,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import { SiCodeforces } from "react-icons/si";
 import Link from "next/link";
 
 const Hero = () => {
@@ -19,6 +20,11 @@ const Hero = () => {
       name: "LeetCode",
       link: "https://leetcode.com/u/bluetooxth",
       icon: <SiLeetcode />,
+    },
+    {
+      name: "Codeforces",
+      link: "https://codeforces.com/profile/bluetooxth",
+      icon: <SiCodeforces />,
     },
     {
       name: "Twitter",
@@ -52,7 +58,7 @@ const Hero = () => {
               <Link
                 key={index}
                 href={social.link}
-                className="text-2xl text-zinc-100 p-2 rounded-md bg-zinc-950 border border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out font-normal"
+                className="text-2xl text-zinc-100 p-2 rounded-md bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out font-normal"
               >
                 {social.icon}
               </Link>

@@ -15,7 +15,7 @@ const Blogs = () => {
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-950 border border-zinc-700 hover:bg-zinc-900 transition-colors duration-300 ease-in-out overflow-hidden"
+              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out overflow-hidden"
             >
               <h2 className="text-xl font-medium text-zinc-200 z-10">
                 {blog.name}
