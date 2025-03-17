@@ -31,7 +31,7 @@ export const GetInTouch: React.FC = () => {
       } else {
         setButton("Failed");
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error("Error processing contact form submission:", error);
       setButton("Failed");
     }
