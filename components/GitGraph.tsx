@@ -1,8 +1,9 @@
 "use client";
+
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 
-const GithubContribution = () => {
+export const GitGraph: React.FC = () => {
   return (
     <section className="w-[95vw] md:w-[80vw] lg:w-[60vw] xl:w-[50vw] text-zinc-100">
       <GitHubCalendar
@@ -17,5 +18,3 @@ const GithubContribution = () => {
     </section>
   );
 };
-
-export default GithubContribution;

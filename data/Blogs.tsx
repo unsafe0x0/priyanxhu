@@ -1,4 +1,4 @@
-const blogs = [
+export const blogs = [
   {
     name: "Understanding HTTP Status Codes",
     desc: "The Secret Language of the Web: Understanding HTTP Status Codes",
@@ -12,5 +12,3 @@ const blogs = [
     date: "3 March 2025",
   },
 ];
-
-export default blogs;

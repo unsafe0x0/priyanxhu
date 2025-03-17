@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -9,8 +9,14 @@ import { SiLeetcode } from "react-icons/si";
 import { SiCodeforces } from "react-icons/si";
 import Link from "next/link";
 
-const Hero = () => {
-  const socials = [
+interface Social {
+  name: string;
+  link: string;
+  icon: JSX.Element;
+}
+
+export const Hero: React.FC = () => {
+  const socials: Social[] = [
     {
       name: "Github",
       link: "https://github.com/bluetooxth",
@@ -77,5 +83,3 @@ const Hero = () => {
     </section>
   );
 };
-
-export default Hero;

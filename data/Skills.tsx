@@ -1,3 +1,6 @@
+"use client";
+
+import React, { JSX } from "react";
 import {
   FaJsSquare,
   FaReact,
@@ -15,14 +18,20 @@ import {
   SiPython,
   SiPostman,
   SiExpo,
+  SiPostgresql,
+  SiCplusplus,
+  SiBun,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
-import { TbBrandPrisma } from "react-icons/tb";
-import { SiPostgresql, SiCplusplus, SiBun } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandPrisma, TbBrandReactNative } from "react-icons/tb";
 import { GiBearFace } from "react-icons/gi";
 
-const skills = [
+interface Skill {
+  skillName: string;
+  skillIcon: JSX.Element;
+}
+
+export const skills: Skill[] = [
   {
     skillName: "JavaScript",
     skillIcon: <FaJsSquare />,
@@ -108,5 +117,3 @@ const skills = [
     skillIcon: <FaLinux />,
   },
 ];
-
-export default skills;

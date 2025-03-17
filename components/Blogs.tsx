@@ -1,18 +1,25 @@
 "use client";
 
 import React from "react";
-import blogs from "@/data/Blogs";
+import { blogs } from "@/data/Blogs";
 import Link from "next/link";
 import { RiExternalLinkFill } from "react-icons/ri";
 import { CiCalendarDate } from "react-icons/ci";
 
-const Blogs = () => {
+interface Blog {
+  name: string;
+  desc: string;
+  date: string;
+  url: string;
+}
+
+export const Blogs: React.FC = () => {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[60vw] xl:w-[50vw] gap-4">
         <h2 className="text-3xl font-medium text-zinc-100">Blogs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch justify-start w-full">
-          {blogs.map((blog, index) => (
+          {blogs.map((blog: Blog, index: number) => (
             <div
               key={index}
               className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out overflow-hidden"
@@ -41,5 +48,3 @@ const Blogs = () => {
     </section>
   );
 };
-
-export default Blogs;
