@@ -1,7 +1,7 @@
 import { db } from "@/prisma/db";
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   try {
     const view = await db.view.findFirst();
 
