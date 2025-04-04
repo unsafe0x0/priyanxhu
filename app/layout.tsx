@@ -41,11 +41,21 @@ export const metadata: Metadata = {
     siteName: "Priyanshu Chahar",
     locale: "en_US",
   },
+  icons: {
+    icon: "https://avatars.githubusercontent.com/u/165533860?v=4",
+  },
 };
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="https://avatars.githubusercontent.com/u/165533860?v=4"
+          type="image/png"
+        />
+      </head>
       <body className={primary.className}>
         <Navbar />
         {children}
