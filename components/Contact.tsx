@@ -55,12 +55,15 @@ export default function Contact() {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl">
-        <h2 className="text-2xl font-medium mb-7">Connect with me</h2>
+        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-[#cc241d] mb-7">
+          Connect with me
+        </h2>
         <p className="text-md font-normal mb-1">
           {`Have a question ? Feel free to reach out to me`}
         </p>
-        <p className="text-md font-normal mb-1">
-          {`You can also email me at Bluetooxth@gmail.com`}
+        <p className="text-md font-normal mb-1 flex flex-wrap items-center gap-1">
+          <span className="">{`You can also email me at`}</span>
+          <span className="text-[#cc241d]">{`Bluetooxth@gmail.com`}</span>
         </p>
         <p className="text-md font-normal mb-5">
           {`or fill the form below, i will get back to you as soon as possible`}

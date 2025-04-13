@@ -55,7 +55,10 @@ export default function Hero() {
           />
         </div>
         <div className="flex flex-col justify-start items-start gap-2 max-w-lg">
-          <h1 className="text-2xl font-medium">{`Hi, I'm Priyanshu`}</h1>
+          <h1 className="text-2xl font-medium flex flex-wrap items-center gap-3">
+            <span>{`Hi, I'm`}</span>
+            <span className="text-[#cc241d]">{` Priyanshu`}</span>
+          </h1>
           <p className="text-md font-normal">
             {`3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things`}
           </p>

@@ -22,9 +22,14 @@ const LandingPage = () => {
     mutationFn: updateView,
   });
 
+  const hasUpdatedView = React.useRef(false);
+
   useEffect(() => {
-    mutation.mutate();
-  }, [mutation]);
+    if (!hasUpdatedView.current) {
+      mutation.mutate();
+      hasUpdatedView.current = true;
+    }
+  }, []);
 
   return (
     <>
