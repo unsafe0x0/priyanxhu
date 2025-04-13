@@ -1,22 +1,25 @@
 @import "tailwindcss";
 
+/* @media (prefers-color-scheme: dark) {
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+} */
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-primary: var(--font-primary);
+  --font-primary: var(--font-fira-code);
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #1d2021;
+  --foreground: #fbf1c7;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-primary);
-}
-
-::-webkit-scrollbar {
-  display: none;
 }

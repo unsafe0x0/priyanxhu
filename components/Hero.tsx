@@ -1,85 +1,78 @@
 "use client";
 
-import React, { JSX } from "react";
-import { AiOutlineGithub } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaDiscord } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-import { SiCodeforces } from "react-icons/si";
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-interface Social {
-  name: string;
-  link: string;
-  icon: JSX.Element;
-}
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { SiLeetcode, SiCodeforces } from "react-icons/si";
 
-export const Hero: React.FC = () => {
-  const socials: Social[] = [
-    {
-      name: "Github",
-      link: "https://github.com/bluetooxth",
-      icon: <AiOutlineGithub />,
-    },
-    {
-      name: "LeetCode",
-      link: "https://leetcode.com/u/bluetooxth",
-      icon: <SiLeetcode />,
-    },
-    {
-      name: "Codeforces",
-      link: "https://codeforces.com/profile/bluetooxth",
-      icon: <SiCodeforces />,
-    },
-    {
-      name: "Twitter",
-      link: "https://twitter.com/bluetooxth",
-      icon: <FaSquareXTwitter />,
-    },
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/priyannxhuu",
-      icon: <FaLinkedin />,
-    },
-    {
-      name: "Discord",
-      link: "https://discord.com/users/bluetooxth",
-      icon: <FaDiscord />,
-    },
-  ];
+const socials = [
+  {
+    id: 1,
+    name: "GitHub",
+    url: "https://github.com/bluetooxth",
+    icon: <FaGithub />,
+  },
+  {
+    id: 2,
+    name: "X",
+    url: "https://x.com/bluetooxth",
+    icon: <FaSquareXTwitter />,
+  },
+  {
+    id: 3,
+    name: "LeetCode",
+    url: "https://leetcode.com/bluetooxth",
+    icon: <SiLeetcode />,
+  },
+  {
+    id: 4,
+    name: "CodeForces",
+    url: "https://codeforces.com/profile/bluetooxth",
+    icon: <SiCodeforces />,
+  },
+  {
+    id: 5,
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/priyannxhuu",
+    icon: <FaLinkedin />,
+  },
+];
 
+export default function Hero() {
   return (
     <section className="flex justify-center items-center w-full">
-      <div className="flex flex-col-reverse md:grid md:grid-cols-2 justify-start items-start w-[95vw] md:w-[80vw] lg:w-[60vw] xl:w-[50vw] gap-2">
-        <div className="md:grid-cols-1 flex flex-col">
-          <h2 className="text-2xl font-medium text-zinc-100">
-            <span>{`Hi, I'm Priyanshu`}</span>
-          </h2>
-          <p className="text-md text-zinc-300">
-            {`3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things.`}
+      <div className="flex flex-wrap justify-start items-start w-full px-3 md:w-4xl gap-7">
+        <div className="flex justify-center items-center">
+          <Image
+            src="https://avatars.githubusercontent.com/u/165533860?v=4"
+            alt="Hero"
+            width={150}
+            height={150}
+            className="rounded-xl"
+          />
+        </div>
+        <div className="flex flex-col justify-start items-start gap-2 max-w-lg">
+          <h1 className="text-2xl font-medium">{`Hi, I'm Priyanshu`}</h1>
+          <p className="text-md font-normal">
+            {`3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things`}
           </p>
-          <div className="flex flex-wrap justify-start items-center gap-3 mt-2">
-            {socials.map((social, index) => (
+          <div className="flex flex-wrap justify-start items-start gap-5">
+            {socials.map((social) => (
               <Link
-                key={index}
-                href={social.link}
-                className="text-2xl text-zinc-100 p-2 rounded-md bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out font-normal"
+                key={social.id}
+                href={social.url}
+                target="_blank"
+                className="text-2xl hover:scale-125 transition-all duration-300 ease-in-out"
               >
                 {social.icon}
               </Link>
             ))}
           </div>
         </div>
-        <div className="h-40 w-40 rounded-xl overflow-hidden flex justify-center items-center">
-          <img
-            src="https://avatars.githubusercontent.com/u/165533860?v=4"
-            alt="Priyanshu's Avatar"
-            draggable="false"
-            className="h-full w-full rounded-xl object-cover transition-all duration-300 ease-in-out"
-          />
-        </div>
       </div>
     </section>
   );
-};
+}

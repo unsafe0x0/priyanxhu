@@ -3,66 +3,54 @@
 import React from "react";
 import { projects } from "@/data/Projects";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { SiGithub } from "react-icons/si";
 import { GiWireframeGlobe } from "react-icons/gi";
 
-interface Project {
-  name: string;
-  desc: string;
-  link: string;
-  github: string;
-  tech: React.ReactNode[];
-}
-
-export const Projects: React.FC = () => {
+export default function Projects() {
   return (
-    <section className="flex justify-center items-center w-full" id="projects">
-      <div className="flex flex-col justify-start items-start w-[95vw] md:w-[80vw] lg:w-[60vw] xl:w-[50vw] gap-4">
-        <h2 className="text-3xl font-medium text-zinc-100">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch justify-start w-full">
-          {projects.map((project: Project, index: number) => (
+    <section className="flex justify-center items-center w-full">
+      <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl gap-7">
+        <h2 className="text-2xl font-medium">Things i worked on</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-start gap-5 w-full">
+          {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 p-3 md:p-4 rounded-md bg-zinc-900 border border-zinc-700 hover:bg-zinc-800 transition-colors duration-300 ease-in-out overflow-hidden"
+              className="flex flex-col justify-start items-start gap-2 border border-[#353535] rounded-lg p-5"
             >
-              <div className="flex justify-between items-center w-full">
-                <h2 className="text-xl font-medium text-zinc-100 select-none">
-                  {project.name}
-                </h2>
-                <div className="flex justify-start items-center gap-2">
-                  <Link
-                    href={project.link}
-                    className="text-xl text-zinc-100 p-1.5 bg-zinc-950 rounded-md"
+              <h2 className="text-2xl font-medium">{project.name}</h2>
+              <p className="text-md font-normal">{project.desc}</p>
+              <div className="flex flex-wrap justify-start items-start gap-3 mt-2">
+                {project.tech.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="text-xl p-1.5 bg-[#353535] rounded-md"
                   >
-                    <GiWireframeGlobe />
-                  </Link>
-                  <Link
-                    href={project.github}
-                    className="text-xl text-zinc-100 p-1.5 bg-zinc-950 rounded-md"
-                  >
-                    <FaGithub />
-                  </Link>
-                </div>
+                    {tech}
+                  </div>
+                ))}
               </div>
-              <p className="text-md font-normal text-zinc-300">
-                {project.desc}
-              </p>
-              <ul className="flex flex-wrap justify-start items-center gap-2 w-full">
-                {project.tech.map(
-                  (tech: React.ReactNode, techIndex: number) => (
-                    <li
-                      key={techIndex}
-                      className="text-md font-normal text-zinc-100 p-1 rounded-md bg-zinc-950"
-                    >
-                      {tech}
-                    </li>
-                  )
-                )}
-              </ul>
+              <div className="flex flex-wrap justify-start items-start gap-3 w-full mt-2">
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium flex items-center gap-1"
+                >
+                  <GiWireframeGlobe />
+                  Website
+                </Link>
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium flex items-center gap-1"
+                >
+                  <SiGithub />
+                  Github
+                </Link>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
+}

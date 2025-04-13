@@ -21,10 +21,11 @@ import {
   SiPostgresql,
   SiCplusplus,
   SiBun,
+  SiC,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { TbBrandPrisma, TbBrandReactNative } from "react-icons/tb";
-import { GiBearFace } from "react-icons/gi";
+import { GiBearFace, GiPalmTree } from "react-icons/gi";
 
 interface Skill {
   skillName: string;
@@ -41,6 +42,10 @@ export const skills: Skill[] = [
     skillIcon: <FaGolang />,
   },
   {
+    skillName: "C",
+    skillIcon: <SiC />,
+  },
+  {
     skillName: "C++",
     skillIcon: <SiCplusplus />,
   },
@@ -51,6 +56,10 @@ export const skills: Skill[] = [
   {
     skillName: "ReactJS",
     skillIcon: <FaReact />,
+  },
+  {
+    skillName: "Tanstack",
+    skillIcon: <GiPalmTree />,
   },
   {
     skillName: "NextJS",

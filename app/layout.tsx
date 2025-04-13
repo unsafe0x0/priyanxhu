@@ -1,68 +1,38 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import TanStackProvider from "@/context/tanstack";
 
-const primary = Noto_Sans({
+const firaCode = Fira_Code({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-fira-code",
   subsets: ["latin"],
-  variable: "--font-primary",
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "Hi, I'm Priyanshu Chahar",
-  description: "Hi, I'm Priyanshu Chahar, a developer and a programmer.",
+  title: "Hi, I'm Priyanshu",
+  description:
+    "Hi, I'm Priyanshu. I am a full stack developer and competitive programmer.",
   keywords: [
+    "Priyanshu",
+    "Full Stack Developer",
+    "Competitive Programmer",
     "Priyanshu Chahar",
-    "Portfolio",
-    "Developer",
-    "Priyanshu Chahar Portfolio",
-    "Priyanshu Chahar Developer",
-    "Priyannxhuu",
     "Bluetooxth",
-    "Priyanxhu",
-    "Priyanxhu.me",
+    "Priyanshu Chahar portfolio",
   ],
-  openGraph: {
-    title: "Hi, I'm Priyanshu Chahar",
-    description:
-      "Hi, I'm Priyanshu Chahar, a developer and a competitive programmer.",
-    type: "website",
-    url: "https://priyanxhu.me",
-    images: [
-      {
-        url: "https://avatars.githubusercontent.com/u/165533860?v=4",
-        width: 1200,
-        height: 630,
-        alt: "Priyanshu Chahar Avatar",
-      },
-    ],
-    siteName: "Priyanshu Chahar",
-    locale: "en_US",
-  },
-  icons: {
-    icon: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  },
 };
 
-const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="icon"
-          href="https://avatars.githubusercontent.com/u/165533860?v=4"
-          type="image/png"
-        />
-      </head>
-      <body className={primary.className}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={firaCode.className}>
+        <TanStackProvider>{children}</TanStackProvider>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

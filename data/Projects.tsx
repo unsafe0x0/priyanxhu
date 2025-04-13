@@ -5,7 +5,7 @@ import {
   SiExpress,
   SiMongodb,
   SiHono,
-  SiPostgresql,
+  SiCloudinary,
 } from "react-icons/si";
 import { ReactNode } from "react";
 
@@ -18,6 +18,18 @@ interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    name: "RoomUncle",
+    tech: [
+      <SiNextdotjs key="nextjs" />,
+      <SiCloudinary key="cloudinary" />,
+      <SiMongodb key="mongodb" />,
+      <SiTailwindcss key="tailwind" />,
+    ],
+    desc: "A platform for listing hostel rooms and pg rooms.",
+    link: "https://roomuncle.vercel.app",
+    github: "https://github.com/Bluetooxth/roomuncle",
+  },
   {
     name: "Lynktree",
     tech: [
@@ -41,28 +53,18 @@ export const projects: Project[] = [
     link: "https://zkip.vercel.app",
     github: "https://github.com/Bluetooxth/zkip",
   },
-  //   {
-  //     name: "ByteRace",
-  //     tech: [
-  //       <SiNextdotjs key="nextjs" />,
-  //       <SiMongodb key="mongodb" />,
-  //       <SiTailwindcss key="tailwind" />,
-  //     ],
-  //     desc: "Coding time tracker along with language and a vs code extension.",
-  //     link: "https://byterace.vercel.app",
-  //     github: "https://github.com/Bluetooxth/ByteRace",
-  //   },
   {
     name: "Dokxy",
     tech: [
       <SiNextdotjs key="nextjs" />,
       <SiTailwindcss key="tailwind" />,
-      <SiPostgresql key="postgresql" />,
       <FaNodeJs key="nodejs" />,
       <SiHono key="hono" />,
+      <SiMongodb key="mongodb" />,
+      <SiCloudinary key="cloudinary" />,
     ],
     desc: "Doctor-patient appointment system for easy scheduling and management.",
     link: "https://dokxyv1.vercel.app",
-    github: "https://github.com/Bluetooxth/healthcare-api",
+    github: "https://github.com/Bluetooxth/healthcare-frontend",
   },
 ];
