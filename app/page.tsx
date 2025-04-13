@@ -24,7 +24,7 @@ const LandingPage = () => {
 
   useEffect(() => {
     mutation.mutate();
-  }, []);
+  }, [mutation]);
 
   return (
     <>
