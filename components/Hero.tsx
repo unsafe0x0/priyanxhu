@@ -30,7 +30,7 @@ const socials = [
   {
     id: 4,
     name: "CodeForces",
-    url: "https://codeforces.com/profile/muxdust",
+    url: "https://codeforces.com/profile/bluetooxth",
     icon: <SiCodeforces />,
   },
   {
