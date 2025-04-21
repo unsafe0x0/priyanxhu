@@ -12,25 +12,25 @@ const socials = [
   {
     id: 1,
     name: "GitHub",
-    url: "https://github.com/bluetooxth",
+    url: "https://github.com/muxdust",
     icon: <FaGithub />,
   },
   {
     id: 2,
     name: "X",
-    url: "https://x.com/bluetooxth",
+    url: "https://x.com/muxdust",
     icon: <FaSquareXTwitter />,
   },
   {
     id: 3,
     name: "LeetCode",
-    url: "https://leetcode.com/bluetooxth",
+    url: "https://leetcode.com/muxdust",
     icon: <SiLeetcode />,
   },
   {
     id: 4,
     name: "CodeForces",
-    url: "https://codeforces.com/profile/bluetooxth",
+    url: "https://codeforces.com/profile/muxdust",
     icon: <SiCodeforces />,
   },
   {

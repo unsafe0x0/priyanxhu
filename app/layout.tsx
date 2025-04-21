@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Full Stack Developer",
     "Competitive Programmer",
     "Priyanshu Chahar",
-    "Bluetooxth",
+    "muxdust",
     "Priyanshu Chahar portfolio",
   ],
 };
