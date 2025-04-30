@@ -1,17 +1,6 @@
-import { FaNodeJs } from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiExpress,
-  SiMongodb,
-  SiHono,
-  SiCloudinary,
-} from "react-icons/si";
-import { ReactNode } from "react";
-
 interface Project {
   name: string;
-  tech: ReactNode[];
+  tech: string[];
   desc: string;
   link: string;
   github: string;
@@ -19,36 +8,29 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    name: "RoomUncle",
+    name: "QuadState",
     tech: [
-      <SiNextdotjs key="nextjs" />,
-      <SiCloudinary key="cloudinary" />,
-      <SiMongodb key="mongodb" />,
-      <SiTailwindcss key="tailwind" />,
+      "NextJS",
+      "Cloudinary",
+      "MongoDB",
+      "Tailwind CSS",
+      "Tanstack Query",
+      "XGBoost",
     ],
-    desc: "A platform for listing hostel rooms and pg rooms.",
-    link: "https://roomuncle.vercel.app",
-    github: "https://github.com/muxdust/roomuncle",
+    desc: "QuadState is a platform for listing luxury properties and predicting price of properties based on features.",
+    link: "https://quadstate.vercel.app",
+    github: "https://github.com/muxdust/quadstate",
   },
   {
     name: "Lynktree",
-    tech: [
-      <SiNextdotjs key="nextjs" />,
-      <FaNodeJs key="nodejs" />,
-      <SiExpress key="express" />,
-      <SiMongodb key="mongodb" />,
-    ],
+    tech: ["NextJS", "NodeJS", "Express", "MongoDB"],
     desc: "Organize and share multiple links through a single URL.",
     link: "https://lynktree.vercel.app",
     github: "https://github.com/muxdust/Lynktree",
   },
   {
     name: "Zkip",
-    tech: [
-      <SiNextdotjs key="nextjs" />,
-      <SiMongodb key="mongodb" />,
-      <SiTailwindcss key="tailwind" />,
-    ],
+    tech: ["NextJS", "MongoDB", "Tailwind CSS"],
     desc: "URL shortening service for easy sharing and tracking.",
     link: "https://zkip.vercel.app",
     github: "https://github.com/muxdust/zkip",
@@ -56,12 +38,12 @@ export const projects: Project[] = [
   {
     name: "Dokxy",
     tech: [
-      <SiNextdotjs key="nextjs" />,
-      <SiTailwindcss key="tailwind" />,
-      <FaNodeJs key="nodejs" />,
-      <SiHono key="hono" />,
-      <SiMongodb key="mongodb" />,
-      <SiCloudinary key="cloudinary" />,
+      "NextJS",
+      "Tailwind CSS",
+      "NodeJS",
+      "HonoJS",
+      "MongoDB",
+      "Cloudinary",
     ],
     desc: "Doctor-patient appointment system for easy scheduling and management.",
     link: "https://dokxyv1.vercel.app",

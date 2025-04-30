@@ -60,7 +60,7 @@ export default function Hero() {
             <span className="text-[#cc241d]">{` Priyanshu`}</span>
           </h1>
           <p className="text-md font-normal">
-            {`3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things`}
+            {`I'm a 3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things`}
           </p>
           <div className="flex flex-wrap justify-start items-start gap-5">
             {socials.map((social) => (

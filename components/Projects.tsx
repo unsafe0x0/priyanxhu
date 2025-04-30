@@ -23,7 +23,7 @@ export default function Projects() {
                 {project.tech.map((tech, index) => (
                   <div
                     key={index}
-                    className="text-xl p-1.5 bg-[#353535] rounded-md"
+                    className="text-xs p-1.5 bg-[#353535] rounded-md"
                   >
                     {tech}
                   </div>

@@ -16,7 +16,6 @@ export default function Skills() {
               key={skill.skillName}
               className="flex justify-center items-center gap-2 border border-[#353535] rounded-lg px-3 py-2"
             >
-              <p className="text-lg">{skill.skillIcon}</p>
               <p className="text-md font-normal">{skill.skillName}</p>
             </div>
           ))}

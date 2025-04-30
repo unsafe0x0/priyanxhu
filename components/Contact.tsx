@@ -95,7 +95,7 @@ export default function Contact() {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-[#fbf1c7] text-[#353535] px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2"
+            className="bg-[#fbf1c7] text-[#353535] px-3 md:px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2"
           >
             {buttonText}
             <FaPaperPlane />
