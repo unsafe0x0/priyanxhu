@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaPaperPlane } from "react-icons/fa6";
 import { useMutation } from "@tanstack/react-query";
 
 async function sendMessage({
@@ -98,7 +97,6 @@ export default function Contact() {
             className="bg-[#fbf1c7] text-[#353535] px-3 md:px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2"
           >
             {buttonText}
-            <FaPaperPlane />
           </button>
         </form>
       </div>

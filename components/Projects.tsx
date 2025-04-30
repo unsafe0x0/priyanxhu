@@ -3,8 +3,6 @@
 import React from "react";
 import { projects } from "@/data/Projects";
 import Link from "next/link";
-import { SiGithub } from "react-icons/si";
-import { GiWireframeGlobe } from "react-icons/gi";
 
 export default function Projects() {
   return (
@@ -33,17 +31,15 @@ export default function Projects() {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium flex items-center gap-1"
+                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium"
                 >
-                  <GiWireframeGlobe />
                   Website
                 </Link>
                 <Link
                   href={project.github}
                   target="_blank"
-                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium flex items-center gap-1"
+                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium"
                 >
-                  <SiGithub />
                   Github
                 </Link>
               </div>
