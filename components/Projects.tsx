@@ -11,7 +11,7 @@ export default function Projects() {
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl gap-7">
         <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-[#cc241d]">Things i worked on</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-start gap-5 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-stretch gap-5 w-full">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -19,7 +19,7 @@ export default function Projects() {
             >
               <h2 className="text-2xl font-medium">{project.name}</h2>
               <p className="text-md font-normal">{project.desc}</p>
-              <div className="flex flex-wrap justify-start items-start gap-3 mt-2">
+              <div className="flex flex-wrap justify-start items-start gap-3 mt-auto">
                 {project.tech.map((tech, index) => (
                   <div
                     key={index}
