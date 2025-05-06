@@ -31,14 +31,14 @@ export default function Projects() {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium"
+                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1 rounded-md text-md font-medium"
                 >
                   Website
                 </Link>
                 <Link
                   href={project.github}
                   target="_blank"
-                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1.5 rounded-md text-md font-medium"
+                  className="bg-[#fbf1c7] text-[#353535] px-3 py-1 rounded-md text-md font-medium"
                 >
                   Github
                 </Link>
