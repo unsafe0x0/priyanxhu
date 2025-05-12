@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="flex flex-col justify-start items-start gap-2 max-w-lg">
           <h1 className="text-2xl font-medium flex flex-wrap items-center gap-3">
             <span>{`Hi, I'm`}</span>
-            <span className="text-[#cc241d]">{` Priyanshu`}</span>
+            <span className="text-red-700/80">{` Priyanshu`}</span>
           </h1>
           <p className="text-md font-normal">
             {`I'm a 3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things`}
@@ -68,7 +68,7 @@ export default function Hero() {
                 key={social.id}
                 href={social.url}
                 target="_blank"
-                className="text-2xl hover:scale-125 transition-all duration-300 ease-in-out"
+                className="text-2xl hover:scale-125 transition-all duration-300 ease-in-out p-1.5 rounded-lg bg-zinc-900/40 border border-white/10"
               >
                 {social.icon}
               </Link>

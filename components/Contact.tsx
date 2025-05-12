@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
+import { LuSendHorizontal } from "react-icons/lu";
 
 async function sendMessage({
   name,
@@ -54,7 +55,7 @@ export default function Contact() {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl">
-        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-[#cc241d] mb-7">
+        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-red-700/80 mb-7">
           Connect with me
         </h2>
         <p className="text-md font-normal mb-1">
@@ -62,7 +63,7 @@ export default function Contact() {
         </p>
         <p className="text-md font-normal mb-1 flex flex-wrap items-center gap-1">
           <span className="">{`You can also email me at`}</span>
-          <span className="text-[#cc241d]">{`muxdust@gmail.com`}</span>
+          <span className="text-red-700/80">{`muxdust@gmail.com`}</span>
         </p>
         <p className="text-md font-normal mb-5">
           {`or fill the form below, i will get back to you as soon as possible`}
@@ -74,29 +75,30 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full px-3 py-2 outline-none text-md font-normal border border-[#353535] rounded-lg"
+            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 rounded-lg bg-zinc-900/40"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full px-3 py-2 outline-none text-md font-normal border border-[#353535] rounded-lg"
+            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 rounded-lg bg-zinc-900/40"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             placeholder="Enter your message"
-            className="w-full px-3 py-2 outline-none text-md font-normal border border-[#353535] rounded-lg resize-none"
+            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 rounded-lg resize-none bg-zinc-900/40"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-[#fbf1c7] text-[#353535] px-3 md:px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2"
+            className="bg-white/80 text-zinc-800 px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2"
           >
             {buttonText}
+            <LuSendHorizontal className="text-xl"/>
           </button>
         </form>
       </div>
