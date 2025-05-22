@@ -29,11 +29,11 @@ export const projects: Project[] = [
     github: "https://github.com/muxdust/vaulture",
   },
   {
-    name: "ByteRace",
+    name: "BashForge",
     tech: ["NextJS", "TailwindCSS", "PostgreSQL", "VsCode"],
-    desc: "Coding time activity tracker with vs code extension",
-    link: "https://byterace.vercel.app",
-    github: "https://github.com/muxdust/byterace",
+    desc: "Coding time activity tracker with VsCode extension",
+    link: "https://bashforge.vercel.app",
+    github: "https://github.com/muxdust/bashforge",
   },
   {
     name: "Lynktree",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     name: "Zkip",
     tech: ["NextJS", "MongoDB", "TailwindCSS"],
-    desc: "URL shortening service for easy sharing and tracking.",
+    desc: "URL shortener for easy sharing and tracking.",
     link: "https://zkip.vercel.app",
     github: "https://github.com/muxdust/zkip",
   },
