@@ -3,9 +3,9 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 
-const firaCode = Poppins({
+const fontName = Poppins({
   weight: ["400"],
-  variable: "--font-fira-code",
+  variable: "--font-primary",
   subsets: ["latin"],
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={firaCode.className}>
+      <body className={fontName.className}>
         <TanStackProvider>{children}</TanStackProvider>
       </body>
     </html>

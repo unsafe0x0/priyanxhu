@@ -11,11 +11,11 @@ export default function Projects() {
         <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-red-500/80">
           Things i worked on
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-stretch gap-5 w-full">
+        <div className="columns-1 md:columns-2 gap-5 w-full space-y-5">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-start items-start gap-2 border border-white/10 rounded-lg p-5 bg-zinc-900"
+              className="flex flex-col justify-start items-start gap-2 border border-white/10 rounded-lg p-5 bg-neutral-900 break-inside-avoid"
             >
               <h2 className="text-2xl font-medium">{project.name}</h2>
               <p className="text-md font-normal">{project.desc}</p>
@@ -23,7 +23,7 @@ export default function Projects() {
                 {project.tech.map((tech, index) => (
                   <div
                     key={index}
-                    className="text-xs p-1.5 bg-zinc-800 rounded-md"
+                    className="text-xs p-1.5 bg-neutral-800 rounded-md"
                   >
                     {tech}
                   </div>
@@ -33,14 +33,14 @@ export default function Projects() {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="bg-white/80 text-zinc-800 px-3 py-1 rounded-md text-md font-medium"
+                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-md font-medium"
                 >
                   Website
                 </Link>
                 <Link
                   href={project.github}
                   target="_blank"
-                  className="bg-white/80 text-zinc-800 px-3 py-1 rounded-md text-md font-medium"
+                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-md font-medium"
                 >
                   Github
                 </Link>

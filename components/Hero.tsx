@@ -44,7 +44,7 @@ const socials = [
 export default function Hero() {
   return (
     <section className="flex justify-center items-center w-full">
-      <div className="flex flex-wrap justify-start items-start w-full px-3 md:w-4xl gap-7">
+      <div className="flex flex-wrap justify-start items-center w-full px-3 md:w-4xl gap-7">
         <div className="flex justify-center items-center">
           <Image
             src="https://avatars.githubusercontent.com/u/165533860?v=4"
@@ -68,7 +68,7 @@ export default function Hero() {
                 key={social.id}
                 href={social.url}
                 target="_blank"
-                className="text-2xl hover:scale-125 transition-all duration-300 ease-in-out p-1.5 rounded-lg bg-zinc-900 border border-white/10"
+                className="text-2xl hover:scale-125 transition-all duration-300 ease-in-out p-1.5 rounded-lg bg-neutral-900 border border-white/10"
               >
                 {social.icon}
               </Link>

@@ -14,7 +14,7 @@ export default function Skills() {
           {skills.map((skill) => (
             <div
               key={skill.skillName}
-              className="flex justify-center items-center gap-2 border border-white/10 rounded-lg px-3 py-2 bg-zinc-900"
+              className="flex justify-center items-center gap-2 border border-white/10 rounded-lg px-3 py-2 bg-neutral-900"
             >
               <p className="text-md font-normal">{skill.skillName}</p>
             </div>

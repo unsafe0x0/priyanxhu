@@ -10,7 +10,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-primary: var(--font-fira-code);
+  --font-primary: var(--font-primary);
 }
 
 :root {
