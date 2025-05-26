@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import SocialBadge from "./SocialBadge";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
+import { GrStatusCriticalSmall } from "react-icons/gr";
 
 const socials = [
   {
@@ -17,7 +18,7 @@ const socials = [
   },
   {
     id: 2,
-    name: "X",
+    name: "Twitter",
     url: "https://x.com/muxdust",
     icon: <FaSquareXTwitter />,
   },
@@ -44,35 +45,34 @@ const socials = [
 export default function Hero() {
   return (
     <section className="flex justify-center items-center w-full">
-      <div className="flex flex-wrap justify-start items-center w-full px-3 md:w-4xl gap-7">
-        <div className="flex justify-center items-center">
-          <Image
-            src="https://avatars.githubusercontent.com/u/165533860?v=4"
-            alt="Hero"
-            width={150}
-            height={150}
-            className="rounded-xl"
-          />
-        </div>
-        <div className="flex flex-col justify-start items-start gap-2 max-w-lg">
-          <h1 className="text-2xl font-medium flex flex-wrap items-center gap-3">
-            <span>{`Hi, I'm`}</span>
-            <span className="text-red-500/80">{` Priyanshu`}</span>
-          </h1>
-          <p className="text-md font-normal">
-            {`I'm a 3rd-year CS student with specialization in AiML, passionate about development, problem-solving, and learning new things`}
-          </p>
-          <div className="flex flex-wrap justify-start items-start gap-5">
-            {socials.map((social) => (
-              <Link
-                key={social.id}
-                href={social.url}
-                target="_blank"
-                className="text-2xl hover:scale-125 transition-all duration-300 ease-in-out p-1.5 rounded-lg bg-neutral-900 border border-white/10"
-              >
-                {social.icon}
-              </Link>
-            ))}
+      <div className="flex flex-col justify-start items-start px-3 md:w-4xl w-full">
+        <p className="text-xs md:text-sm font-normal px-2 py-1 rounded-md border border-red-500/80 bg-red-500/40 backdrop-blur-2xl mb-3 flex items-center gap-1">
+          <GrStatusCriticalSmall className="text-red-500/80 animate-pulse" />{" "}
+          Available
+        </p>
+        <div className="flex flex-row justify-start items-center w-full gap-4">
+          <div className="flex flex-col justify-start items-start">
+            <Image
+              src="https://avatars.githubusercontent.com/u/165533860?v=4"
+              alt="Hero"
+              width={120}
+              height={120}
+              className="rounded-xl"
+            />
+          </div>
+          <div className="flex flex-col justify-start items-start gap-1 max-w-lg">
+            <h1 className="text-2xl font-semibold">Priyanshu Chahar</h1>
+            <p className="text-md font-normal">Software Developer</p>
+            <div className="flex flex-wrap justify-start items-start gap-2">
+              {socials.map((social, index) => (
+                <SocialBadge
+                  key={index}
+                  url={social.url}
+                  icon={social.icon}
+                  name={social.name}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

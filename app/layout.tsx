@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 
-const fontName = Poppins({
+const fontName = Noto_Sans({
   weight: ["400"],
   variable: "--font-primary",
   subsets: ["latin"],
