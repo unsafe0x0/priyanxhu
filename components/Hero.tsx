@@ -7,7 +7,6 @@ import SocialBadge from "./SocialBadge";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiLeetcode, SiCodeforces } from "react-icons/si";
-import { GrStatusCriticalSmall } from "react-icons/gr";
 
 const socials = [
   {
@@ -46,10 +45,6 @@ export default function Hero() {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start px-3 md:w-4xl w-full">
-        <p className="text-xs md:text-sm font-normal px-2 py-1 rounded-md border border-red-500/80 bg-red-500/40 backdrop-blur-2xl mb-3 flex items-center gap-1">
-          <GrStatusCriticalSmall className="text-red-500/80 animate-pulse" />{" "}
-          Available
-        </p>
         <div className="flex flex-row justify-start items-center w-full gap-4">
           <div className="flex flex-col justify-start items-start">
             <Image

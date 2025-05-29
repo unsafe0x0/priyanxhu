@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 
-const fontName = Noto_Sans({
+const fontName = Outfit({
   weight: ["400"],
   variable: "--font-primary",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Hi, I'm Priyanshu",
+  title: "Priyanshu Chahar",
   description:
     "Hi, I'm Priyanshu. I am a full stack developer and competitive programmer.",
   keywords: [

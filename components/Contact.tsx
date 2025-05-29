@@ -55,7 +55,7 @@ export default function Contact() {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl">
-        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-red-500/80 mb-7">
+        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-green-500/80 mb-7">
           Connect with me
         </h2>
         <p className="text-md font-normal mb-1">
@@ -63,7 +63,7 @@ export default function Contact() {
         </p>
         <p className="text-md font-normal mb-1 flex flex-wrap items-center gap-1">
           <span className="">{`You can also email me at`}</span>
-          <span className="text-red-500/80">{`muxdust@gmail.com`}</span>
+          <span className="text-green-500/80">{`muxdust@gmail.com`}</span>
         </p>
         <p className="text-md font-normal mb-5">
           {`or fill the form below, i will get back to you as soon as possible`}
@@ -95,7 +95,7 @@ export default function Contact() {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-white/80 text-neutral-800 px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2"
+            className="bg-white/80 text-neutral-800 px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2 cursor-pointer"
           >
             {buttonText}
             <LuSendHorizontal className="text-xl"/>

@@ -3,12 +3,14 @@
 import React from "react";
 import { projects } from "@/data/Projects";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { TbExternalLink } from "react-icons/tb";
 
 export default function Projects() {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl gap-7">
-        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-red-500/80">
+        <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-green-500/80">
           Things i worked on
         </h2>
         <div className="columns-1 md:columns-2 gap-5 w-full space-y-5">
@@ -33,16 +35,18 @@ export default function Projects() {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-sm font-medium"
+                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-sm font-medium flex items-center"
                 >
                   Website
+                  <TbExternalLink className="inline ml-1" />
                 </Link>
                 <Link
                   href={project.github}
                   target="_blank"
-                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-sm font-medium"
+                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-sm font-medium flex items-center"
                 >
                   Github
+                  <FaGithub className="inline ml-1" />
                 </Link>
               </div>
             </div>
