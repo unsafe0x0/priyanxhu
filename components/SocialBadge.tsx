@@ -17,7 +17,7 @@ const SocialBadge = ({
     <Link
       href={url}
       target="_blank"
-      className="text-2xl transition-all duration-300 ease-in-out p-1.5 rounded-lg bg-neutral-900 border border-white/10 relative"
+      className="text-xl transition-all duration-300 ease-in-out p-1.5 rounded-lg bg-neutral-900 border border-white/10 relative"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
