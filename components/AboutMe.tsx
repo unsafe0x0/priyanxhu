@@ -11,13 +11,13 @@ export default function AboutMe() {
         </h2>
         <div className="flex flex-col justify-start items-start gap-2">
           <p className="text-md font-normal">
-            {`Hey! I'm Priyanshu Chahar, a 4th year computer science student and
-          developer who loves turning ideas into real, working things`}
+            {`Hey, I'm Priyanshu Chahar, a 4th-year CSE student with a specialization in AI/ML. I enjoy bringing ideas to life by building real, usable projects.`}
           </p>
           <p className="text-md font-normal">
-            {`I'm flexible working with any tech stack, though I prefer modern
-          tools. I'm currently working with Next.js, Node, Express, and
-          TypeScript`}
+            {`I'm comfortable working with any tech stack, but I prefer using modern tools. Right now, I mostly work with NextJS, NodeJS, ExpressJS, and TypeScript or JavaScript.`}
+          </p>
+          <p className="text-md font-normal">
+            {`Currently, I’m focused on improving my skills in AI/ML and solving DSA problems regularly.`}
           </p>
         </div>
       </div>

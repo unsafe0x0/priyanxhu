@@ -25,7 +25,7 @@ export default function Projects() {
                 {project.tech.map((tech, index) => (
                   <div
                     key={index}
-                    className="text-xs p-1.5 bg-neutral-800 rounded-md"
+                    className="text-xs p-1 bg-neutral-800 rounded-md"
                   >
                     {tech}
                   </div>
@@ -35,7 +35,7 @@ export default function Projects() {
                 <Link
                   href={project.link}
                   target="_blank"
-                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-sm font-medium flex items-center"
+                  className="bg-white/80 text-neutral-800 px-2 py-1 rounded-md text-sm font-normal flex items-center"
                 >
                   Website
                   <TbExternalLink className="inline ml-1" />
@@ -43,7 +43,7 @@ export default function Projects() {
                 <Link
                   href={project.github}
                   target="_blank"
-                  className="bg-white/80 text-neutral-800 px-3 py-1 rounded-md text-sm font-medium flex items-center"
+                  className="bg-white/80 text-neutral-800 px-2 py-1 rounded-md text-sm font-normal flex items-center"
                 >
                   Github
                   <FaGithub className="inline ml-1" />

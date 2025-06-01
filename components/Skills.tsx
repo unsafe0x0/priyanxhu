@@ -2,6 +2,7 @@
 
 import React from "react";
 import { skills } from "@/data/Skills";
+import Image from "next/image";
 
 export default function Skills() {
   return (
@@ -10,13 +11,19 @@ export default function Skills() {
         <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-green-500/80">
           What i Know
         </h2>
-        <div className="flex flex-wrap justify-start items-start gap-2">
+        <div className="flex flex-wrap justify-start items-start gap-1.5 md:gap-2">
           {skills.map((skill) => (
             <div
               key={skill.skillName}
-              className="flex justify-center items-center gap-2 border border-white/10 rounded-lg px-3 py-1.5 bg-neutral-900"
+              className="flex justify-center items-center gap-1 border border-white/10 rounded-lg px-3 py-1.5 bg-neutral-900"
             >
-              <span className="text-md">{skill.icon}</span>
+              <Image
+                src={skill.image}
+                alt={skill.skillName}
+                width={22}
+                height={22}
+                className="object-contain h-5 w-5"
+              />
               <p className="text-md font-normal">{skill.skillName}</p>
             </div>
           ))}

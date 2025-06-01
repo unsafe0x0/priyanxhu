@@ -75,27 +75,27 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 rounded-lg bg-neutral-900"
+            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 focus:ring focus:ring-green-500/80 rounded-lg bg-neutral-900"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 rounded-lg bg-neutral-900"
+            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 focus:ring focus:ring-green-500/80 rounded-lg bg-neutral-900"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             placeholder="Enter your message"
-            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 rounded-lg resize-none bg-neutral-900"
+            className="w-full px-3 py-2 outline-none text-md font-normal border border-white/10 focus:ring focus:ring-green-500/80 rounded-lg resize-none bg-neutral-900"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-white/80 text-neutral-800 px-5 py-2 rounded-lg text-md font-medium flex items-center gap-3 mt-2 cursor-pointer"
+            className="bg-white/80 text-neutral-800 px-3 py-2 rounded-lg text-md font-normal flex items-center gap-3 mt-2 cursor-pointer"
           >
             {buttonText}
             <LuSendHorizontal className="text-xl"/>

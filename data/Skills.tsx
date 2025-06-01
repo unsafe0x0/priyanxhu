@@ -1,127 +1,31 @@
-import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGithub, FaPython, FaGolang } from "react-icons/fa6";
-import { FaGitAlt } from "react-icons/fa6";
-import { IoLogoNodejs, IoLogoJavascript } from "react-icons/io5";
-
-import {
-  RiNextjsLine,
-  RiReactjsLine,
-  RiTailwindCssFill,
-  RiBearSmileLine,
-} from "react-icons/ri";
-import {
-  SiExpress,
-  SiMongodb,
-  SiPostman,
-  SiReactquery,
-  SiPrisma,
-  SiHono,
-  SiBun,
-  SiTypescript,
-} from "react-icons/si";
-import {
-  TbBrandCpp,
-  TbHexagonLetterC,
-  TbBrandReactNative,
-} from "react-icons/tb";
-import { VscTerminalLinux } from "react-icons/vsc";
-
 interface Skill {
   skillName: string;
-  icon?: React.ReactNode;
+  image: string;
 }
 
 export const skills: Skill[] = [
-  {
-    skillName: "JavaScript",
-    icon: <IoLogoJavascript />,
-  },
-  {
-    skillName: "C",
-    icon: <TbHexagonLetterC />,
-  },
-  {
-    skillName: "C++",
-    icon: <TbBrandCpp />,
-  },
-  {
-    skillName: "TypeScript",
-    icon: <SiTypescript />,
-  },
-  {
-    skillName: "Golang",
-    icon: <FaGolang />,
-  },
-  {
-    skillName: "Python",
-    icon: <FaPython />,
-  },
-  {
-    skillName: "ReactJS",
-    icon: <RiReactjsLine />,
-  },
-  {
-    skillName: "Tanstack",
-    icon: <SiReactquery />,
-  },
-  {
-    skillName: "NextJS",
-    icon: <RiNextjsLine />,
-  },
-  {
-    skillName: "TailwindCSS",
-    icon: <RiTailwindCssFill />,
-  },
-  {
-    skillName: "React Native",
-    icon: <TbBrandReactNative />,
-  },
-  {
-    skillName: "NodeJS",
-    icon: <IoLogoNodejs />,
-  },
-  {
-    skillName: "BunJS",
-    icon: <SiBun />,
-  },
-  {
-    skillName: "ExpressJS",
-    icon: <SiExpress />,
-  },
-  {
-    skillName: "HonoJS",
-    icon: <SiHono />,
-  },
-  {
-    skillName: "Zustand",
-    icon: <RiBearSmileLine />,
-  },
-  {
-    skillName: "Prisma",
-    icon: <SiPrisma />,
-  },
-  {
-    skillName: "PostgreSQL",
-    icon: <BiLogoPostgresql />,
-  },
-  {
-    skillName: "MongoDB",
-    icon: <SiMongodb />,
-  },
-  {
-    skillName: "Git",
-    icon: <FaGitAlt />,
-  },
-  {
-    skillName: "Github",
-    icon: <FaGithub />,
-  },
-  {
-    skillName: "Postman",
-    icon: <SiPostman />,
-  },
-  {
-    skillName: "Linux",
-    icon: <VscTerminalLinux />,
-  },
+  { skillName: "JavaScript", image: "/icons/js.svg" },
+  { skillName: "TypeScript", image: "/icons/ts.svg" },
+  { skillName: "C", image: "/icons/c.svg" },
+  { skillName: "C++", image: "/icons/cpp.svg" },
+  { skillName: "Golang", image: "/icons/go.svg" },
+  { skillName: "ReactJS", image: "/icons/jsx.svg" },
+  { skillName: "Tanstack Query", image: "/icons/tanstackquery.svg" },
+  { skillName: "TailwindCSS", image: "/icons/tailwind.svg" },
+  { skillName: "NextJS", image: "/icons/nextjs.svg" },
+  { skillName: "NodeJS", image: "/icons/nodejs.svg" },
+  { skillName: "BunJS", image: "/icons/bun.svg" },
+  { skillName: "ExpressJS", image: "/icons/express.svg" },
+  { skillName: "HonoJS", image: "/icons/honojs.svg" },
+  { skillName: "Prisma", image: "/icons/prisma.svg" },
+  { skillName: "PostgreSQL", image: "/icons/postgres.svg" },
+  { skillName: "MongoDB", image: "/icons/mongodb.svg" },
+  { skillName: "Git", image: "/icons/git.svg" },
+  { skillName: "Github", image: "/icons/github.svg" },
+  { skillName: "Postman", image: "/icons/postman.svg" },
+  { skillName: "Python", image: "/icons/python.svg" },
+  { skillName: "ML", image: "/icons/robot.svg" },
+  { skillName: "TensorFlow", image: "/icons/tenserflow.svg" },
+  { skillName: "Keras", image: "/icons/keras.svg" },
+  { skillName: "Linux", image: "/icons/linux.svg" },
 ];

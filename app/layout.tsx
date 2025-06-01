@@ -4,7 +4,7 @@ import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 
 const fontName = Space_Grotesk({
-  weight: ["400"],
+  weight: ["400", "500" , "600"],
   variable: "--font-primary",
   subsets: ["latin"],
 });
