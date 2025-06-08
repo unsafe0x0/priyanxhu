@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 
 const fontName = Space_Grotesk({
-  weight: ["400", "500" , "600"],
+  weight: ["400", "500", "600"],
   variable: "--font-primary",
   subsets: ["latin"],
 });
@@ -68,6 +69,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
       <body className={fontName.className}>
         <TanStackProvider>{children}</TanStackProvider>
       </body>
