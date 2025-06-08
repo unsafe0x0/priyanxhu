@@ -17,7 +17,7 @@ export default function Skills() {
         </FadeInOnScroll>
         <div className="flex flex-wrap justify-start items-start gap-1.5 md:gap-2">
           {skills.map((skill, index) => (
-            <FadeInOnScroll key={index} delay={index * 0.1}>
+            <FadeInOnScroll key={index}>
               <div className="flex justify-center items-center gap-1 border border-white/10 rounded-lg px-3 py-1.5 bg-neutral-900">
                 <Image
                   src={skill.image}

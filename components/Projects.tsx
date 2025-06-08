@@ -19,7 +19,7 @@ export default function Projects() {
         </FadeInOnScroll>
         <div className="columns-1 md:columns-2 gap-5 w-full space-y-5">
           {projects.map((project, index) => (
-            <FadeInOnScroll key={index} delay={index * 0.1}>
+            <FadeInOnScroll key={index}>
               <div className="flex flex-col justify-start items-start gap-2 border border-white/10 rounded-lg p-5 bg-neutral-900 break-inside-avoid">
                 <h2 className="text-2xl font-medium">{project.name}</h2>
                 <p className="text-md font-normal">{project.desc}</p>
