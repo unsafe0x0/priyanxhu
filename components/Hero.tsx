@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import SocialBadge from "./SocialBadge";
+import { useTheme } from "next-themes";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -47,7 +48,7 @@ export default function Hero() {
   return (
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start px-3 md:w-4xl w-full">
-        <div className="flex flex-row justify-start items-center w-full gap-4">
+        <div className="flex flex-row justify-start items-center w-full gap-4 mt-10">
           <div className="flex flex-col justify-start items-start">
             <FadeInOnScroll>
               <Image

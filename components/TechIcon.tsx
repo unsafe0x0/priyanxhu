@@ -1,23 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 
-const SocialBadge = ({
-  url,
+const TechIcon = ({
   icon,
   name,
 }: {
-  url: string;
   icon: React.ReactNode;
   name: string;
 }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link
-      href={url}
-      target="_blank"
-      className="text-xl p-1.5 rounded-md bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700/50 relative"
+    <div
+      className="text-xl p-1 rounded-md bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700/50 relative"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -29,8 +24,8 @@ const SocialBadge = ({
       >
         {name}
       </span>
-    </Link>
+    </div>
   );
 };
 
-export default SocialBadge;
+export default TechIcon;

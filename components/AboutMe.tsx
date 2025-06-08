@@ -9,7 +9,7 @@ export default function AboutMe() {
     <section className="flex justify-center items-center w-full">
       <div className="flex flex-col justify-start items-start w-full px-3 md:w-4xl gap-7">
         <FadeInOnScroll>
-          <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-green-500/80">
+          <h2 className="text-2xl font-medium underline underline-offset-8 decoration-2 decoration-red-500">
             About Me
           </h2>
         </FadeInOnScroll>

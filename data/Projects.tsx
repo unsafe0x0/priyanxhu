@@ -1,6 +1,26 @@
+import React from "react";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { IoLogoNodejs } from "react-icons/io5";
+import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import {
+  SiExpress,
+  SiMongodb,
+  SiReactquery,
+  SiPrisma,
+  SiHono,
+  SiCloudinary,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+import { FaRobot } from "react-icons/fa6";
+
+interface ProjectTech {
+  name: string;
+  icon: React.ReactNode | null;
+}
+
 interface Project {
   name: string;
-  tech: string[];
+  tech: ProjectTech[];
   desc: string;
   link: string;
   github: string;
@@ -10,12 +30,12 @@ export const projects: Project[] = [
   {
     name: "QuadState",
     tech: [
-      "NextJS",
-      "Cloudinary",
-      "MongoDB",
-      "TailwindCSS",
-      "Tanstack Query",
-      "XGBoost",
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "Cloudinary", icon: <SiCloudinary /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "Tanstack Query", icon: <SiReactquery /> },
+      { name: "XGBoost", icon: <FaRobot /> },
     ],
     desc: "Explore or list luxury properties and predict property price based on features.",
     link: "https://quadstate.vercel.app",
@@ -23,28 +43,49 @@ export const projects: Project[] = [
   },
   {
     name: "Vaulture",
-    tech: ["NextJS", "TailwindCSS", "Tanstack Query", "Prisma", "PostgreSQL"],
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "Tanstack Query", icon: <SiReactquery /> },
+      { name: "Prisma", icon: <SiPrisma /> },
+      { name: "PostgreSQL", icon: <BiLogoPostgresql /> },
+    ],
     desc: "Password manager with end-to-end encryption",
     link: "https://vaulture.vercel.app",
     github: "https://github.com/muxdust/vaulture",
   },
   {
     name: "BashForge",
-    tech: ["NextJS", "TailwindCSS", "PostgreSQL", "VsCode"],
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "PostgreSQL", icon: <BiLogoPostgresql /> },
+      { name: "VsCode", icon: <VscVscode /> },
+    ],
     desc: "Coding time activity tracker with VsCode extension",
     link: "https://bashforge.vercel.app",
     github: "https://github.com/muxdust/bashforge",
   },
   {
     name: "Lynktree",
-    tech: ["NextJS", "NodeJS", "Express", "MongoDB", "TailwindCSS"],
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "NodeJS", icon: <IoLogoNodejs /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+    ],
     desc: "Organize and share multiple links through a single URL.",
     link: "https://lynktree.vercel.app",
     github: "https://github.com/muxdust/Lynktree",
   },
   {
     name: "Zkip",
-    tech: ["NextJS", "MongoDB", "TailwindCSS"],
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+    ],
     desc: "URL shortener for easy sharing and tracking.",
     link: "https://zkip.vercel.app",
     github: "https://github.com/muxdust/zkip",
@@ -52,12 +93,12 @@ export const projects: Project[] = [
   {
     name: "Dokxy",
     tech: [
-      "NextJS",
-      "TailwindCSS",
-      "NodeJS",
-      "HonoJS",
-      "MongoDB",
-      "Cloudinary",
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "NodeJS", icon: <IoLogoNodejs /> },
+      { name: "HonoJS", icon: <SiHono /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Cloudinary", icon: <SiCloudinary /> },
     ],
     desc: "Doctor-patient appointment system for easy scheduling and management.",
     link: "https://dokxyv1.vercel.app",

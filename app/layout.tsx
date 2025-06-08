@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Head from "next/head";
-import { Space_Grotesk } from "next/font/google";
+import { Public_Sans } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
+import ThemeProvider from "@/components/ThemeProvider";
 
-const fontName = Space_Grotesk({
+const fontName = Public_Sans({
   weight: ["400", "500", "600"],
   variable: "--font-primary",
   subsets: ["latin"],
@@ -68,12 +69,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <body className={fontName.className}>
-        <TanStackProvider>{children}</TanStackProvider>
+        <TanStackProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </TanStackProvider>
       </body>
     </html>
   );
