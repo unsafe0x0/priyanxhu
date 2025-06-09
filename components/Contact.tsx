@@ -102,7 +102,7 @@ export default function Contact() {
             <button
               type="submit"
               onClick={handleSubmit}
-              className="bg-neutral-800 dark:bg-white text-white dark:text-neutral-800 px-3 py-2 rounded-md text-md font-normal flex items-center gap-3 mt-2 cursor-pointer"
+              className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-3 py-2 rounded-md text-md font-normal flex items-center gap-3 mt-2 cursor-pointer"
             >
               {buttonText}
               <LuSendHorizontal className="text-xl" />

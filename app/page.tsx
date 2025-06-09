@@ -36,7 +36,7 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <main className="py-8 flex flex-col justify-center items-center w-full gap-14 bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100">
+      <main className="py-8 flex flex-col justify-center items-center w-full gap-14 bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-300">
         <Hero />
         <AboutMe />
         <Skills />

@@ -33,7 +33,7 @@ export default function Projects() {
                   <Link
                     href={project.link}
                     target="_blank"
-                    className="bg-neutral-800 dark:bg-white text-white dark:text-neutral-800 px-2 py-1.5 rounded-md text-sm font-normal flex items-center"
+                    className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-2 py-1.5 rounded-md text-sm font-normal flex items-center"
                   >
                     Website
                     <TbExternalLink className="inline ml-1" />
@@ -41,7 +41,7 @@ export default function Projects() {
                   <Link
                     href={project.github}
                     target="_blank"
-                    className="bg-neutral-800 dark:bg-white text-white dark:text-neutral-800 px-2 py-1.5 rounded-md text-sm font-normal flex items-center"
+                    className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-2 py-1.5 rounded-md text-sm font-normal flex items-center"
                   >
                     Github
                     <FaGithub className="inline ml-1" />
