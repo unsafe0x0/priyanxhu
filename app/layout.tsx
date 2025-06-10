@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Head from "next/head";
-import { Public_Sans } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 import ThemeProvider from "@/components/ThemeProvider";
 
-const fontName = Public_Sans({
+const fontName = JetBrains_Mono({
   weight: ["400", "500", "600"],
   variable: "--font-primary",
   subsets: ["latin"],

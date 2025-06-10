@@ -12,6 +12,9 @@ import {
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { FaRobot } from "react-icons/fa6";
+import { IoSparklesOutline } from "react-icons/io5";
+import { LuFramer } from "react-icons/lu";
+import { MdOutlineSecurity } from "react-icons/md";
 
 interface ProjectTech {
   name: string;
@@ -28,20 +31,6 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    name: "QuadState",
-    tech: [
-      { name: "NextJS", icon: <RiNextjsLine /> },
-      { name: "Cloudinary", icon: <SiCloudinary /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
-      { name: "Tanstack Query", icon: <SiReactquery /> },
-      { name: "XGBoost", icon: <FaRobot /> },
-    ],
-    desc: "Explore or list luxury properties and predict property price based on features.",
-    link: "https://quadstate.vercel.app",
-    github: "https://github.com/muxdust/quadstate",
-  },
-  {
     name: "Vaulture",
     tech: [
       { name: "NextJS", icon: <RiNextjsLine /> },
@@ -55,6 +44,22 @@ export const projects: Project[] = [
     github: "https://github.com/muxdust/vaulture",
   },
   {
+    name: "OptiCV",
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "Tanstack Query", icon: <SiReactquery /> },
+      { name: "Prisma", icon: <SiPrisma /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "Groq AI", icon: <IoSparklesOutline /> },
+      { name: "Framer Motion", icon: <LuFramer /> },
+      { name: "NextAuth", icon: <MdOutlineSecurity /> },
+    ],
+    desc: "Ai powered overleaf resume optimizer",
+    link: "https://opticv.vercel.app",
+    github: "https://github.com/muxdust/opticv",
+  },
+  {
     name: "BashForge",
     tech: [
       { name: "NextJS", icon: <RiNextjsLine /> },
@@ -65,6 +70,20 @@ export const projects: Project[] = [
     desc: "Coding time activity tracker with VsCode extension",
     link: "https://bashforge.vercel.app",
     github: "https://github.com/muxdust/bashforge",
+  },
+  {
+    name: "QuadState",
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "Cloudinary", icon: <SiCloudinary /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "Tanstack Query", icon: <SiReactquery /> },
+      { name: "XGBoost", icon: <FaRobot /> },
+    ],
+    desc: "Explore or list luxury properties and predict property price based on features.",
+    link: "https://quadstate.vercel.app",
+    github: "https://github.com/muxdust/quadstate",
   },
   {
     name: "Lynktree",
