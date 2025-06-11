@@ -85,19 +85,19 @@ export const projects: Project[] = [
     link: "https://quadstate.vercel.app",
     github: "https://github.com/muxdust/quadstate",
   },
-  {
-    name: "Lynktree",
-    tech: [
-      { name: "NextJS", icon: <RiNextjsLine /> },
-      { name: "NodeJS", icon: <IoLogoNodejs /> },
-      { name: "Express", icon: <SiExpress /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
-    ],
-    desc: "Organize and share multiple links through a single URL.",
-    link: "https://lynktree.vercel.app",
-    github: "https://github.com/muxdust/Lynktree",
-  },
+  // {
+  //   name: "Lynktree",
+  //   tech: [
+  //     { name: "NextJS", icon: <RiNextjsLine /> },
+  //     { name: "NodeJS", icon: <IoLogoNodejs /> },
+  //     { name: "Express", icon: <SiExpress /> },
+  //     { name: "MongoDB", icon: <SiMongodb /> },
+  //     { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+  //   ],
+  //   desc: "Organize and share multiple links through a single URL.",
+  //   link: "https://lynktree.vercel.app",
+  //   github: "https://github.com/muxdust/Lynktree",
+  // },
   {
     name: "Zkip",
     tech: [

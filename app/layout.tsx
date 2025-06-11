@@ -1,39 +1,33 @@
 import type { Metadata } from "next";
-import Head from "next/head";
-import { JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 import ThemeProvider from "@/components/ThemeProvider";
 
-const fontName = JetBrains_Mono({
+const fontName = Space_Grotesk({
   weight: ["400", "500", "600"],
   variable: "--font-primary",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Priyanshu Chahar | Full Stack Developer & Competitive Programmer",
+  title: "Priyanshu Chahar | Software Developer | Full Stack & AI/ML | DSA",
   description:
-    "Priyanshu Chahar is a skilled full stack developer and competitive programmer specializing in building efficient, scalable web applications and solving complex algorithmic problems.",
+    "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
   keywords: [
     "Priyanshu Chahar",
     "Full Stack Developer",
     "Competitive Programmer",
     "Web Developer",
     "Software Engineer",
-    "JavaScript Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Programming Portfolio",
-    "Algorithm Expert",
+    "Muxdust",
+    "Priyanshu",
+    "Priyanxhu",
   ],
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
-    title: "Priyanshu Chahar | Full Stack Developer & Competitive Programmer",
+    title: "Priyanshu Chahar | Software Developer | Full Stack & AI/ML | DSA",
     description:
-      "Explore the portfolio of Priyanshu Chahar, a full stack developer and competitive programmer focused on modern web technologies and problem solving.",
+      "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
     url: "https://priyanxhu.me",
     siteName: "Priyanshu Chahar Portfolio",
     images: [
@@ -41,17 +35,17 @@ export const metadata: Metadata = {
         url: "https://avatars.githubusercontent.com/u/165533860?v=4",
         width: 1200,
         height: 630,
-        alt: "Priyanshu Chahar Portfolio",
+        alt: "Priyanshu Chahar",
       },
     ],
-    locale: "en_US",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Priyanshu Chahar | Full Stack Developer & Competitive Programmer",
+    title: "Priyanshu Chahar | Software Developer | Full Stack & AI/ML | DSA",
     description:
-      "Showcasing Priyanshu Chahar’s expertise in full stack development and competitive programming.",
+      "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
     site: "@muxdust",
     creator: "@muxdust",
     images: ["https://avatars.githubusercontent.com/u/165533860?v=4"],
@@ -59,7 +53,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: true,
+    noarchive: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -69,10 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      </Head>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={fontName.className}>
         <TanStackProvider>
           <ThemeProvider>{children}</ThemeProvider>

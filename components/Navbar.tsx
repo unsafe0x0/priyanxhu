@@ -7,8 +7,14 @@ import { BsSun } from "react-icons/bs";
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [currentTime, setCurrentTime] = useState("");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
+    if (!mounted) return;
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
@@ -39,7 +45,7 @@ const Navbar = () => {
           onClick={toggleTheme}
           className="text-2xl p-1.5 rounded-md border border-neutral-200 dark:border-neutral-700/50"
         >
-          {theme === "dark" ? <BiMoon /> : <BsSun />}
+          {mounted && (theme === "dark" ? <BiMoon /> : <BsSun />)}
         </button>
       </div>
     </nav>

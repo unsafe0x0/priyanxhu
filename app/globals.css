@@ -1,27 +1,7 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #f3f3f3;
-  --color-secondary: #171717;
-}
-
-@dark {
-  --color-primary: #171717;
-  --color-secondary: #f3f3f3;
-}
-
 @variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --text-color: var(--color-primary);
-  --background-color: var(--color-secondary);
-}
-
-html {
-  transition-property: background-color, color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
 
 ::-webkit-scrollbar {
   width: 0px;
