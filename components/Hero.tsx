@@ -15,13 +15,13 @@ const socials = [
   {
     id: 1,
     name: "GitHub",
-    url: "https://github.com/muxdust",
+    url: "https://github.com/unsafe0x0",
     icon: <FaGithub />,
   },
   {
     id: 2,
     name: "Twitter",
-    url: "https://x.com/muxdust",
+    url: "https://x.com/unsafezero",
     icon: <FaSquareXTwitter />,
   },
   {
