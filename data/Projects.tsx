@@ -41,7 +41,7 @@ export const projects: Project[] = [
     ],
     desc: "Password manager with end-to-end encryption",
     link: "https://vaulture.vercel.app",
-    github: "https://github.com/muxdust/vaulture",
+    github: "https://github.com/unsafe0x0/vaulture",
   },
   {
     name: "OptiCV",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     ],
     desc: "Ai powered overleaf resume optimizer",
     link: "https://opticv.vercel.app",
-    github: "https://github.com/muxdust/opticv",
+    github: "https://github.com/unsafe0x0/opticv",
   },
   {
     name: "BashForge",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     ],
     desc: "Coding time activity tracker with VsCode extension",
     link: "https://bashforge.vercel.app",
-    github: "https://github.com/muxdust/bashforge",
+    github: "https://github.com/unsafe0x0/bashforge",
   },
   {
     name: "QuadState",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     ],
     desc: "Explore or list luxury properties and predict property price based on features.",
     link: "https://quadstate.vercel.app",
-    github: "https://github.com/muxdust/quadstate",
+    github: "https://github.com/unsafe0x0/quadstate",
   },
   // {
   //   name: "Lynktree",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
   //   ],
   //   desc: "Organize and share multiple links through a single URL.",
   //   link: "https://lynktree.vercel.app",
-  //   github: "https://github.com/muxdust/Lynktree",
+  //   github: "https://github.com/unsafe0x0/Lynktree",
   // },
   {
     name: "Zkip",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     ],
     desc: "URL shortener for easy sharing and tracking.",
     link: "https://zkip.vercel.app",
-    github: "https://github.com/muxdust/zkip",
+    github: "https://github.com/unsafe0x0/zkip",
   },
   {
     name: "Dokxy",
@@ -121,6 +121,6 @@ export const projects: Project[] = [
     ],
     desc: "Doctor-patient appointment system for easy scheduling and management.",
     link: "https://dokxyv1.vercel.app",
-    github: "https://github.com/muxdust/healthcare-frontend",
+    github: "https://github.com/unsafe0x0/healthcare-frontend",
   },
 ];
