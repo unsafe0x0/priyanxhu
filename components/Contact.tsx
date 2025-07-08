@@ -68,7 +68,7 @@ export default function Contact() {
           </p>
           <p className="text-md font-normal mb-1 flex flex-wrap items-center gap-1">
             <span className="">{`You can also email me at`}</span>
-            <span className="text-red-500">{`muxdust@gmail.com`}</span>
+            <span className="text-red-500 underline">{`unsafezero@gmail.com`}</span>
           </p>
           <p className="text-md font-normal mb-5">
             {`or fill the form below, i will get back to you as soon as possible`}

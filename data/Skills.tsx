@@ -1,5 +1,5 @@
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaGithub, FaPython, FaGolang, FaGitAlt } from "react-icons/fa6";
+import { FaGithub, FaPython, FaGitAlt } from "react-icons/fa6";
 import { IoLogoNodejs, IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsLine, RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -23,6 +23,7 @@ import { VscTerminalLinux } from "react-icons/vsc";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { LuFramer } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
+import { FaRust } from "react-icons/fa";
 
 interface Skill {
   skillName: string;
@@ -34,7 +35,7 @@ export const skills: Skill[] = [
   { skillName: "TypeScript", icon: <SiTypescript /> },
   { skillName: "C", icon: <TbHexagonLetterC /> },
   { skillName: "C++", icon: <TbBrandCpp /> },
-  { skillName: "Golang", icon: <FaGolang /> },
+  { skillName: "Rust", icon: <FaRust /> },
   { skillName: "Python", icon: <FaPython /> },
   { skillName: "ReactJS", icon: <RiReactjsLine /> },
   { skillName: "NextJS", icon: <RiNextjsLine /> },

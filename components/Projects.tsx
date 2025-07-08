@@ -18,7 +18,7 @@ export default function Projects() {
             Things i worked on
           </h2>
         </FadeInOnScroll>
-        <div className="columns-1 md:columns-2 gap-5 w-full space-y-5">
+        <div className="columns-1 gap-5 w-full space-y-5">
           {projects.map((project, index) => (
             <FadeInOnScroll key={index}>
               <div className="flex flex-col justify-start items-start gap-2 border border-neutral-200 dark:border-neutral-700/50 rounded-md p-5 bg-neutral-50 dark:bg-neutral-900 break-inside-avoid">

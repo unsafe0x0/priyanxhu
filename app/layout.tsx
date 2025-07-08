@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 import ThemeProvider from "@/components/ThemeProvider";
 
-const fontName = Space_Grotesk({
+const fontName = JetBrains_Mono({
   weight: ["400", "500", "600"],
   variable: "--font-primary",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Priyanshu Chahar | Software Developer | Full Stack & AI/ML | DSA",
+  title: "Priyanshu Chahar | Software Developer",
   description:
     "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
   keywords: [

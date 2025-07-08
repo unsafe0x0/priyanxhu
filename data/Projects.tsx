@@ -71,20 +71,20 @@ export const projects: Project[] = [
     link: "https://bashforge.vercel.app",
     github: "https://github.com/unsafe0x0/bashforge",
   },
-  {
-    name: "QuadState",
-    tech: [
-      { name: "NextJS", icon: <RiNextjsLine /> },
-      { name: "Cloudinary", icon: <SiCloudinary /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
-      { name: "Tanstack Query", icon: <SiReactquery /> },
-      { name: "XGBoost", icon: <FaRobot /> },
-    ],
-    desc: "Explore or list luxury properties and predict property price based on features.",
-    link: "https://quadstate.vercel.app",
-    github: "https://github.com/unsafe0x0/quadstate",
-  },
+  // {
+  //   name: "QuadState",
+  //   tech: [
+  //     { name: "NextJS", icon: <RiNextjsLine /> },
+  //     { name: "Cloudinary", icon: <SiCloudinary /> },
+  //     { name: "MongoDB", icon: <SiMongodb /> },
+  //     { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+  //     { name: "Tanstack Query", icon: <SiReactquery /> },
+  //     { name: "XGBoost", icon: <FaRobot /> },
+  //   ],
+  //   desc: "Explore or list luxury properties and predict property price based on features.",
+  //   link: "https://quadstate.vercel.app",
+  //   github: "https://github.com/unsafe0x0/quadstate",
+  // },
   // {
   //   name: "Lynktree",
   //   tech: [
@@ -98,17 +98,17 @@ export const projects: Project[] = [
   //   link: "https://lynktree.vercel.app",
   //   github: "https://github.com/unsafe0x0/Lynktree",
   // },
-  {
-    name: "Zkip",
-    tech: [
-      { name: "NextJS", icon: <RiNextjsLine /> },
-      { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
-    ],
-    desc: "URL shortener for easy sharing and tracking.",
-    link: "https://zkip.vercel.app",
-    github: "https://github.com/unsafe0x0/zkip",
-  },
+  // {
+  //   name: "Zkip",
+  //   tech: [
+  //     { name: "NextJS", icon: <RiNextjsLine /> },
+  //     { name: "MongoDB", icon: <SiMongodb /> },
+  //     { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+  //   ],
+  //   desc: "URL shortener for easy sharing and tracking.",
+  //   link: "https://zkip.vercel.app",
+  //   github: "https://github.com/unsafe0x0/zkip",
+  // },
   {
     name: "Dokxy",
     tech: [
