@@ -18,7 +18,7 @@ export default function Skills() {
         <div className="flex flex-wrap justify-start items-start gap-1.5 md:gap-2">
           {skills.map((skill, index) => (
             <FadeInOnScroll key={index}>
-              <div className="flex justify-center items-center gap-1 border border-neutral-200 dark:border-neutral-700/50 rounded-md px-3 py-1.5 bg-neutral-50 dark:bg-neutral-900">
+              <div className="flex justify-center items-center gap-1 border border-neutral-200 dark:border-neutral-700/50 rounded-none px-3 py-1.5 bg-neutral-50 dark:bg-neutral-900">
                 <span className="text-xl">{skill.icon}</span>
                 <p className="text-md font-normal">{skill.skillName}</p>
               </div>

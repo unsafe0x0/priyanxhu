@@ -21,7 +21,7 @@ export default function Projects() {
         <div className="columns-1 gap-5 w-full space-y-5">
           {projects.map((project, index) => (
             <FadeInOnScroll key={index}>
-              <div className="flex flex-col justify-start items-start gap-2 border border-neutral-200 dark:border-neutral-700/50 rounded-md p-5 bg-neutral-50 dark:bg-neutral-900 break-inside-avoid">
+              <div className="flex flex-col justify-start items-start gap-2 border border-neutral-200 dark:border-neutral-700/50 rounded-none p-5 bg-neutral-50 dark:bg-neutral-900 break-inside-avoid">
                 <h2 className="text-2xl font-medium">{project.name}</h2>
                 <p className="text-md font-normal">{project.desc}</p>
                 <div className="flex flex-wrap justify-start items-start gap-1.5 mt-auto">
@@ -33,7 +33,7 @@ export default function Projects() {
                   <Link
                     href={project.link}
                     target="_blank"
-                    className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-2 py-1.5 rounded-md text-sm font-normal flex items-center"
+                    className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-2 py-1.5 rounded-none text-sm font-normal flex items-center"
                   >
                     Website
                     <TbExternalLink className="inline ml-1" />
@@ -41,7 +41,7 @@ export default function Projects() {
                   <Link
                     href={project.github}
                     target="_blank"
-                    className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-2 py-1.5 rounded-md text-sm font-normal flex items-center"
+                    className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-2 py-1.5 rounded-none text-sm font-normal flex items-center"
                   >
                     Github
                     <FaGithub className="inline ml-1" />

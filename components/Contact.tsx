@@ -66,8 +66,8 @@ export default function Contact() {
           <p className="text-md font-normal mb-1">
             {`Have a question ? Feel free to reach out to me`}
           </p>
-          <p className="text-md font-normal mb-1 flex flex-wrap items-center gap-1">
-            <span className="">{`You can also email me at`}</span>
+          <p className="text-md font-normal mb-1 flex flex-wrap items-center gap-1.5">
+            <span className="">{`You can also email me at `}</span>
             <span className="text-red-500 underline">{`unsafezero@gmail.com`}</span>
           </p>
           <p className="text-md font-normal mb-5">
@@ -82,27 +82,27 @@ export default function Contact() {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-3 py-2 outline-none text-md font-normal border border-neutral-200 dark:border-neutral-700/50 focus:ring focus:ring-red-500 rounded-md bg-neutral-50 dark:bg-neutral-900"
+              className="w-full px-3 py-2 outline-none text-md font-normal border border-neutral-200 dark:border-neutral-700/50 focus:ring focus:ring-red-500 rounded-none bg-neutral-50 dark:bg-neutral-900"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-3 py-2 outline-none text-md font-normal border border-neutral-200 dark:border-neutral-700/50 focus:ring focus:ring-red-500 rounded-md bg-neutral-50 dark:bg-neutral-900"
+              className="w-full px-3 py-2 outline-none text-md font-normal border border-neutral-200 dark:border-neutral-700/50 focus:ring focus:ring-red-500 rounded-none bg-neutral-50 dark:bg-neutral-900"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
               placeholder="Enter your message"
-              className="w-full px-3 py-2 outline-none text-md font-normal border border-neutral-200 dark:border-neutral-700/50 focus:ring focus:ring-red-500 rounded-md resize-none bg-neutral-50 dark:bg-neutral-900"
+              className="w-full px-3 py-2 outline-none text-md font-normal border border-neutral-200 dark:border-neutral-700/50 focus:ring focus:ring-red-500 rounded-none resize-none bg-neutral-50 dark:bg-neutral-900"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <button
               type="submit"
               onClick={handleSubmit}
-              className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-3 py-2 rounded-md text-md font-normal flex items-center gap-3 mt-2 cursor-pointer"
+              className="bg-neutral-800 dark:bg-white/80 text-white/80 dark:text-neutral-800 px-3 py-2 rounded-none text-md font-normal flex items-center gap-3 mt-2 cursor-pointer"
             >
               {buttonText}
               <LuSendHorizontal className="text-xl" />

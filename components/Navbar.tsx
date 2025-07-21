@@ -43,9 +43,9 @@ const Navbar = () => {
         </div>
         <button
           onClick={toggleTheme}
-          className="text-2xl p-1.5 rounded-md border border-neutral-200 dark:border-neutral-700/50"
+          className="text-2xl p-1.5 rounded-none border border-neutral-200 dark:border-neutral-700/50"
         >
-          {mounted && (theme === "dark" ? <BiMoon /> : <BsSun />)}
+          {mounted && (theme === "dark" ? <BsSun /> : <BiMoon />)}
         </button>
       </div>
     </nav>

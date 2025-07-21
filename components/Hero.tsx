@@ -56,7 +56,7 @@ export default function Hero() {
                 alt="Hero"
                 width={120}
                 height={120}
-                className="rounded-xl"
+                className="rounded-none"
               />
             </FadeInOnScroll>
           </div>
