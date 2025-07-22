@@ -2,7 +2,6 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-
 ::-webkit-scrollbar {
-  width: 0px;
+  display: none;
 }

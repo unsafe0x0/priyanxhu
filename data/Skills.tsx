@@ -21,7 +21,6 @@ import {
 } from "react-icons/tb";
 import { VscTerminalLinux } from "react-icons/vsc";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { LuFramer } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
 import { FaRust } from "react-icons/fa";
 
@@ -45,7 +44,6 @@ export const skills: Skill[] = [
   { skillName: "ExpressJS", icon: <SiExpress /> },
   { skillName: "HonoJS", icon: <SiHono /> },
   { skillName: "TailwindCSS", icon: <RiTailwindCssFill /> },
-  { skillName: "Framer Motion", icon: <LuFramer /> },
   { skillName: "Tanstack Query", icon: <SiReactquery /> },
   { skillName: "React Native", icon: <TbBrandReactNative /> },
   { skillName: "Prisma", icon: <SiPrisma /> },

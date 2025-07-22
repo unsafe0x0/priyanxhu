@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/tanstack";
 import ThemeProvider from "@/components/ThemeProvider";
 
-const fontName = JetBrains_Mono({
+const fontName = Space_Grotesk({
   weight: ["400", "500", "600"],
   variable: "--font-primary",
   subsets: ["latin"],

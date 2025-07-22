@@ -31,19 +31,6 @@ interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Vaulture",
-    tech: [
-      { name: "NextJS", icon: <RiNextjsLine /> },
-      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
-      { name: "Tanstack Query", icon: <SiReactquery /> },
-      { name: "Prisma", icon: <SiPrisma /> },
-      { name: "PostgreSQL", icon: <BiLogoPostgresql /> },
-    ],
-    desc: "Password manager with end-to-end encryption",
-    link: "https://vaulture.vercel.app",
-    github: "https://github.com/unsafe0x0/vaulture",
-  },
-  {
     name: "OptiCV",
     tech: [
       { name: "NextJS", icon: <RiNextjsLine /> },
@@ -70,6 +57,19 @@ export const projects: Project[] = [
     desc: "Coding time activity tracker with VsCode extension",
     link: "https://bashforge.vercel.app",
     github: "https://github.com/unsafe0x0/bashforge",
+  },
+  {
+    name: "Vaulture",
+    tech: [
+      { name: "NextJS", icon: <RiNextjsLine /> },
+      { name: "TailwindCSS", icon: <RiTailwindCssFill /> },
+      { name: "Tanstack Query", icon: <SiReactquery /> },
+      { name: "Prisma", icon: <SiPrisma /> },
+      { name: "PostgreSQL", icon: <BiLogoPostgresql /> },
+    ],
+    desc: "Password manager with end-to-end encryption",
+    link: "https://vaulture.vercel.app",
+    github: "https://github.com/unsafe0x0/vaulture",
   },
   // {
   //   name: "QuadState",
