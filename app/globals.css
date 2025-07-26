@@ -1,6 +1,22 @@
 @import "tailwindcss";
 
-@variant dark (&:where(.dark, .dark *));
+:root {
+  --background: #020202;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-openSans: var(--font-openSans);
+  --font-doto: var(--font-doto);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-openSans);
+}
 
 ::-webkit-scrollbar {
   display: none;

@@ -1,63 +1,53 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Doto, Open_Sans } from "next/font/google";
 import "./globals.css";
-import TanStackProvider from "@/context/tanstack";
-import ThemeProvider from "@/components/ThemeProvider";
+import TanStackProvider from "@/context/TanstackProvider";
 
-const fontName = Space_Grotesk({
-  weight: ["400", "500", "600"],
-  variable: "--font-primary",
+const doto = Doto({
+  variable: "--font-doto",
+  subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Priyanshu Chahar | Software Developer",
+  title: "Priyanshu Chahar",
   description:
-    "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
-  keywords: [
-    "Priyanshu Chahar",
-    "Full Stack Developer",
-    "Competitive Programmer",
-    "Web Developer",
-    "Software Engineer",
-    "Muxdust",
-    "Priyanshu",
-    "Priyanxhu",
-  ],
+    "Priyanshu Chahar – Software Developer & Competitive Programmer. Building innovative solutions and solving complex problems.",
+  metadataBase: new URL("https://priyanxhu.me"),
   openGraph: {
-    title: "Priyanshu Chahar | Software Developer | Full Stack & AI/ML | DSA",
+    title: "Priyanshu Chahar",
     description:
-      "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
+      "Priyanshu Chahar – Software Developer & Competitive Programmer. Building innovative solutions and solving complex problems.",
     url: "https://priyanxhu.me",
-    siteName: "Priyanshu Chahar Portfolio",
+    siteName: "Priyanshu Chahar",
     images: [
       {
-        url: "https://avatars.githubusercontent.com/u/165533860?v=4",
+        url: "https://priyanxhu.me/image.png",
         width: 1200,
         height: 630,
-        alt: "Priyanshu Chahar",
+        alt: "Priyanshu Chahar – Software Developer & Competitive Programmer",
       },
     ],
-    type: "website",
     locale: "en_US",
+    type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Priyanshu Chahar | Software Developer | Full Stack & AI/ML | DSA",
-    description:
-      "Hey there! I am Priyanshu Chahar, a full stack developer and competitive programmer. I love building web applications and solving complex problems using modern technologies.",
-    site: "@muxdust",
-    creator: "@muxdust",
-    images: ["https://avatars.githubusercontent.com/u/165533860?v=4"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    noarchive: true,
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  keywords: [
+    "Priyanshu Chahar",
+    "Software Developer",
+    "Competitive Programmer",
+    "Portfolio",
+    "priyanxhu.me",
+    "Web Developer",
+    "Programming",
+    "Coding",
+  ],
+  authors: [{ name: "Priyanshu Chahar", url: "https://priyanxhu.me" }],
+  creator: "Priyanshu Chahar",
+  publisher: "Priyanshu Chahar",
 };
 
 export default function RootLayout({
@@ -67,10 +57,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={fontName.className}>
-        <TanStackProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </TanStackProvider>
+      <body className={`${doto.variable} ${openSans.variable} antialiased`}>
+        <TanStackProvider>{children}</TanStackProvider>
       </body>
     </html>
   );
