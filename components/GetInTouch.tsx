@@ -63,7 +63,7 @@ const GetInTouch = () => {
           type="text"
           name="name"
           placeholder="Your Name"
-          className="p-2 bg-neutral-800/60 rounded-md outline-none text-base font-normal text-neutral-300 border border-transparent focus:border-neutral-200 transition-colors duration-200"
+          className="p-2 bg-neutral-800/60 rounded-md outline-none text-sm font-normal text-neutral-300 border border-transparent focus:border-neutral-200 transition-colors duration-200"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -73,7 +73,7 @@ const GetInTouch = () => {
           type="email"
           name="email"
           placeholder="Your Email"
-          className="p-2 bg-neutral-800/60 rounded-md outline-none text-base font-normal text-neutral-300 border border-transparent focus:border-neutral-200 transition-colors duration-200"
+          className="p-2 bg-neutral-800/60 rounded-md outline-none text-sm font-normal text-neutral-300 border border-transparent focus:border-neutral-200 transition-colors duration-200"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -82,7 +82,7 @@ const GetInTouch = () => {
         <textarea
           name="message"
           placeholder="Your Message"
-          className="p-2 bg-neutral-800/60 rounded-md outline-none text-base font-normal text-neutral-300 border border-transparent focus:border-neutral-200 transition-colors duration-200 resize-none"
+          className="p-2 bg-neutral-800/60 rounded-md outline-none text-sm font-normal text-neutral-300 border border-transparent focus:border-neutral-200 transition-colors duration-200 resize-none"
           rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
