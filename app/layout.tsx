@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Doto, Open_Sans } from "next/font/google";
+import { Doto, Fira_Code } from "next/font/google";
 import "./globals.css";
 import TanStackProvider from "@/context/TanstackProvider";
 
@@ -8,8 +8,8 @@ const doto = Doto({
   subsets: ["latin"],
 });
 
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
+const bodyFont = Fira_Code({
+  variable: "--font-bodyFont",
   subsets: ["latin"],
 });
 
@@ -57,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${doto.variable} ${openSans.variable} antialiased`}>
+      <body className={`${doto.variable} ${bodyFont.variable} antialiased`}>
         <TanStackProvider>{children}</TanStackProvider>
       </body>
     </html>

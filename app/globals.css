@@ -8,14 +8,14 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-openSans: var(--font-openSans);
+  --font-bodyFont: var(--font-bodyFont);
   --font-doto: var(--font-doto);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-openSans);
+  font-family: var(--font-bodyFont);
 }
 
 ::-webkit-scrollbar {

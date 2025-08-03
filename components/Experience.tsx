@@ -14,7 +14,7 @@ const Experience = ({ experience }: ExperienceProps) => {
       <ul className="flex flex-col gap-3 w-full">
         {experience.map((exp, index) => (
           <li key={index} className="p-3 bg-neutral-800/60 rounded-md w-full flex flex-col gap-1">
-            <p className="text-md">{exp.duration}</p>
+            <p className="text-base">{exp.duration}</p>
             <p className="text-sm">{exp.company}</p>
             <p className="text-xs text-neutral-400">{exp.description}</p>
           </li>

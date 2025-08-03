@@ -8,7 +8,7 @@ export const profileData = {
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
     { name: "LeetCode", url: "https://leetcode.com/unsafezero" },
-    { name: "CodeForces", url: "https://codeforces.com/unsafezero" },
+    { name: "CodeForces", url: "https://codeforces.com/profile/unsafezero" },
     { name: "LinkedIn", url: "https://linkedin.com/in/priyannxhuu" },
   ],
   experience: [
@@ -49,8 +49,49 @@ export const profileData = {
   ],
   projects: [
     {
+      name: "BashForge",
+      description: "Coding time activity tracker with VsCode extension",
+      image: "/images/bashforge.webp",
+      stack: ["NextJS", "TailwindCSS", "PostgreSQL", "VsCode", "NextAuth"],
+      links: [
+        { name: "Website", url: "https://bashforge.vercel.app/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/bashforge" },
+      ],
+    },
+    // {
+    //   name: "XeroChat",
+    //   image: "/images/xerochat.webp",
+    //   description: "AI chat app with auth and chat history",
+    //   stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth"],
+    //   links: [
+    //     { name: "Website", url: "https://xerochat.vercel.app/" },
+    //     { name: "Github", url: "https://github.com/unsafe0x0/xerochat" },
+    //   ],
+    // },
+    {
+      name: "OfficeXManagement",
+      description: "Office management system with employee and task management",
+      image: "/images/officexmanagement.webp",
+      stack: [
+        "NextJS",
+        "TailwindCSS",
+        "NodeJS",
+        "ExpressJS",
+        "Cloudinary",
+        "MongoDB",
+      ],
+      links: [
+        { name: "Website", url: "https://officexmangement.vercel.app/" },
+        {
+          name: "Github",
+          url: "https://github.com/unsafe0x0/office-management",
+        },
+      ],
+    },
+    {
       name: "OptiCV",
       description: "AI powered overleaf resume optimizer",
+      image: "/images/opticv.webp",
       stack: [
         "NextJS",
         "TailwindCSS",
@@ -67,33 +108,10 @@ export const profileData = {
       ],
     },
     {
-      name: "BashForge",
-      description: "Coding time activity tracker with VsCode extension",
-      stack: ["NextJS", "TailwindCSS", "PostgreSQL", "VsCode"],
-      links: [
-        { name: "Website", url: "https://bashforge.vercel.app/" },
-        { name: "Github", url: "https://github.com/unsafe0x0/bashforge" },
-      ],
-    },
-    {
-      name: "Vaulture",
-      description: "Password manager with end-to-end encryption",
-      stack: [
-        "NextJS",
-        "TailwindCSS",
-        "Tanstack Query",
-        "Prisma",
-        "PostgreSQL",
-      ],
-      links: [
-        { name: "Website", url: "https://vaulture.vercel.app/" },
-        { name: "Github", url: "https://github.com/unsafe0x0/vaulture" },
-      ],
-    },
-    {
       name: "Dokxy",
       description:
         "Doctor-patient appointment system for easy scheduling and management.",
+      image: "/images/dokxy.webp",
       stack: [
         "NextJS",
         "TailwindCSS",

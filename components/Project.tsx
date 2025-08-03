@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 interface ProjectProps {
   project: {
     name: string;
     description?: string;
+    image?: string;
     stack: string[];
     links: { name: string; url: string }[];
   };
@@ -14,6 +16,15 @@ interface ProjectProps {
 const Project = ({ project }: ProjectProps) => {
   return (
     <div className="flex flex-col items-start justify-start gap-3 p-4 bg-neutral-900 rounded-md border border-neutral-800 text-neutral-300 col-span-1 w-full break-inside-avoid">
+      {project.image && (
+        <Image
+          src={project.image}
+          alt={project.name}
+          width={400}
+          height={200}
+          className="w-full h-48 object-cover rounded-md mb-2"
+        />
+      )}
       <h2 className="text-2xl font-semibold text-neutral-200 font-doto">
         {project.name}
       </h2>

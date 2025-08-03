@@ -42,7 +42,7 @@ const LandingPage = () => {
 
   return (
     <React.Fragment>
-      <main className="columns-1 md:columns-2 lg:columns-3 items-start space-y-5 space-x-5 justify-center max-w-6xl mx-auto px-4 py-12">
+      <main className="columns-1 md:columns-2 lg:columns-3 items-start space-y-5 space-x-5 justify-center max-w-7xl w-full mx-auto px-4 py-12">
         <Info name={name} title={title} about={about} />
         <BasedIn />
         <Socials
