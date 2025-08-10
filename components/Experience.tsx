@@ -1,27 +1,39 @@
 "use client";
-import React from "react";
 
-interface ExperienceProps {
-  experience: any[];
+interface ExperienceItem {
+  duration: string;
+  position?: string;
+  company: string;
+  description?: string;
 }
 
-const Experience = ({ experience }: ExperienceProps) => {
-  return (
-    <div className="flex flex-col items-start justify-start gap-3 p-4 bg-neutral-900 rounded-md border border-neutral-800 text-neutral-300 col-span-1 w-full break-inside-avoid">
-      <h2 className="text-2xl font-semibold text-neutral-200 font-doto">
-        Experience
-      </h2>
-      <ul className="flex flex-col gap-3 w-full">
-        {experience.map((exp, index) => (
-          <li key={index} className="p-3 bg-neutral-800/60 rounded-md w-full flex flex-col gap-1">
-            <p className="text-base">{exp.duration}</p>
-            <p className="text-sm">{exp.company}</p>
-            <p className="text-xs text-neutral-400">{exp.description}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+interface ExperienceProps {
+  experience: ExperienceItem[];
+}
 
-export default Experience;
+export default function Experience({ experience }: ExperienceProps) {
+  return (
+    <section className="space-y-6">
+      <h2 className="font-doto text-2xl tracking-wide">Experience</h2>
+      <div className="space-y-6">
+        {experience.map((exp, idx) => (
+          <div key={idx} className="space-y-2">
+            <div className="flex items-center gap-3 flex-wrap">
+              <div className="text-base md:text-lg">
+                {exp.position
+                  ? `${exp.position} · ${exp.company}`
+                  : exp.company}
+              </div>
+              <span className="inline-flex items-center rounded-md border border-neutral-700/50 bg-neutral-800/60 px-2 py-1 text-xs uppercase tracking-wide">
+                {exp.duration}
+              </span>
+            </div>
+            {exp.description && (
+              <p className="text-sm  leading-relaxed">{exp.description}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

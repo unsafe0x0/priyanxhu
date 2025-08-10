@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Doto, Fira_Code } from "next/font/google";
+import { Doto, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import TanStackProvider from "@/context/TanstackProvider";
 
 const doto = Doto({
   variable: "--font-doto",
   subsets: ["latin"],
 });
 
-const bodyFont = Fira_Code({
+const bodyFont = JetBrains_Mono({
   variable: "--font-bodyFont",
   subsets: ["latin"],
 });
@@ -58,7 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${doto.variable} ${bodyFont.variable} antialiased`}>
-        <TanStackProvider>{children}</TanStackProvider>
+        {children}
       </body>
     </html>
   );

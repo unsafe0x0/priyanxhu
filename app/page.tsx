@@ -2,65 +2,41 @@
 
 import React, { useEffect } from "react";
 import { profileData } from "@/data/Data";
-import Info from "@/components/Info";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import SkillsBadges from "@/components/Skills";
 import Socials from "@/components/Socials";
-import BasedIn from "@/components/BasedIn";
-import Skills from "@/components/Skills";
+import ContactMe from "@/components/ContactMe";
 import Experience from "@/components/Experience";
-import GetInTouch from "@/components/GetInTouch";
-import Project from "@/components/Project";
-import { useMutation } from "@tanstack/react-query";
+import Extensions from "@/components/Extensions";
 
-async function updateView() {
-  const res = await fetch("/api/view", {
-    method: "POST",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to update view");
-  }
-}
-
-const LandingPage = () => {
-  const mutation = useMutation({
-    mutationFn: updateView,
-  });
-
-  const hasUpdatedView = React.useRef(false);
-
+export default function LandingPage() {
   useEffect(() => {
-    if (!hasUpdatedView.current) {
-      mutation.mutate();
-      hasUpdatedView.current = true;
-    }
+    fetch("/api/view", { method: "POST" }).catch(() => {});
   }, []);
 
-  const { name, title, about, skills, projects, experience, socialLinks } =
-    profileData;
-
-  const getLink = (platform: string) =>
-    socialLinks.find((link) => link.name === platform)?.url || "#";
+  const {
+    name,
+    title,
+    about,
+    imageUrl,
+    skills,
+    projects,
+    experience,
+    vsCodeExtensions,
+    socialLinks,
+    email,
+  } = profileData;
 
   return (
-    <React.Fragment>
-      <main className="columns-1 md:columns-2 lg:columns-3 items-start space-y-5 space-x-5 justify-center max-w-7xl w-full mx-auto px-4 py-12">
-        <Info name={name} title={title} about={about} />
-        <BasedIn />
-        <Socials
-          github={getLink("GitHub")}
-          linkedin={getLink("LinkedIn")}
-          twitter={getLink("Twitter")}
-          leetcode={getLink("LeetCode")}
-          codeforces={getLink("CodeForces")}
-        />
-        <Skills skills={skills} />
-        {projects.map((project, index) => (
-          <Project key={index} project={project} />
-        ))}
-        <Experience experience={experience} />
-        <GetInTouch />
-      </main>
-    </React.Fragment>
+    <main className="max-w-2xl mx-auto px-5 py-14 sm:py-16 space-y-12 sm:space-y-14">
+      <Hero name={name} title={title} about={about} imageUrl={imageUrl} />
+      <SkillsBadges skills={skills} />
+      <Projects projects={projects} />
+      <Extensions extensions={vsCodeExtensions} />
+      <Experience experience={experience} />
+      <Socials email={email} links={socialLinks} />
+      <ContactMe />
+    </main>
   );
-};
-
-export default LandingPage;
+}

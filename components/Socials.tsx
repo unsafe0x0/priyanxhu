@@ -1,70 +1,70 @@
 "use client";
-import React from "react";
+
 import Link from "next/link";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { SiLeetcode, SiCodeforces } from "react-icons/si";
-
-interface SocialsProps {
-  github: string;
-  linkedin: string;
-  twitter: string;
-  leetcode: string;
-  codeforces: string;
+interface SocialLink {
+  name: string;
+  url: string;
 }
 
-const Socials = ({
-  github,
-  linkedin,
-  twitter,
-  leetcode,
-  codeforces,
-}: SocialsProps) => {
+interface SocialsProps {
+  email: string;
+  links: SocialLink[];
+}
+
+export default function Socials({ email, links }: SocialsProps) {
+  const get = (platform: string) =>
+    links.find((l) => l.name.toLowerCase() === platform.toLowerCase())?.url ||
+    "#";
+
   return (
-    <div className="flex flex-col justify-start items-start p-4 gap-3 bg-neutral-900 rounded-md border border-neutral-800 text-neutral-300 col-span-1 w-full break-inside-avoid">
-      <h2 className="text-2xl font-semibold text-neutral-200 font-doto">
-        Connect with Me
-      </h2>
-      <div className="grid grid-cols-2 gap-4 w-full">
-        <Link
-          href={github}
-          target="_blank"
-          className="flex justify-center items-center transition-colors duration-200 w-full h-full bg-neutral-800/60 p-4 rounded-md"
-        >
-          <FaGithub className="text-3xl" />
+    <section className="space-y-3">
+      <h2 className="font-doto text-2xl tracking-wide">Social</h2>
+      <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+        <Link href={`mailto:${email}`} className="underline underline-offset-4">
+          Email
         </Link>
         <Link
-          href={linkedin}
+          href={get("GitHub")}
           target="_blank"
-          className="flex justify-center items-center transition-colors duration-200 w-full h-full bg-neutral-800/60 p-4 rounded-md"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
         >
-          <FaLinkedin className="text-3xl" />
+          GitHub
         </Link>
         <Link
-          href={twitter}
+          href={get("LinkedIn")}
           target="_blank"
-          className="flex justify-center items-center transition-colors duration-200 w-full h-full bg-neutral-800/60 p-4 rounded-md"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
         >
-          <FaSquareXTwitter className="text-3xl" />
+          LinkedIn
         </Link>
         <Link
-          href={leetcode}
+          href={get("Twitter")}
           target="_blank"
-          className="flex justify-center items-center transition-colors duration-200 w-full h-full bg-neutral-800/60 p-4 rounded-md"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
         >
-          <SiLeetcode className="text-3xl" />
+          Twitter
         </Link>
         <Link
-          href={codeforces}
+          href={get("LeetCode")}
           target="_blank"
-          className="flex justify-center items-center transition-colors duration-200 w-full h-full bg-neutral-800/60 p-4 rounded-md"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
         >
-          <SiCodeforces className="text-3xl" />
+          LeetCode
+        </Link>
+        <Link
+          href={get("CodeForces")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
+        >
+          CodeForces
         </Link>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Socials;
+}
