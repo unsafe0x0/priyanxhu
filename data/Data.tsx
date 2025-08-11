@@ -4,7 +4,7 @@ export const profileData = {
   location: "India",
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `4th year CSE student and software developer focused on AI/ML. Skilled in building reliable, maintainable systems with TypeScript, Next.js, and Node.js. Dedicated to efficient implementation and continuous improvement through DSA and competitive programming. Available for opportunities and freelance projects.`,
+  about: `4th year CSE student and software developer focused on AI/ML. Skilled in building reliable, maintainable systems with TypeScript, NextJS, and NodeJS. Dedicated to efficient implementation and continuous improvement through DSA and competitive programming. Available for opportunities and freelance projects.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -18,13 +18,13 @@ export const profileData = {
       position: "Development Experience",
       company: "Self taught & Freelance",
       description:
-        "Built personal and freelance projects using JavaScript, TypeScript, Next.js, Node.js, Express.js, MongoDB, and PostgreSQL, focusing on clean and maintainable code.",
+        "Built personal and freelance projects using JavaScript, TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL, focusing on clean and maintainable code.",
     },
   ],
   skills: [
     "JavaScript",
     "TypeScript",
-    "C++",
+    "C/C++",
     "Golang",
     "Python",
     "ReactJS",

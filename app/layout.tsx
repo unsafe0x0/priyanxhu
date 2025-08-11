@@ -15,20 +15,20 @@ const bodyFont = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Priyanshu Chahar",
   description:
-    "Priyanshu Chahar – Software Developer & Competitive Programmer. Building innovative solutions and solving complex problems.",
+    "Priyanshu Chahar – Software Developer. Building innovative solutions and solving complex problems.",
   metadataBase: new URL("https://priyanxhu.me"),
   openGraph: {
     title: "Priyanshu Chahar",
     description:
-      "Priyanshu Chahar – Software Developer & Competitive Programmer. Building innovative solutions and solving complex problems.",
+      "Priyanshu Chahar – Software Developer. Building innovative solutions and solving complex problems.",
     url: "https://priyanxhu.me",
     siteName: "Priyanshu Chahar",
     images: [
       {
-        url: "https://priyanxhu.me/image.png",
+        url: "https://priyanxhu.me/og-image.avif",
         width: 1200,
         height: 630,
-        alt: "Priyanshu Chahar – Software Developer & Competitive Programmer",
+        alt: "Priyanshu Chahar – Software Developer",
       },
     ],
     locale: "en_US",
@@ -36,13 +36,9 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Priyanshu Chahar",
-    "Software Developer",
-    "Competitive Programmer",
-    "Portfolio",
+    "unsafezero",
+    "unsafe0x0",
     "priyanxhu.me",
-    "Web Developer",
-    "Programming",
-    "Coding",
   ],
   authors: [{ name: "Priyanshu Chahar", url: "https://priyanxhu.me" }],
   creator: "Priyanshu Chahar",

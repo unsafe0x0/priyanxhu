@@ -22,9 +22,9 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
           priority
         />
         <div className="space-y-2 text-left">
-          <h1 className="font-doto text-3xl md:text-4xl tracking-tight">
+          <h2 className="font-doto text-3xl md:text-4xl tracking-tight">
             {name}
-          </h1>
+          </h2>
           <p className="text-base">{title}</p>
         </div>
       </div>
