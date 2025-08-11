@@ -41,7 +41,7 @@ export default function ContactMe() {
           onChange={(e) => setName(e.target.value)}
           required
           autoComplete="off"
-          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm outline-none focus:border-neutral-200 transition-colors"
+          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors"
         />
         <input
           type="email"
@@ -51,7 +51,7 @@ export default function ContactMe() {
           onChange={(e) => setEmail(e.target.value)}
           required
           autoComplete="off"
-          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm outline-none focus:border-neutral-200 transition-colors"
+          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors"
         />
         <textarea
           name="message"
@@ -61,11 +61,11 @@ export default function ContactMe() {
           required
           rows={4}
           autoComplete="off"
-          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm outline-none focus:border-neutral-200 transition-colors resize-none"
+          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors resize-none"
         />
         <button
           type="submit"
-          className="inline-flex items-center rounded-md bg-white text-neutral-900 px-3 py-2 text-sm hover:bg-neutral-200 transition-colors"
+          className="inline-flex items-center rounded-md bg-white text-neutral-900 px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-200 transition-colors"
           disabled={status === "sending"}
         >
           {status === "idle" && "Send"}

@@ -3,9 +3,8 @@ export const profileData = {
   title: "Software Developer",
   location: "India",
   email: "unsafezero@gmail.com",
-
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `Software developer and 4th year CSE student focused on AI/ML. I build clean, reliable products with TypeScript, Next.js, Node.js, and modern tooling. I enjoy turning ideas into fast, pragmatic systems and sharpen problem solving daily through DSA and competitive programming. I'm open for opportunities and freelancing.`,
+  about: `4th year CSE student and software developer focused on AI/ML. Skilled in building reliable, maintainable systems with TypeScript, Next.js, and Node.js. Dedicated to efficient implementation and continuous improvement through DSA and competitive programming. Available for opportunities and freelance projects.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -19,15 +18,14 @@ export const profileData = {
       position: "Development Experience",
       company: "Self taught & Freelance",
       description:
-        "Developed more than 10 personal projects and 3 freelance projects using JavaScript, TypeScript, NextJS, NodeJS, ExpressJS, MongoDB and PostgreSQL.",
+        "Built personal and freelance projects using JavaScript, TypeScript, Next.js, Node.js, Express.js, MongoDB, and PostgreSQL, focusing on clean and maintainable code.",
     },
   ],
   skills: [
     "JavaScript",
     "TypeScript",
-    "C",
     "C++",
-    "Rust",
+    "Golang",
     "Python",
     "ReactJS",
     "NextJS",
@@ -37,7 +35,6 @@ export const profileData = {
     "ExpressJS",
     "HonoJS",
     "TailwindCSS",
-    "Tanstack Query",
     "React Native",
     "Prisma",
     "PostgreSQL",
@@ -53,8 +50,7 @@ export const profileData = {
     {
       name: "BashForge",
       description:
-        "Track coding activity across projects with detailed language breakdowns and daily and weekly time summaries, integrated with a VS Code extension and dashboard.",
-      image: "/images/bashforge.webp",
+        "Track coding activity across projects with detailed language breakdowns and daily and weekly time summaries.",
       stack: ["NextJS", "TailwindCSS", "PostgreSQL", "VsCode", "NextAuth"],
       links: [
         { name: "Website", url: "https://bashforge.vercel.app/" },
@@ -63,7 +59,6 @@ export const profileData = {
     },
     {
       name: "XeroChat",
-      image: "/images/xerochat.webp",
       description:
         "AI powered chat application with multiple LLM models featuring secure authentication and persistent conversation history, quick access to previous prompts and responses.",
       stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth"],
@@ -75,8 +70,7 @@ export const profileData = {
     {
       name: "OptiCV",
       description:
-        "AI-powered Overleaf resume optimizer that analyzes job descriptions, highlights keyword gaps, and makes edits, generating tailored bullet points and ATS-friendly formatting to improve interview callbacks.",
-      image: "/images/opticv.webp",
+        "AI-powered Overleaf resume optimizer according to job descriptions, makes edits, generating tailored bullet points and ATS-friendly formatting to improve interview callbacks.",
       stack: [
         "NextJS",
         "TailwindCSS",
@@ -95,8 +89,7 @@ export const profileData = {
     {
       name: "Dokxy",
       description:
-        "Doctor patient appointment platform enabling simple scheduling, profile management, simplifying communication between clinics and patients .",
-      image: "/images/dokxy.webp",
+        "Doctor patient appointment management system with features like appointment booking, patient records, and doctor profiles.",
       stack: [
         "NextJS",
         "TailwindCSS",

@@ -39,7 +39,9 @@ export default function Projects({ projects }: ProjectsProps) {
               {project.name}
             </Link>
             {project.description && (
-              <p className="text-sm leading-relaxed">{project.description}</p>
+              <p className="text-sm text-neutral-300 leading-relaxed">
+                {project.description}
+              </p>
             )}
 
             <div className="flex flex-wrap gap-2">
@@ -63,7 +65,7 @@ export default function Projects({ projects }: ProjectsProps) {
                 (l) => l.name.toLowerCase() === "github",
               );
               return (
-                <div className="flex gap-3 text-sm">
+                <div className="flex gap-3 text-sm text-neutral-300">
                   {live && (
                     <Link
                       href={live.url}

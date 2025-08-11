@@ -24,9 +24,11 @@ export default function Extensions({ extensions }: ExtensionsProps) {
         {extensions.map((ext, idx) => (
           <div key={idx} className="space-y-2">
             <div className="text-base md:text-lg">{ext.name}</div>
-            <p className="text-sm  leading-relaxed">{ext.description}</p>
+            <p className="text-sm text-neutral-300  leading-relaxed">
+              {ext.description}
+            </p>
             {ext.links && ext.links.length > 0 && (
-              <div className="flex gap-3 text-sm">
+              <div className="flex gap-3 text-sm text-neutral-300">
                 {ext.links.map((l, i) => (
                   <Link
                     key={i}

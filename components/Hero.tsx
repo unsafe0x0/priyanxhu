@@ -16,8 +16,8 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
         <Image
           src={imageUrl}
           alt={`${name} avatar`}
-          width={84}
-          height={84}
+          width={100}
+          height={100}
           className="rounded-md object-cover"
           priority
         />
@@ -28,7 +28,7 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
           <p className="text-base">{title}</p>
         </div>
       </div>
-      <p className="text-sm leading-relaxed ">{about}</p>
+      <p className="text-sm text-neutral-300 leading-relaxed ">{about}</p>
     </section>
   );
 }

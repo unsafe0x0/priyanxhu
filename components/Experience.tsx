@@ -29,7 +29,9 @@ export default function Experience({ experience }: ExperienceProps) {
               </span>
             </div>
             {exp.description && (
-              <p className="text-sm  leading-relaxed">{exp.description}</p>
+              <p className="text-sm text-neutral-300  leading-relaxed">
+                {exp.description}
+              </p>
             )}
           </div>
         ))}
