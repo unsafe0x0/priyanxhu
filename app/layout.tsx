@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Doto, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const doto = Doto({
-  variable: "--font-doto",
-  subsets: ["latin"],
-});
-
-const bodyFont = JetBrains_Mono({
+const bodyFont = Space_Grotesk({
   variable: "--font-bodyFont",
   subsets: ["latin"],
 });
@@ -34,12 +29,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  keywords: [
-    "Priyanshu Chahar",
-    "unsafezero",
-    "unsafe0x0",
-    "priyanxhu.me",
-  ],
+  keywords: ["Priyanshu Chahar", "unsafezero", "unsafe0x0", "priyanxhu.me"],
   authors: [{ name: "Priyanshu Chahar", url: "https://priyanxhu.me" }],
   creator: "Priyanshu Chahar",
   publisher: "Priyanshu Chahar",
@@ -52,9 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${doto.variable} ${bodyFont.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={bodyFont.className}>{children}</body>
     </html>
   );
 }

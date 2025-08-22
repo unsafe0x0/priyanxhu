@@ -26,18 +26,13 @@ const projectPrimaryLink = (links: ProjectLink[]) =>
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <section className="space-y-6">
-      <h2 className="font-doto text-2xl tracking-wide">Things i Built</h2>
+      <h2 className="text-2xl tracking-wide">Things i Built</h2>
       <div className="space-y-5">
         {projects.map((project, idx) => (
           <div key={idx} className="space-y-2">
-            <Link
-              href={projectPrimaryLink(project.links)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base md:text-lg underline underline-offset-4"
-            >
+            <h2 className="text-lg">
               {project.name}
-            </Link>
+            </h2>
             {project.description && (
               <p className="text-sm text-neutral-300 leading-relaxed">
                 {project.description}
@@ -48,7 +43,7 @@ export default function Projects({ projects }: ProjectsProps) {
               {project.stack.map((item, i) => (
                 <span
                   key={i}
-                  className="inline-flex items-center rounded-md border border-neutral-700/50 bg-neutral-800/60 px-2 py-1 text-xs uppercase tracking-wide"
+                  className="inline-flex items-center rounded-md border border-neutral-700/50 bg-[#212121] px-2 py-1 text-xs uppercase tracking-wide"
                 >
                   {item}
                 </span>
@@ -59,10 +54,10 @@ export default function Projects({ projects }: ProjectsProps) {
               const live = project.links.find(
                 (l) =>
                   l.name.toLowerCase() === "website" ||
-                  l.name.toLowerCase() === "live",
+                  l.name.toLowerCase() === "live"
               );
               const github = project.links.find(
-                (l) => l.name.toLowerCase() === "github",
+                (l) => l.name.toLowerCase() === "github"
               );
               return (
                 <div className="flex gap-3 text-sm text-neutral-300">

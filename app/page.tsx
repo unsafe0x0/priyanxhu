@@ -29,7 +29,7 @@ export default function LandingPage() {
   } = profileData;
 
   return (
-    <main className="max-w-2xl mx-auto px-5 py-14 sm:py-16 space-y-12 sm:space-y-14">
+    <main className="max-w-2xl mx-auto px-3 py-10 space-y-12">
       <Hero name={name} title={title} about={about} imageUrl={imageUrl} />
       <SkillsBadges skills={skills} />
       <Projects projects={projects} />

@@ -7,7 +7,7 @@ export default function ContactMe() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle",
+    "idle"
   );
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -31,7 +31,7 @@ export default function ContactMe() {
 
   return (
     <section className="space-y-4">
-      <h2 className="font-doto text-2xl tracking-wide">Drop a Message</h2>
+      <h2 className="text-2xl tracking-wide">Drop a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-3">
         <input
           type="text"
@@ -41,7 +41,7 @@ export default function ContactMe() {
           onChange={(e) => setName(e.target.value)}
           required
           autoComplete="off"
-          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors"
+          className="w-full rounded-md bg-[#212121] border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors"
         />
         <input
           type="email"
@@ -51,7 +51,7 @@ export default function ContactMe() {
           onChange={(e) => setEmail(e.target.value)}
           required
           autoComplete="off"
-          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors"
+          className="w-full rounded-md bg-[#212121] border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors"
         />
         <textarea
           name="message"
@@ -61,11 +61,11 @@ export default function ContactMe() {
           required
           rows={4}
           autoComplete="off"
-          className="w-full rounded-md bg-neutral-800/60 border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors resize-none"
+          className="w-full rounded-md bg-[#212121] border border-neutral-700/50 px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors resize-none"
         />
         <button
           type="submit"
-          className="inline-flex items-center rounded-md bg-white text-neutral-900 px-3 py-2 text-sm text-neutral-300 hover:bg-neutral-200 transition-colors"
+          className="inline-flex items-center rounded-md bg-white text-neutral-900 px-3 py-2 text-sm hover:bg-neutral-200 transition-colors cursor-pointer"
           disabled={status === "sending"}
         >
           {status === "idle" && "Send"}

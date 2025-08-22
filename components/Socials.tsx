@@ -19,7 +19,7 @@ export default function Socials({ email, links }: SocialsProps) {
 
   return (
     <section className="space-y-3">
-      <h2 className="font-doto text-2xl tracking-wide">Socials</h2>
+      <h2 className="text-2xl tracking-wide">Socials</h2>
       <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-300">
         <Link href={`mailto:${email}`} className="underline underline-offset-4">
           Email
