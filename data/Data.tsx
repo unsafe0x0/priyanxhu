@@ -4,7 +4,7 @@ export const profileData = {
   location: "India",
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `4th year CSE student and software developer focused on AI/ML. Skilled in building reliable, maintainable systems with TypeScript, NextJS, and NodeJS. Dedicated to efficient implementation and continuous improvement through DSA and competitive programming. Available for opportunities and freelance projects.`,
+  about: `Hey there! I'm Priyanshu aka Unsafezero, a Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full-stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -32,7 +32,6 @@ export const profileData = {
     "ExpressJS",
     "HonoJS",
     "TailwindCSS",
-    "React Native",
     "Prisma",
     "PostgreSQL",
     "MongoDB",
@@ -47,6 +46,7 @@ export const profileData = {
     "Linux",
     "Machine Learning",
     "Deep Learning",
+    "DSA",
   ],
   projects: [
     {
