@@ -14,12 +14,12 @@ interface ExperienceProps {
 export default function Experience({ experience }: ExperienceProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide">Experience</h2>
+      <h2 className="text-2xl tracking-wide font-medium">Experience</h2>
       <div className="space-y-6">
         {experience.map((exp, idx) => (
           <div key={idx} className="space-y-2">
             <div className="flex items-center gap-3 flex-wrap">
-              <div className="text-lg">
+              <div className="text-md font-medium">
                 {exp.position
                   ? `${exp.position} · ${exp.company}`
                   : exp.company}

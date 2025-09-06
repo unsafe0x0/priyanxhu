@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { profileData } from "@/data/Data";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import CurrentlyWorking from "@/components/CurrentlyWorking";
 import SkillsBadges from "@/components/Skills";
 import Socials from "@/components/Socials";
 import ContactMe from "@/components/ContactMe";
@@ -22,6 +23,7 @@ export default function LandingPage() {
     imageUrl,
     skills,
     projects,
+    currentlyWorking,
     experience,
     vsCodeExtensions,
     socialLinks,
@@ -33,6 +35,7 @@ export default function LandingPage() {
       <Hero name={name} title={title} about={about} imageUrl={imageUrl} />
       <SkillsBadges skills={skills} />
       <Projects projects={projects} />
+      <CurrentlyWorking currentlyWorking={currentlyWorking} />
       <Extensions extensions={vsCodeExtensions} />
       <Experience experience={experience} />
       <Socials email={email} links={socialLinks} />

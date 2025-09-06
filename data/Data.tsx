@@ -4,7 +4,7 @@ export const profileData = {
   location: "India",
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `Hey there! I'm Priyanshu aka Unsafezero, a Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full-stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
+  about: `Hey there! I'm Priyanshu aka Unsafezero, a Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -43,6 +43,7 @@ export const profileData = {
     "Git",
     "Github",
     "Postman",
+    "Vercel",
     "Linux",
     "Machine Learning",
     "Deep Learning",
@@ -63,7 +64,7 @@ export const profileData = {
       name: "XeroChat",
       description:
         "AI powered chat application with multiple LLM models featuring secure authentication and persistent conversation history, quick access to previous prompts and responses.",
-      stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth"],
+      stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth", "AI Providers"],
       links: [
         { name: "Website", url: "https://xerochat.tech/" },
         { name: "Github", url: "https://github.com/unsafe0x0/xerochat" },
@@ -106,6 +107,18 @@ export const profileData = {
           name: "Github",
           url: "https://github.com/unsafe0x0/healthcare-frontend",
         },
+      ],
+    },
+  ],
+  currentlyWorking: [
+    {
+      name: "Ai-SDK",
+      description:
+        "SDK to easily integrate AI models into your applications with support for multiple providers and models, featuring a simple and consistent API for seamless integration.",
+      stack: ["Golang", "AI Providers"],
+      links: [
+        { name: "Github", url: "https://github.com/unsafe0x0/ai" },
+        { name: "Documentation", url: "/ai" },
       ],
     },
   ],

@@ -22,7 +22,7 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
           priority
         />
         <div className="space-y-1 text-left">
-          <h2 className="text-3xl md:text-4xl tracking-tight">{name}</h2>
+          <h2 className="text-3xl tracking-tight font-medium">{name}</h2>
             <p className="text-base">{title}</p>
             <span className="inline-flex items-center rounded-md border border-neutral-700/50 bg-[#212121] px-2 py-1 text-xs uppercase tracking-wide">
               Open to work

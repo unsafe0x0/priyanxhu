@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const bodyFont = Space_Grotesk({
+const bodyFont = Inter({
   variable: "--font-bodyFont",
   subsets: ["latin"],
 });

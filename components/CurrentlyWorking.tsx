@@ -2,32 +2,34 @@
 
 import Link from "next/link";
 
-interface ProjectLink {
+interface CurrentlyWorkingLink {
   name: string;
   url: string;
 }
 
-interface ProjectItem {
+interface CurrentlyWorkingItem {
   name: string;
   description?: string;
   stack: string[];
-  links: ProjectLink[];
+  links: CurrentlyWorkingLink[];
 }
 
-interface ProjectsProps {
-  projects: ProjectItem[];
+interface CurrentlyWorkingProps {
+  currentlyWorking: CurrentlyWorkingItem[];
 }
 
-export default function Projects({ projects }: ProjectsProps) {
+export default function CurrentlyWorking({
+  currentlyWorking,
+}: CurrentlyWorkingProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-medium">Featured Projects</h2>
+      <h2 className="text-2xl tracking-wide font-medium">
+        Currently Working On
+      </h2>
       <div className="space-y-5">
-        {projects.map((project, idx) => (
+        {currentlyWorking.map((project, idx) => (
           <div key={idx} className="space-y-2">
-            <h2 className="text-lg font-medium">
-              {project.name}
-            </h2>
+            <h2 className="text-lg font-medium">{project.name}</h2>
             {project.description && (
               <p className="text-sm text-neutral-300 leading-relaxed">
                 {project.description}
@@ -46,24 +48,23 @@ export default function Projects({ projects }: ProjectsProps) {
             </div>
 
             {(() => {
-              const live = project.links.find(
+              const documentation = project.links.find(
                 (l) =>
                   l.name.toLowerCase() === "website" ||
-                  l.name.toLowerCase() === "live"
+                  l.name.toLowerCase() === "documentation"
               );
               const github = project.links.find(
                 (l) => l.name.toLowerCase() === "github"
               );
               return (
                 <div className="flex gap-3 text-sm text-neutral-300">
-                  {live && (
+                  {documentation && (
                     <Link
-                      href={live.url}
-                      target="_blank"
+                      href={documentation.url}
                       rel="noopener noreferrer"
                       className="underline underline-offset-4"
                     >
-                      Live
+                      Documentation
                     </Link>
                   )}
                   {github && (

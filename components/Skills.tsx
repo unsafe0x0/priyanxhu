@@ -7,7 +7,7 @@ interface SkillsBadgesProps {
 export default function SkillsBadges({ skills }: SkillsBadgesProps) {
   return (
     <section className="space-y-3">
-      <h2 className="text-2xl tracking-wide">What i Know</h2>
+      <h2 className="text-2xl tracking-wide font-medium">What i Know</h2>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, i) => (
           <span
