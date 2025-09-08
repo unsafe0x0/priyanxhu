@@ -42,6 +42,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link
+        rel="shortcut icon"
+        href="https://avatars.githubusercontent.com/u/165533860?v=4"
+        type="image/x-icon"
+      />
       <body className={bodyFont.className}>{children}</body>
     </html>
   );

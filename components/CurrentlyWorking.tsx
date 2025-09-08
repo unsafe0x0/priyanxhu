@@ -40,7 +40,7 @@ export default function CurrentlyWorking({
               {project.stack.map((item, i) => (
                 <span
                   key={i}
-                  className="inline-flex items-center rounded-md border border-neutral-700/50 bg-[#212121] px-2 py-1 text-xs uppercase tracking-wide"
+                  className="inline-flex items-center border border-neutral-700/50 bg-[#212121] px-2 py-1 text-xs uppercase tracking-wide"
                 >
                   {item}
                 </span>
