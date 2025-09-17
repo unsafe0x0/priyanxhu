@@ -19,7 +19,7 @@ export default function Socials({ email, links }: SocialsProps) {
 
   return (
     <section className="space-y-3">
-      <h2 className="text-2xl tracking-wide font-medium">Socials</h2>
+      <h2 className="text-2xl tracking-wide font-medium">Find me on</h2>
       <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-300">
         <Link href={`mailto:${email}`} className="underline underline-offset-4">
           Email
@@ -63,6 +63,30 @@ export default function Socials({ email, links }: SocialsProps) {
           className="underline underline-offset-4"
         >
           CodeForces
+        </Link>
+        <Link
+          href={get("Discord")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
+        >
+          Discord
+        </Link>
+        <Link
+          href={get("Peerlist")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
+        >
+          Peerlist
+        </Link>
+        <Link
+          href={get("Youtube")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4"
+        >
+          Youtube
         </Link>
       </div>
     </section>

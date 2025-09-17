@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import CurrentlyWorking from "@/components/CurrentlyWorking";
 import SkillsBadges from "@/components/Skills";
+import CurrentlyLearning from "@/components/CurrentlyLearning";
 import Socials from "@/components/Socials";
 import ContactMe from "@/components/ContactMe";
 import Experience from "@/components/Experience";
@@ -22,6 +23,7 @@ export default function LandingPage() {
     about,
     imageUrl,
     skills,
+    currentlyLearning,
     projects,
     currentlyWorking,
     experience,
@@ -34,6 +36,7 @@ export default function LandingPage() {
     <main className="max-w-2xl mx-auto px-3 py-10 space-y-12">
       <Hero name={name} title={title} about={about} imageUrl={imageUrl} />
       <SkillsBadges skills={skills} />
+      <CurrentlyLearning learningItems={currentlyLearning} />
       <Projects projects={projects} />
       <CurrentlyWorking currentlyWorking={currentlyWorking} />
       <Extensions extensions={vsCodeExtensions} />

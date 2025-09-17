@@ -12,7 +12,7 @@ export default function SkillsBadges({ skills }: SkillsBadgesProps) {
         {skills.map((skill, i) => (
           <span
             key={i}
-            className="inline-flex items-center border border-neutral-700/50 bg-[#212121] px-2 py-1 text-xs uppercase tracking-wide"
+            className="inline-flex items-center border border-neutral-700/50 bg-[#ffffff] text-neutral-800 px-2 py-1 text-xs tracking-wide rounded-md"
           >
             {skill}
           </span>

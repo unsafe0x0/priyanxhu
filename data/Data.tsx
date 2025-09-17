@@ -11,6 +11,9 @@ export const profileData = {
     { name: "LeetCode", url: "https://leetcode.com/unsafezero" },
     { name: "CodeForces", url: "https://codeforces.com/profile/unsafezero" },
     { name: "LinkedIn", url: "https://linkedin.com/in/priyannxhuu" },
+    { name: "Discord", url: "https://discord.com/users/unsafezero" },
+    { name: "Peerlist", url: "https://peerlist.io/unsafezero" },
+    { name: "Youtube", url: "https://youtube.com/@unsafezero" },
   ],
   experience: [
     {
@@ -30,6 +33,7 @@ export const profileData = {
     "NodeJS",
     "BunJS",
     "ExpressJS",
+    "Fastify",
     "HonoJS",
     "TailwindCSS",
     "Prisma",
@@ -37,19 +41,38 @@ export const profileData = {
     "MongoDB",
     "Golang",
     "Gin",
+    "Wails",
     "GORM",
-    "C/C++",
+    "C++",
     "Python",
     "Git",
     "Github",
     "Postman",
     "Vercel",
+    "Render",
     "Linux",
     "Machine Learning",
     "Deep Learning",
     "DSA",
   ],
+  currentlyLearning: [
+    "Advanced Golang Patterns",
+    "Desktop Application Development with Wails",
+    "AI/ML Integration in Applications",
+    "System Design",
+    "Data Structures and Algorithms",
+  ],
   projects: [
+    {
+      name: "Ai SDK",
+      description:
+        "SDK to easily integrate AI models into your applications with support for multiple providers and models. Easy to use and lightweight.",
+      stack: ["Golang", "AI Providers"],
+      links: [
+        { name: "Website", url: "/ai" },
+        { name: "Github", url: "https://github.com/unsafe0x0/ai" },
+      ],
+    },
     {
       name: "BashForge",
       description:
@@ -70,25 +93,25 @@ export const profileData = {
         { name: "Github", url: "https://github.com/unsafe0x0/xerochat" },
       ],
     },
-    {
-      name: "OptiCV",
-      description:
-        "AI-powered Overleaf resume optimizer according to job descriptions, makes edits, generating tailored bullet points and ATS-friendly formatting to improve interview callbacks.",
-      stack: [
-        "NextJS",
-        "TailwindCSS",
-        "Tanstack Query",
-        "Prisma",
-        "MongoDB",
-        "Groq AI",
-        "Framer Motion",
-        "NextAuth",
-      ],
-      links: [
-        { name: "Website", url: "https://opticv.vercel.app/" },
-        { name: "Github", url: "https://github.com/unsafe0x0/opticv" },
-      ],
-    },
+    // {
+    //   name: "OptiCV",
+    //   description:
+    //     "AI-powered Overleaf resume optimizer according to job descriptions, makes edits, generating tailored bullet points and ATS-friendly formatting to improve interview callbacks.",
+    //   stack: [
+    //     "NextJS",
+    //     "TailwindCSS",
+    //     "Tanstack Query",
+    //     "Prisma",
+    //     "MongoDB",
+    //     "Groq AI",
+    //     "Framer Motion",
+    //     "NextAuth",
+    //   ],
+    //   links: [
+    //     { name: "Website", url: "https://opticv.vercel.app/" },
+    //     { name: "Github", url: "https://github.com/unsafe0x0/opticv" },
+    //   ],
+    // },
     {
       name: "Dokxy",
       description:
@@ -97,28 +120,28 @@ export const profileData = {
         "NextJS",
         "TailwindCSS",
         "NodeJS",
-        "HonoJS",
+        "Fastify",
         "MongoDB",
         "Cloudinary",
       ],
       links: [
-        { name: "Website", url: "https://dokxyv1.vercel.app/" },
+        { name: "Website", url: "https://dokxy.vercel.app/" },
         {
           name: "Github",
-          url: "https://github.com/unsafe0x0/healthcare-frontend",
+          url: "https://github.com/unsafe0x0/healthcare-api",
         },
       ],
     },
   ],
   currentlyWorking: [
     {
-      name: "Ai-SDK",
+      name: "XeroDrive",
       description:
-        "SDK to easily integrate AI models into your applications with support for multiple providers and models, featuring a simple and consistent API for seamless integration.",
-      stack: ["Golang", "AI Providers"],
+        "Cross platform file management system with features like file organization, search, and sharing.",
+      stack: ["Golang", "Wails", "TailwindCSS"],
       links: [
-        { name: "Github", url: "https://github.com/unsafe0x0/ai" },
-        { name: "Documentation", url: "/ai" },
+        { name: "Website", url: "https://xerochat.tech/xerodrive" },
+        { name: "Github", url: "https://github.com/unsafe0x0/xerodrive" },
       ],
     },
   ],
