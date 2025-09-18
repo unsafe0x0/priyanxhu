@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { profileData } from "@/data/Data";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
@@ -14,10 +14,6 @@ import Extensions from "@/components/Extensions";
 import Blogs from "@/components/Blogs";
 
 export default function LandingPage() {
-  useEffect(() => {
-    fetch("/api/view", { method: "POST" }).catch(() => {});
-  }, []);
-
   const {
     name,
     title,

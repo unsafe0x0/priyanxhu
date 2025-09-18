@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const bodyFont = Inter({
   variable: "--font-bodyFont",
@@ -47,7 +48,10 @@ export default function RootLayout({
         href="https://avatars.githubusercontent.com/u/165533860?v=4"
         type="image/x-icon"
       />
-      <body className={bodyFont.className}>{children}</body>
+      <body className={bodyFont.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
