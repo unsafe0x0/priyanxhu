@@ -419,7 +419,7 @@ func main() {
 - `go fmt` - Format your code
 - `go test` - Run tests
 
-### Useful Third-party Packages
+### Useful Third party Packages
 
 ```bash
 # web frameworks

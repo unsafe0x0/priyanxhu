@@ -24,53 +24,91 @@ body {
 /* Override highlight.js styles for consistent code block backgrounds */
 .hljs {
   background: transparent !important;
-  color: inherit !important;
+  color: #e6edf3 !important;
 }
 
 pre .hljs {
   background: transparent !important;
 }
 
-/* Ensure code blocks maintain dark theme colors */
+/* Modern dark theme syntax highlighting inspired by GitHub Dark */
 .hljs-keyword,
 .hljs-selector-tag,
+.hljs-literal,
 .hljs-title,
-.hljs-section,
-.hljs-doctag,
-.hljs-name,
-.hljs-strong {
-  color: #ff6b6b !important;
+.hljs-section {
+  color: #ff7b72 !important; /* Soft red for keywords */
 }
 
 .hljs-string,
-.hljs-title,
-.hljs-section,
-.hljs-built_in,
-.hljs-literal,
-.hljs-type,
-.hljs-addition,
-.hljs-tag,
-.hljs-quote,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #51cbcf !important;
+.hljs-template-literal {
+  color: #a5d6ff !important; /* Light blue for strings */
 }
 
-.hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #868e96 !important;
+.hljs-title.class_,
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-built_in {
+  color: #ffa657 !important; /* Orange for classes and types */
+}
+
+.hljs-function,
+.hljs-title.function_ {
+  color: #d2a8ff !important; /* Purple for functions */
+}
+
+.hljs-variable,
+.hljs-property,
+.hljs-attr {
+  color: #79c0ff !important; /* Bright blue for variables */
 }
 
 .hljs-number,
 .hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
+.hljs-symbol {
+  color: #79c0ff !important; /* Bright blue for numbers */
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #8b949e !important; /* Gray for comments */
+  font-style: italic;
+}
+
+.hljs-tag,
+.hljs-name {
+  color: #7ee787 !important; /* Green for HTML tags */
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #ffa657 !important; /* Orange for CSS selectors */
+}
+
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: #fc7474 !important;
+  color: #79c0ff !important; /* Blue for CSS pseudo */
+}
+
+.hljs-doctag,
+.hljs-meta {
+  color: #a5d6ff !important; /* Light blue for meta info */
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-addition {
+  color: #aff5b4 !important;
+  background-color: #033a16 !important;
+}
+
+.hljs-deletion {
+  color: #ffdcd7 !important;
+  background-color: #67060c !important;
 }
