@@ -1,5 +1,7 @@
 # Getting Started with Go
 
+![Go Logo](https://wallpapercave.com/wp/wp7041166.jpg)
+
 Go aka Golang is a statically typed, compiled programming language designed at Google, it was designed by a team of Google engineers: Robert Griesemer, Rob Pike, and Ken Thompson. It's known for its simplicity, efficiency, and excellent concurrency support, making it perfect for building scalable backend systems, APIs, and cloud applications.
 
 Go was designed to address the limitations of existing languages. Also, to offer a streamlined approach to building robust and efficient software.
@@ -7,9 +9,9 @@ Go was designed to address the limitations of existing languages. Also, to offer
 ## Why Learn Go?
 
 - **Simple and Clean**: Minimalist syntax that's easy to learn and read
-- **Fast Compilation**: Lightning-fast build times
+- **Fast Compilation**: Lightning fast build times
 - **Built in Concurrency**: Goroutines make concurrent programming simple
-- **Strong Standard Library**: Comprehensive built-in packages
+- **Strong Standard Library**: Comprehensive built in packages
 - **Cross platform**: Compile to multiple operating systems
 - **Great for DevOps**: Many popular tools (Docker, Kubernetes) are written in Go
 
@@ -25,7 +27,7 @@ Visit [golang.org](http://golang.org) and download the installer for your operat
 go version
 ```
 
-You should see something like: `go version go1.25.1 linux/amd64`
+You should see something like: `go version go1.25.1 linux/amd64` or similar depending on your OS and Go version.
 
 ### 3. Set Up Your Workspace
 
@@ -71,14 +73,14 @@ func main() {
     var name string = "John"
     var age int = 25
     var isActive bool = true
-    
+
     // short declaration (type inferred)
     city := "New York"
     salary := 50000.50
-    
+
     // constants
     const pi = 3.14159
-    
+
     fmt.Printf("Name: %s, Age: %d, City: %s\n", name, age, city)
 }
 ```
@@ -123,7 +125,7 @@ func getNameAndAge() (name string, age int) {
 func main() {
     result := add(5, 3)
     fmt.Println("5 + 3 =", result)
-    
+
     quotient, err := divide(10, 2)
     if err != nil {
         fmt.Println("Error:", err)
@@ -272,16 +274,16 @@ func main() {
     var p1 Person
     [p1.Name](http://p1.Name) = "Alice"
     p1.Age = 25
-    
+
     p2 := Person{
         Name:     "Bob",
         Age:      30,
         Email:    "[bob@email.com](mailto:bob@email.com)",
         IsActive: true,
     }
-    
+
     p3 := Person{"Charlie", 35, "[charlie@email.com](mailto:charlie@email.com)", false}
-    
+
     fmt.Println(p1, p2, p3)
 }
 
@@ -301,12 +303,12 @@ func (p *Person) HaveBirthday() {
 func main() {
     x := 42
     var p *int = &x  // p is a pointer to x
-    
+
     fmt.Println("Value of x:", x)
     fmt.Println("Address of x:", &x)
     fmt.Println("Value of p:", p)
     fmt.Println("Value pointed to by p:", *p)
-    
+
     *p = 100  // change value through pointer
     fmt.Println("New value of x:", x)
 }
@@ -400,7 +402,7 @@ func apiHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
     http.HandleFunc("/", helloHandler)
     http.HandleFunc("/api", apiHandler)
-    
+
     fmt.Println("Server starting on :8080...")
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
@@ -444,3 +446,7 @@ go get [github.com/golang-jwt/jwt/v4](http://github.com/golang-jwt/jwt/v4)
 - **Official Go Tour**: [tour.golang.org](http://tour.golang.org)
 - **Go by Example**: [gobyexample.com](http://gobyexample.com)
 - **Effective Go**: [golang.org/doc/effective_go](http://golang.org/doc/effective_go)
+
+---
+
+**_This blog is just a starting point. Go has many more advanced features like interfaces, goroutines, channels, testing, and more. Explore the official documentation and build projects to deepen your understanding._**

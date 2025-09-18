@@ -224,11 +224,19 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               {children}
             </h6>
           ),
-          p: ({ children }) => (
-            <p className="mb-4 text-neutral-300 leading-7 text-base break-words overflow-wrap-anywhere">
-              {children}
-            </p>
-          ),
+          p: ({ node, children }) => {
+            if (
+              node &&
+              node.children.some((child: any) => child.tagName === "img")
+            ) {
+              return <>{children}</>;
+            }
+            return (
+              <p className="mb-4 text-neutral-300 leading-7 text-base break-words overflow-wrap-anywhere">
+                {children}
+              </p>
+            );
+          },
           ul: ({ children }) => (
             <ul className="list-disc pl-6 mb-4 space-y-2 text-neutral-300">
               {children}
@@ -299,7 +307,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
               <img
                 src={src}
                 alt={alt}
-                className="max-w-full h-auto rounded-md shadow-xl border border-[#282828]"
+                className="max-w-full h-auto rounded-xl"
               />
             </div>
           ),
