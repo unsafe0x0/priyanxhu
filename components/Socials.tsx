@@ -21,14 +21,17 @@ export default function Socials({ email, links }: SocialsProps) {
     <section className="space-y-3">
       <h2 className="text-2xl tracking-wide font-medium">Find me on</h2>
       <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-neutral-300">
-        <Link href={`mailto:${email}`} className="underline underline-offset-4">
+        <Link
+          href={`mailto:${email}`}
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
+        >
           Email
         </Link>
         <Link
           href={get("GitHub")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           GitHub
         </Link>
@@ -36,7 +39,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("LinkedIn")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           LinkedIn
         </Link>
@@ -44,7 +47,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("Twitter")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           Twitter
         </Link>
@@ -52,7 +55,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("LeetCode")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           LeetCode
         </Link>
@@ -60,7 +63,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("CodeForces")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           CodeForces
         </Link>
@@ -68,7 +71,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("Discord")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           Discord
         </Link>
@@ -76,7 +79,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("Peerlist")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           Peerlist
         </Link>
@@ -84,7 +87,7 @@ export default function Socials({ email, links }: SocialsProps) {
           href={get("Youtube")}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4"
+          className="underline underline-offset-4 hover:text-red-400 transition-colors"
         >
           Youtube
         </Link>

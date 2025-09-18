@@ -35,7 +35,7 @@ export default function Extensions({ extensions }: ExtensionsProps) {
                     href={l.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline underline-offset-4"
+                    className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
                   >
                     {l.name}
                   </Link>

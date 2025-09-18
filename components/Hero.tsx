@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Badge from "./Badge";
 
 interface HeroProps {
   name: string;
@@ -24,6 +25,7 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
         <div className="space-y-1.5">
           <h2 className="text-3xl tracking-tight font-medium">{name}</h2>
           <p className="text-base">{title}</p>
+          <Badge item="Open to Work" />
         </div>
       </div>
       <p className="text-sm text-neutral-300">{about}</p>

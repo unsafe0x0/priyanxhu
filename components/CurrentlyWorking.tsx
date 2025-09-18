@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Badge from "./Badge";
 
 interface CurrentlyWorkingLink {
   name: string;
@@ -38,12 +39,7 @@ export default function CurrentlyWorking({
 
             <div className="flex flex-wrap gap-2">
               {project.stack.map((item, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center border border-neutral-700/50 bg-[#ffffff] text-neutral-800 px-2 py-1 text-xs tracking-wide rounded-md"
-                >
-                  {item}
-                </span>
+                <Badge key={i} item={item} />
               ))}
             </div>
 
@@ -62,7 +58,7 @@ export default function CurrentlyWorking({
                     <Link
                       href={documentation.url}
                       rel="noopener noreferrer"
-                      className="underline underline-offset-4"
+                      className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
                     >
                       Documentation
                     </Link>
@@ -72,7 +68,7 @@ export default function CurrentlyWorking({
                       href={github.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline underline-offset-4"
+                      className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
                     >
                       GitHub
                     </Link>
