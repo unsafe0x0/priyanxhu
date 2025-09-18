@@ -24,9 +24,9 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
         <div className="space-y-1.5">
           <h2 className="text-3xl tracking-tight font-medium">{name}</h2>
           <p className="text-base">{title}</p>
-          <p className="text-sm text-neutral-300">{about}</p>
         </div>
       </div>
+      <p className="text-sm text-neutral-300">{about}</p>
     </section>
   );
 }
