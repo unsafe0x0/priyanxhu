@@ -10,9 +10,9 @@ import { FaArrowLeft } from "react-icons/fa6";
 import Badge from "@/components/Badge";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -24,7 +24,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const blog = profileData.blogs.find((b) => b.slug === params.slug);
+  const { slug } = await params;
+  const blog = profileData.blogs.find((b) => b.slug === slug);
 
   if (!blog) {
     return {
@@ -53,7 +54,8 @@ export async function generateMetadata({
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const blog = profileData.blogs.find((b) => b.slug === params.slug);
+  const { slug } = await params;
+  const blog = profileData.blogs.find((b) => b.slug === slug);
 
   if (!blog) {
     notFound();
@@ -65,7 +67,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       process.cwd(),
       "data",
       "blogs",
-      `${params.slug}.md`
+      `${slug}.md`
     );
     content = await fs.readFile(filePath, "utf8");
   } catch (error) {

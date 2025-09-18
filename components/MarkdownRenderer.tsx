@@ -13,10 +13,27 @@ interface MarkdownRendererProps {
   isStreaming?: boolean;
 }
 
-export default function MarkdownRenderer({
-  content,
-  isStreaming = false,
-}: MarkdownRendererProps) {
+function copyText(text: string) {
+  if (navigator?.clipboard?.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error("Fallback copy failed", err);
+  }
+  document.body.removeChild(textarea);
+  return Promise.resolve();
+}
+
+export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   useEffect(() => {
     hljs.configure({
       languages: [
@@ -51,64 +68,6 @@ export default function MarkdownRenderer({
     });
   }, []);
 
-  const CodeBlock = ({ children, className, ...props }: any) => {
-    const [copied, setCopied] = useState(false);
-    const codeRef = useRef<HTMLElement>(null);
-    const match = /language-(\w+)/.exec(className || "");
-    const language = match ? match[1] : "text";
-
-    const handleCopy = async () => {
-      const code = codeRef.current?.textContent || "";
-
-      try {
-        await navigator.clipboard.writeText(code);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-      } catch (err) {
-        console.error("Failed to copy code:", err);
-      }
-    };
-
-    return (
-      <div className="relative group my-6 w-full max-w-full rounded-md border border-[#282828] bg-[#202020] overflow-hidden">
-        <div className="flex justify-between items-center bg-[#222222] px-4 py-2 border-b border-[#282828]">
-          <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide">
-            {language}
-          </span>
-          <button
-            onClick={handleCopy}
-            className="opacity-70 hover:opacity-100 transition-all duration-200 bg-[#222222] hover:bg-[#242424] text-neutral-300 hover:text-white px-3 py-1.5 rounded-md text-xs flex items-center gap-2 font-medium"
-            aria-label="Copy code"
-          >
-            {copied ? (
-              <>
-                <IoMdCheckmark size={12} />
-                <span>Copied!</span>
-              </>
-            ) : (
-              <>
-                <MdContentCopy size={12} />
-                <span>Copy</span>
-              </>
-            )}
-          </button>
-        </div>
-
-        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-neutral-600 scrollbar-track-transparent max-w-[calc(100vw-2rem)] sm:max-w-[calc(100vw-4rem)] lg:max-w-[850px]">
-          <pre className="p-4 text-sm leading-relaxed min-w-0">
-            <code
-              ref={codeRef}
-              className={`${className} block text-neutral-200 whitespace-pre-wrap bg-transparent`}
-              {...props}
-            >
-              {children}
-            </code>
-          </pre>
-        </div>
-      </div>
-    );
-  };
-
   const InlineCode = ({ children, ...props }: any) => (
     <code
       className="bg-[#222222] px-2 py-0.5 rounded-md text-sm text-red-400 font-mono border border-[#282828] whitespace-nowrap"
@@ -124,48 +83,95 @@ export default function MarkdownRenderer({
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight]}
         components={{
-          code: ({ node, className, children, ...props }) => {
+          code: ({ className, children, ...props }) => {
             const match = /language-(\w+)/.exec(className || "");
-            const language = match ? match[1] : "";
-
-            if (language) {
-              return (
-                <CodeBlock className={className} {...props}>
-                  {children}
-                </CodeBlock>
-              );
-            }
-
-            return <InlineCode {...props}>{children}</InlineCode>;
+            if (!match) return <InlineCode {...props}>{children}</InlineCode>;
+            return (
+              <code
+                className={`${className} block text-neutral-200 whitespace-pre-wrap`}
+                style={{ background: "transparent" }}
+                {...props}
+              >
+                {children}
+              </code>
+            );
           },
           pre: ({ children }) => {
-            const codeChild = React.Children.toArray(children).find(
-              (child: any) => child?.props?.className?.includes("language-"),
-            );
-
-            if (codeChild) {
-              return <>{children}</>;
-            }
-
             const [copied, setCopied] = useState(false);
             const preRef = useRef<HTMLPreElement>(null);
 
-            const handleCopy = async () => {
-              const code = preRef.current?.textContent || "";
-              try {
-                await navigator.clipboard.writeText(code);
-                setCopied(true);
-                setTimeout(() => setCopied(false), 2000);
-              } catch (err) {
-                console.error("Failed to copy code:", err);
+            const getLanguage = () => {
+              if (React.isValidElement(children)) {
+                const codeElement = children as React.ReactElement<{
+                  className?: string;
+                }>;
+                if (codeElement.props?.className) {
+                  const match = /language-(\w+)/.exec(
+                    codeElement.props.className
+                  );
+                  if (match) {
+                    const lang = match[1];
+                    const languageMap: { [key: string]: string } = {
+                      js: "JavaScript",
+                      javascript: "JavaScript",
+                      ts: "TypeScript",
+                      typescript: "TypeScript",
+                      py: "Python",
+                      python: "Python",
+                      java: "Java",
+                      cpp: "C++",
+                      c: "C",
+                      html: "HTML",
+                      css: "CSS",
+                      scss: "SCSS",
+                      json: "JSON",
+                      bash: "Bash",
+                      shell: "Shell",
+                      sql: "SQL",
+                      rust: "Rust",
+                      go: "Go",
+                      php: "PHP",
+                      ruby: "Ruby",
+                      swift: "Swift",
+                      kotlin: "Kotlin",
+                      scala: "Scala",
+                      r: "R",
+                      matlab: "MATLAB",
+                      yaml: "YAML",
+                      yml: "YAML",
+                      xml: "XML",
+                      dockerfile: "Dockerfile",
+                      markdown: "Markdown",
+                      md: "Markdown",
+                      plaintext: "Text",
+                      txt: "Text",
+                    };
+                    return (
+                      languageMap[lang.toLowerCase()] || lang.toUpperCase()
+                    );
+                  }
+                }
               }
+              return "CODE";
+            };
+
+            const handleCopy = () => {
+              const code = preRef.current?.textContent ?? "";
+              if (!code) return;
+
+              copyText(code)
+                .then(() => {
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                })
+                .catch(() => console.error("Failed to copy"));
             };
 
             return (
-              <div className="relative group my-6 w-full rounded-md border border-[#282828] bg-[#202020] overflow-hidden">
+              <div className="relative group my-6 w-full max-w-full rounded-md border border-[#282828] bg-[#202020] overflow-hidden">
                 <div className="flex justify-between items-center bg-[#222222] px-4 py-2 border-b border-[#282828]">
                   <span className="text-xs font-medium text-neutral-400 uppercase tracking-wide">
-                    text
+                    {getLanguage()}
                   </span>
                   <button
                     onClick={handleCopy}
@@ -185,10 +191,10 @@ export default function MarkdownRenderer({
                     )}
                   </button>
                 </div>
-                <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-neutral-600 scrollbar-track-transparent max-w-[calc(100vw-2rem)] sm:max-w-[calc(100vw-4rem)] lg:max-w-[850px]">
+                <div className="overflow-x-auto w-full">
                   <pre
                     ref={preRef}
-                    className="p-4 text-sm leading-relaxed text-neutral-200 min-w-0 whitespace-pre-wrap bg-transparent"
+                    className="p-2.5 text-sm leading-relaxed w-full text-neutral-200 whitespace-pre-wrap bg-[#282828]"
                   >
                     {children}
                   </pre>
@@ -197,27 +203,27 @@ export default function MarkdownRenderer({
             );
           },
           h1: ({ children }) => (
-            <h1 className="text-xl font-bold text-white mt-6 mb-3 first:mt-0 leading-tight">
+            <h1 className="text-3xl font-semibold text-white mt-6 mb-3 first:mt-0 leading-tight">
               {children}
             </h1>
           ),
           h2: ({ children }) => (
-            <h2 className="text-lg font-semibold text-white mt-6 mb-3 first:mt-0 leading-tight">
+            <h2 className="text-2xl font-semibold text-white mt-6 mb-3 first:mt-0 leading-tight">
               {children}
             </h2>
           ),
           h3: ({ children }) => (
-            <h3 className="text-base font-semibold text-white mt-5 mb-2 first:mt-0 leading-tight">
+            <h3 className="text-xl font-semibold text-white mt-5 mb-2 first:mt-0 leading-tight">
               {children}
             </h3>
           ),
           h4: ({ children }) => (
-            <h4 className="text-base font-medium text-white mt-4 mb-2 first:mt-0 leading-tight">
+            <h4 className="text-lg font-medium text-white mt-4 mb-2 first:mt-0 leading-tight">
               {children}
             </h4>
           ),
           h5: ({ children }) => (
-            <h5 className="text-sm font-medium text-white mt-4 mb-2 first:mt-0 leading-tight">
+            <h5 className="text-base font-medium text-white mt-4 mb-2 first:mt-0 leading-tight">
               {children}
             </h5>
           ),
@@ -309,9 +315,6 @@ export default function MarkdownRenderer({
       >
         {content}
       </ReactMarkdown>
-      {isStreaming && (
-        <span className="inline-block w-2 h-5 bg-white animate-pulse ml-1" />
-      )}
     </div>
   );
 }

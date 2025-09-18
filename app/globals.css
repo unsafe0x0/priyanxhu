@@ -20,3 +20,57 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Override highlight.js styles for consistent code block backgrounds */
+.hljs {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+pre .hljs {
+  background: transparent !important;
+}
+
+/* Ensure code blocks maintain dark theme colors */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-name,
+.hljs-strong {
+  color: #ff6b6b !important;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-literal,
+.hljs-type,
+.hljs-addition,
+.hljs-tag,
+.hljs-quote,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #51cbcf !important;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #868e96 !important;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #fc7474 !important;
+}
