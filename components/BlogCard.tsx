@@ -33,7 +33,9 @@ export default function BlogCard({ blog }: BlogCardProps) {
         </h2>
       </Link>
 
-      <p className="text-sm text-neutral-300 leading-relaxed">{blog.description}</p>
+      <p className="text-sm text-neutral-300 leading-relaxed">
+        {blog.description}
+      </p>
 
       <div className="flex items-center gap-3 text-sm text-neutral-400">
         <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>

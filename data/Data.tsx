@@ -94,25 +94,6 @@ export const profileData = {
         { name: "Github", url: "https://github.com/unsafe0x0/xerochat" },
       ],
     },
-    // {
-    //   name: "OptiCV",
-    //   description:
-    //     "AI-powered Overleaf resume optimizer according to job descriptions, makes edits, generating tailored bullet points and ATS-friendly formatting to improve interview callbacks.",
-    //   stack: [
-    //     "NextJS",
-    //     "TailwindCSS",
-    //     "Tanstack Query",
-    //     "Prisma",
-    //     "MongoDB",
-    //     "Groq AI",
-    //     "Framer Motion",
-    //     "NextAuth",
-    //   ],
-    //   links: [
-    //     { name: "Website", url: "https://opticv.vercel.app/" },
-    //     { name: "Github", url: "https://github.com/unsafe0x0/opticv" },
-    //   ],
-    // },
     {
       name: "Dokxy",
       description:
@@ -177,11 +158,22 @@ export const profileData = {
     {
       title: "Golang - A language with high testosterone",
       description:
-        "An introduction to Go programming language, its features, and why it's great for building scalable backend systems.",
+        "An introduction to Go programming language, its features, and why it's great for building scalable systems.",
       slug: "golang",
-      publishedAt: "2025-09-20",
+      publishedAt: "2025-09-18",
       readTime: "10 min read",
-      tags: ["Golang", "Programming", "Backend"],
+      tags: ["Golang", "Programming", "Go"],
+      ogImage: "https://wallpapercave.com/wp/wp7041166.jpg",
+    },
+    {
+      title: "MERN Stack Alternatives in Golang",
+      description:
+        "Exploring backend alternatives to the MERN stack using Golang libraries and frameworks for building robust server side applications.",
+      slug: "mern-alt",
+      publishedAt: "2025-09-19",
+      readTime: "8 min read",
+      tags: ["Golang", "MERN", "Backend", "Web Development"],
+      ogImage: "https://cujo.com/wp-content/uploads/2023/08/GO_1.jpg",
     },
   ],
 };

@@ -8,7 +8,7 @@ export default function ContactMe() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle"
+    "idle",
   );
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

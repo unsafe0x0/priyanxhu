@@ -47,10 +47,10 @@ export default function CurrentlyWorking({
               const documentation = project.links.find(
                 (l) =>
                   l.name.toLowerCase() === "website" ||
-                  l.name.toLowerCase() === "documentation"
+                  l.name.toLowerCase() === "documentation",
               );
               const github = project.links.find(
-                (l) => l.name.toLowerCase() === "github"
+                (l) => l.name.toLowerCase() === "github",
               );
               return (
                 <div className="flex gap-3 text-sm text-neutral-300">

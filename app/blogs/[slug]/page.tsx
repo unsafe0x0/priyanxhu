@@ -33,6 +33,10 @@ export async function generateMetadata({
     };
   }
 
+  const ogImageUrl = blog.ogImage
+    ? `https://priyanxhu.me${blog.ogImage}`
+    : "https://priyanxhu.me/default-og-image.png";
+
   return {
     title: `${blog.title} - Priyanshu Chahar`,
     description: blog.description,
@@ -43,12 +47,21 @@ export async function generateMetadata({
       publishedTime: blog.publishedAt,
       authors: ["Priyanshu Chahar"],
       tags: blog.tags,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
       description: blog.description,
       creator: "@unsafezero",
+      images: [ogImageUrl],
     },
   };
 }
@@ -63,12 +76,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   let content = "";
   try {
-    const filePath = path.join(
-      process.cwd(),
-      "data",
-      "blogs",
-      `${slug}.md`
-    );
+    const filePath = path.join(process.cwd(), "data", "blogs", `${slug}.md`);
     content = await fs.readFile(filePath, "utf8");
   } catch (error) {
     console.error("Error reading blog file:", error);
@@ -103,7 +111,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               Home
             </Link>
           </div>
-          <header className="space-y-4">
+          <header className="space-y-4 border-b border-[#282828] pb-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-semibold tracking-tight leading-tight">
                 {blog.title}
@@ -113,7 +121,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-400 border-b border-[#282828] pb-4">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-400">
               <time dateTime={blog.publishedAt}>
                 {formatDate(blog.publishedAt)}
               </time>
@@ -142,9 +150,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex items-center justify-center gap-4 text-sm">
                   <Link
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                      blog.title
+                      blog.title,
                     )}&url=${encodeURIComponent(
-                      `https://priyanxhu.me/blogs/${blog.slug}`
+                      `https://priyanxhu.me/blogs/${blog.slug}`,
                     )}&via=unsafezero`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -155,7 +163,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <FaDiamond className="inline text-xs text-neutral-500" />
                   <Link
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                      `https://priyanxhu.me/blogs/${blog.slug}`
+                      `https://priyanxhu.me/blogs/${blog.slug}`,
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

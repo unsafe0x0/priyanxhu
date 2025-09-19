@@ -43,10 +43,10 @@ export default function Projects({ projects }: ProjectsProps) {
               const live = project.links.find(
                 (l) =>
                   l.name.toLowerCase() === "website" ||
-                  l.name.toLowerCase() === "live"
+                  l.name.toLowerCase() === "live",
               );
               const github = project.links.find(
-                (l) => l.name.toLowerCase() === "github"
+                (l) => l.name.toLowerCase() === "github",
               );
               return (
                 <div className="flex gap-3 text-sm text-neutral-300">
