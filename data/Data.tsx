@@ -163,7 +163,6 @@ export const profileData = {
       publishedAt: "2025-09-18",
       readTime: "10 min read",
       tags: ["Golang", "Programming", "Go"],
-      ogImage: "https://wallpapercave.com/wp/wp7041166.jpg",
     },
     {
       title: "MERN Stack Alternatives in Golang",
@@ -173,7 +172,6 @@ export const profileData = {
       publishedAt: "2025-09-19",
       readTime: "8 min read",
       tags: ["Golang", "MERN", "Backend", "Web Development"],
-      ogImage: "https://cujo.com/wp-content/uploads/2023/08/GO_1.jpg",
     },
   ],
 };
