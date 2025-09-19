@@ -33,10 +33,6 @@ export async function generateMetadata({
     };
   }
 
-  const ogImageUrl = blog.ogImage
-    ? `https://priyanxhu.me${blog.ogImage}`
-    : "https://priyanxhu.me/default-og-image.png";
-
   return {
     title: `${blog.title} - Priyanshu Chahar`,
     description: blog.description,
@@ -49,7 +45,7 @@ export async function generateMetadata({
       tags: blog.tags,
       images: [
         {
-          url: ogImageUrl,
+          url: blog.ogImage,
           width: 1200,
           height: 630,
           alt: blog.title,
@@ -61,7 +57,7 @@ export async function generateMetadata({
       title: blog.title,
       description: blog.description,
       creator: "@unsafezero",
-      images: [ogImageUrl],
+      images: [blog.ogImage],
     },
   };
 }
@@ -150,9 +146,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex items-center justify-center gap-4 text-sm">
                   <Link
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                      blog.title,
+                      blog.title
                     )}&url=${encodeURIComponent(
-                      `https://priyanxhu.me/blogs/${blog.slug}`,
+                      `https://priyanxhu.me/blogs/${blog.slug}`
                     )}&via=unsafezero`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -163,7 +159,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <FaDiamond className="inline text-xs text-neutral-500" />
                   <Link
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                      `https://priyanxhu.me/blogs/${blog.slug}`,
+                      `https://priyanxhu.me/blogs/${blog.slug}`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
