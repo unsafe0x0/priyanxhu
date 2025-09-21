@@ -38,7 +38,7 @@ export default function LandingPage() {
       <Projects projects={projects} />
       <CurrentlyWorking currentlyWorking={currentlyWorking} />
       <Extensions extensions={vsCodeExtensions} />
-      <Blogs blogs={blogs} />
+      <Blogs blogs={blogs.slice(0, 3)} />
       <Experience experience={experience} />
       <Socials email={email} links={socialLinks} />
       <ContactMe />

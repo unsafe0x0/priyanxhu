@@ -156,13 +156,13 @@ export const profileData = {
   ],
   blogs: [
     {
-      title: "Golang - A language with high testosterone",
+      title: "How Go(Golang) Works: Features, Workflow, and Use Cases",
       description:
-        "An introduction to Go programming language, its features, and why it's great for building scalable systems.",
-      slug: "golang",
-      publishedAt: "2025-09-18",
+        "An overview of how Go works, its key features, workflow, and common use cases.",
+      slug: "how-go-works",
+      publishedAt: "2025-09-21",
       readTime: "10 min read",
-      tags: ["Golang", "Programming", "Go"],
+      tags: ["Golang", "Programming", "Go", "Workflow"],
     },
     {
       title: "MERN Stack Alternatives in Golang",
@@ -172,6 +172,15 @@ export const profileData = {
       publishedAt: "2025-09-19",
       readTime: "8 min read",
       tags: ["Golang", "MERN", "Backend", "Web Development"],
+    },
+    {
+      title: "Golang - A language with high testosterone",
+      description:
+        "An introduction to Go programming language, its features, and why it's great for building scalable systems.",
+      slug: "golang",
+      publishedAt: "2025-09-18",
+      readTime: "10 min read",
+      tags: ["Golang", "Programming", "Go"],
     },
   ],
 };

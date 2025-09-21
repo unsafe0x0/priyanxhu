@@ -45,7 +45,7 @@ export async function generateMetadata({
       tags: blog.tags,
       images: [
         {
-          url: "https://priyanxhu.me/og-image.svg",
+          url: "https://priyanxhu.me/og-image.png",
           width: 1200,
           height: 630,
           alt: blog.title,
@@ -57,7 +57,7 @@ export async function generateMetadata({
       title: blog.title,
       description: blog.description,
       creator: "@unsafezero",
-      images: ["https://priyanxhu.me/og-image.svg"],
+      images: ["https://priyanxhu.me/og-image.png"],
     },
   };
 }

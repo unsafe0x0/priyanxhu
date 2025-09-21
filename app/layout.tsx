@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Priyanshu Chahar",
     images: [
       {
-        url: "https://priyanxhu.me/og-image.svg",
+        url: "https://priyanxhu.me/og-image.png",
         width: 1200,
         height: 630,
         alt: "Priyanshu Chahar – Software Developer",

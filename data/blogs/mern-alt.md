@@ -1,6 +1,6 @@
 # MERN Stack Alternatives in Golang
 
-![MERN Stack Alternatives](https://cujo.com/wp-content/uploads/2023/08/GO_1.jpg)
+![MERN Stack Alternatives](https://res.cloudinary.com/dj98bhfz1/image/upload/v1758421651/MERN_Alternatives_with_Go_Language_o2bqpa.avif)
 
 If you're looking for backend alternatives to the MERN stack (MongoDB, Express.js, Node.js) using Golang, there are several libraries and frameworks that can help you build robust server side applications. Below are some popular choices.
 
