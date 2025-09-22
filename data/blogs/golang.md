@@ -1,7 +1,5 @@
 # Getting Started with Go
 
-![Go Logo](https://res.cloudinary.com/dj98bhfz1/image/upload/v1758421567/Gopher_Mascot_Close-Up_Illustration_faxopx.avif)
-
 Go aka Golang is a statically typed, compiled programming language designed at Google, it was designed by a team of Google engineers: Robert Griesemer, Rob Pike, and Ken Thompson. It's known for its simplicity, efficiency, and excellent concurrency support, making it perfect for building scalable backend systems, APIs, and cloud applications.
 
 Go was designed to address the limitations of existing languages. Also, to offer a streamlined approach to building robust and efficient software.

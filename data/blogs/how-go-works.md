@@ -1,7 +1,5 @@
 # How Go(Golang) Works: Features, Workflow, and Use Cases
 
-![How Go Works](https://res.cloudinary.com/dj98bhfz1/image/upload/v1758421564/How_Go_Works__Introduction_and_Visuals_jft03f.avif)
-
 Go is a statically typed, compiled programming language designed for simplicity, efficiency, and concurrency. It was created by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson and was first released in 2009.
 
 ### Key Features of Go:
