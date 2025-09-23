@@ -42,7 +42,7 @@ export default function ContactMe() {
           onChange={(e) => setName(e.target.value)}
           required
           autoComplete="off"
-          className="w-full bg-[#212121] border border-[#282828] px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors rounded-md"
+          className="w-full bg-[#222222] border border-[#282828] px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors rounded-md"
         />
         <input
           type="email"
@@ -52,7 +52,7 @@ export default function ContactMe() {
           onChange={(e) => setEmail(e.target.value)}
           required
           autoComplete="off"
-          className="w-full bg-[#212121] border border-[#282828] px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors rounded-md"
+          className="w-full bg-[#222222] border border-[#282828] px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors rounded-md"
         />
         <textarea
           name="message"
@@ -62,7 +62,7 @@ export default function ContactMe() {
           required
           rows={4}
           autoComplete="off"
-          className="w-full bg-[#212121] border border-[#282828] px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors rounded-md resize-none"
+          className="w-full bg-[#222222] border border-[#282828] px-3 py-2 text-sm text-neutral-300 outline-none focus:border-neutral-200 transition-colors rounded-md resize-none"
         />
         <button
           type="submit"

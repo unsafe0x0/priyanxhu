@@ -44,23 +44,23 @@ export default function CurrentlyWorking({
             </div>
 
             {(() => {
-              const documentation = project.links.find(
+              const live = project.links.find(
                 (l) =>
                   l.name.toLowerCase() === "website" ||
-                  l.name.toLowerCase() === "documentation",
+                  l.name.toLowerCase() === "live",
               );
               const github = project.links.find(
                 (l) => l.name.toLowerCase() === "github",
               );
               return (
                 <div className="flex gap-3 text-sm text-neutral-300">
-                  {documentation && (
+                  {live && (
                     <Link
-                      href={documentation.url}
+                      href={live.url}
                       rel="noopener noreferrer"
                       className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
                     >
-                      Documentation
+                      Live
                     </Link>
                   )}
                   {github && (

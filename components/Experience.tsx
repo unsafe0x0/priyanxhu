@@ -1,5 +1,7 @@
 "use client";
 
+import Badge from "./Badge";
+
 interface ExperienceItem {
   duration: string;
   position?: string;
@@ -24,9 +26,7 @@ export default function Experience({ experience }: ExperienceProps) {
                   ? `${exp.position} · ${exp.company}`
                   : exp.company}
               </div>
-              <span className="inline-flex items-center border border-[#282828] bg-[#ffffff] text-neutral-800 px-2 py-1 text-xs tracking-wide rounded-md">
-                {exp.duration}
-              </span>
+              <Badge item={exp.duration} />
             </div>
             {exp.description && (
               <p className="text-sm text-neutral-300  leading-relaxed">

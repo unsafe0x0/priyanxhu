@@ -130,7 +130,7 @@ function CodeBlock({ children }: { children: React.ReactNode }) {
       <div className="overflow-x-auto w-full">
         <pre
           ref={preRef}
-          className="p-2.5 text-sm leading-relaxed w-full text-neutral-200 whitespace-pre-wrap bg-[#282828]"
+          className="p-2.5 text-sm leading-relaxed w-full text-neutral-200 whitespace-pre-wrap bg-[#252525]"
         >
           {children}
         </pre>

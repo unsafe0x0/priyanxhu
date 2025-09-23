@@ -117,13 +117,12 @@ export const profileData = {
   ],
   currentlyWorking: [
     {
-      name: "XeroDrive",
-      description:
-        "Cross platform file management system with features like file organization, search, and sharing.",
-      stack: ["Golang", "Wails", "TailwindCSS"],
+      name: "Halo Ai",
+      description: "Something like v0 and lovable",
+      stack: ["NextJS", "AI Providers", "TailwindCSS"],
       links: [
-        { name: "Website", url: "https://xerochat.tech/xerodrive" },
-        { name: "Github", url: "https://github.com/unsafe0x0/xerodrive" },
+        { name: "Website", url: "/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/" },
       ],
     },
   ],
