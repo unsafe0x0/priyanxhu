@@ -1,9 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/api/feed",
+        destination: "http://localhost:3001/api/feed",
+      },
+    ];
   },
 };
 

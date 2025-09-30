@@ -75,13 +75,13 @@ export const profileData = {
       ],
     },
     {
-      name: "BashForge",
+      name: "CoreDump",
       description:
         "Track coding activity across projects with detailed language breakdowns and daily and weekly time summaries.",
       stack: ["NextJS", "TailwindCSS", "PostgreSQL", "VsCode", "NextAuth"],
       links: [
-        { name: "Website", url: "https://bashforge.vercel.app/" },
-        { name: "Github", url: "https://github.com/unsafe0x0/bashforge" },
+        { name: "Website", url: "https://coredump.vercel.app/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/CoreDump" },
       ],
     },
     {
@@ -139,56 +139,18 @@ export const profileData = {
       ],
     },
     {
-      name: "BashForge",
-      description: "VS Code extension for BashForge project.",
+      name: "CoreDump",
+      description: "VS Code extension for CoreDump project.",
       links: [
         {
           name: "Marketplace",
-          url: "https://marketplace.visualstudio.com/items?itemName=Unsafezero.bashforge",
+          url: "https://marketplace.visualstudio.com/items?itemName=Unsafezero.CoreDump",
         },
         {
           name: "Github",
-          url: "https://github.com/unsafe0x0/bashforge-extension",
+          url: "https://github.com/unsafe0x0/CoreDump-extension",
         },
       ],
-    },
-  ],
-  blogs: [
-    {
-      title: "How to setup a HTTP server using Go and Gin",
-      description:
-        "An overview of how to setup a HTTP server using Go and Gin with some basic middleware.",
-      slug: "go-gin",
-      publishedAt: "2025-09-22",
-      readTime: "15 min read",
-      tags: ["Golang", "Programming", "Go", "Server", "Middleware", "Gin"],
-    },
-    {
-      title: "How Go(Golang) Works: Features, Workflow, and Use Cases",
-      description:
-        "An overview of how Go works, its key features, workflow, and common use cases.",
-      slug: "how-go-works",
-      publishedAt: "2025-09-21",
-      readTime: "10 min read",
-      tags: ["Golang", "Programming", "Go", "Workflow", "Features"],
-    },
-    {
-      title: "MERN Stack Alternatives in Golang",
-      description:
-        "Exploring backend alternatives to the MERN stack using Golang libraries and frameworks for building robust server side applications.",
-      slug: "mern-alt",
-      publishedAt: "2025-09-19",
-      readTime: "8 min read",
-      tags: ["Golang", "MERN", "Backend", "Web Development", "Alternatives"],
-    },
-    {
-      title: "Golang - A language with high testosterone",
-      description:
-        "An introduction to Go programming language, its features, and why it's great for building scalable systems.",
-      slug: "golang",
-      publishedAt: "2025-09-18",
-      readTime: "10 min read",
-      tags: ["Golang", "Programming", "Go", "Features", "Scalable"],
     },
   ],
 };

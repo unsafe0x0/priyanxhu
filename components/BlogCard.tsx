@@ -1,11 +1,10 @@
 import Link from "next/link";
-import Badge from "./Badge";
 import { FaDiamond } from "react-icons/fa6";
 
 interface Blog {
   title: string;
   description: string;
-  slug: string;
+  url: string;
   publishedAt: string;
   readTime: string;
   tags: string[];
@@ -27,7 +26,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
 
   return (
     <div className="space-y-2">
-      <Link href={`/blogs/${blog.slug}`}>
+      <Link href={`${blog.url}`} target="_blank" rel="noopener noreferrer">
         <h2 className="text-lg font-medium text-white hover:text-red-400 transition-colors">
           {blog.title}
         </h2>
@@ -45,16 +44,14 @@ export default function BlogCard({ blog }: BlogCardProps) {
 
       <div className="flex flex-wrap gap-2">
         {blog.tags.map((tag) => (
-          <Badge key={tag} item={tag} />
+          <span
+            key={tag}
+            className="inline-flex items-center border border-[#282828] bg-[#ffffff] text-neutral-800 px-2 py-1 text-xs tracking-wide rounded-md"
+          >
+            {tag}
+          </span>
         ))}
       </div>
-
-      <Link
-        href={`/blogs/${blog.slug}`}
-        className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
-      >
-        Read more
-      </Link>
     </div>
   );
 }

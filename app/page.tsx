@@ -25,7 +25,6 @@ export default function LandingPage() {
     currentlyWorking,
     experience,
     vsCodeExtensions,
-    blogs,
     socialLinks,
     email,
   } = profileData;
@@ -38,7 +37,7 @@ export default function LandingPage() {
       <Projects projects={projects} />
       <CurrentlyWorking currentlyWorking={currentlyWorking} />
       <Extensions extensions={vsCodeExtensions} />
-      <Blogs blogs={blogs.slice(0, 3)} />
+      <Blogs />
       <Experience experience={experience} />
       <Socials email={email} links={socialLinks} />
       <ContactMe />

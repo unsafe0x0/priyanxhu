@@ -8,6 +8,12 @@ const Ai = () => {
         Ai-SDK Documentation Coming Soon!
       </p>
       <Link
+        href="https://github.com/unsafe0x0/ai"
+        className="text-base text-center font-normal underline underline-offset-4 mt-2 block"
+      >
+        Github Repo Url
+      </Link>
+      <Link
         href="/"
         className="text-base text-center font-normal underline underline-offset-4 mt-2 block"
       >
