@@ -43,17 +43,20 @@ export default function Blogs() {
           <BlogCard key={blog.url} blog={blog} />
         ))}
       </div>
-      <button className="inline-flex items-center bg-white text-neutral-900 px-5 py-2 text-sm hover:bg-neutral-200 transition-colors cursor-pointer rounded-md">
-        <Link href="https://blogs.priyanxhu.me" className="inline-flex items-center gap-2">
-          View all <FaArrowRight className="inline" />
-        </Link>
-      </button>
 
       {fetchedBlogs.length === 0 && (
         <div className="text-center py-8 text-neutral-400">
-          <p>No blogs published yet. Check back soon!</p>
+          <p>Unable to fetch blogs</p>
         </div>
       )}
+      <button className="inline-flex items-center bg-white text-neutral-900 px-5 py-2 text-sm hover:bg-neutral-200 transition-colors cursor-pointer rounded-md">
+        <Link
+          href="https://blogs.priyanxhu.me"
+          className="inline-flex items-center gap-2"
+        >
+          View all <FaArrowRight className="inline" />
+        </Link>
+      </button>
     </section>
   );
 }

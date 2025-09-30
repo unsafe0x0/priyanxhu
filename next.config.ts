@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/feed",
-        destination: "http://localhost:3001/api/feed",
+        destination: "https://blogs.priyanxhu.me/api/feed",
       },
     ];
   },
