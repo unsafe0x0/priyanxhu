@@ -7,11 +7,12 @@ import Projects from "@/components/Projects";
 import CurrentlyWorking from "@/components/CurrentlyWorking";
 import Skills from "@/components/Skills";
 import CurrentlyLearning from "@/components/CurrentlyLearning";
-import Socials from "@/components/Socials";
+import FloatingNav from "@/components/FloatingNav";
 import ContactMe from "@/components/ContactMe";
 import Experience from "@/components/Experience";
 import Extensions from "@/components/Extensions";
 import Blogs from "@/components/Blogs";
+import Footer from "@/components/Footer";
 
 export default function LandingPage() {
   const {
@@ -30,7 +31,7 @@ export default function LandingPage() {
   } = profileData;
 
   return (
-    <main className="max-w-2xl mx-auto px-3 py-10 space-y-10">
+    <main className="max-w-2xl mx-auto px-3 pt-10 space-y-10 min-h-screen">
       <Hero name={name} title={title} about={about} imageUrl={imageUrl} />
       <Skills skills={skills} />
       <CurrentlyLearning learningItems={currentlyLearning} />
@@ -39,8 +40,9 @@ export default function LandingPage() {
       <Extensions extensions={vsCodeExtensions} />
       <Blogs />
       <Experience experience={experience} />
-      <Socials email={email} links={socialLinks} />
+      <FloatingNav email={email} links={socialLinks} />
       <ContactMe />
+      <Footer />
     </main>
   );
 }

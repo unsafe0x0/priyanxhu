@@ -5,7 +5,6 @@ export const profileData = {
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
   about: `Hey there! I'm Priyanshu aka Unsafezero, a Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
-  spotifyEmbedUrl: `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7pLuEMFougkSHXrPBtNxTR?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -56,13 +55,7 @@ export const profileData = {
     "Deep Learning",
     "DSA",
   ],
-  currentlyLearning: [
-    "Advanced Golang Patterns",
-    "Desktop Application Development with Wails",
-    "AI/ML Integration in Applications",
-    "System Design",
-    "Data Structures and Algorithms",
-  ],
+  currentlyLearning: ["System Design", "Data Structures and Algorithms"],
   projects: [
     {
       name: "Ai SDK",

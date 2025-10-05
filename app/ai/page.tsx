@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Ai = () => {
   return (
-    <main className="max-w-2xl mx-auto my-auto px-3 py-10 text-neutral-300">
+    <main className="max-w-2xl mx-auto my-auto px-3 py-10 text-neutral-700 dark:text-neutral-300">
       <p className="text-base text-center font-normal">
         Ai-SDK Documentation Coming Soon!
       </p>

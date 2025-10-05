@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const bodyFont = Inter({
-  variable: "--font-bodyFont",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Priyanshu Chahar",
@@ -42,15 +40,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <link
         rel="shortcut icon"
         href="https://avatars.githubusercontent.com/u/165533860?v=4"
         type="image/x-icon"
       />
-      <body className={bodyFont.className}>
-        {children}
-        <Analytics />
+      <body className={inter.className}>
+        <ThemeProvider>
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

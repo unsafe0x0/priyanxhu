@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import BlogCard from "./BlogCard";
+import Button from "./Button";
 
 interface Blog {
   title: string;
@@ -45,18 +46,18 @@ export default function Blogs() {
       </div>
 
       {fetchedBlogs.length === 0 && (
-        <div className="text-center py-8 text-neutral-400">
+        <div className="text-center py-8 text-neutral-700 dark:text-neutral-300">
           <p>Unable to fetch blogs</p>
         </div>
       )}
-      <button className="inline-flex items-center bg-white text-neutral-900 px-5 py-2 text-sm hover:bg-neutral-200 transition-colors cursor-pointer rounded-md">
+      <Button type="button">
         <Link
           href="https://blogs.priyanxhu.me"
           className="inline-flex items-center gap-2"
         >
           View all <FaArrowRight className="inline" />
         </Link>
-      </button>
+      </Button>
     </section>
   );
 }

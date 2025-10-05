@@ -19,7 +19,7 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
           alt={`${name} avatar`}
           width={100}
           height={100}
-          className="object-cover rounded-md"
+          className="object-cover"
           priority
         />
         <div className="space-y-1.5">
@@ -28,7 +28,7 @@ export default function Hero({ name, title, about, imageUrl }: HeroProps) {
           <Badge item="Open to Work" />
         </div>
       </div>
-      <p className="text-sm text-neutral-300">{about}</p>
+      <p className="text-sm text-neutral-700 dark:text-neutral-300">{about}</p>
     </section>
   );
 }

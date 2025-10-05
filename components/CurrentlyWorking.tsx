@@ -32,7 +32,7 @@ export default function CurrentlyWorking({
           <div key={idx} className="space-y-2">
             <h2 className="text-lg font-medium">{project.name}</h2>
             {project.description && (
-              <p className="text-sm text-neutral-300 leading-relaxed">
+              <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
                 {project.description}
               </p>
             )}
@@ -53,12 +53,12 @@ export default function CurrentlyWorking({
                 (l) => l.name.toLowerCase() === "github",
               );
               return (
-                <div className="flex gap-3 text-sm text-neutral-300">
+                <div className="flex gap-3 text-sm text-neutral-700 dark:text-neutral-300">
                   {live && (
                     <Link
                       href={live.url}
                       rel="noopener noreferrer"
-                      className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
+                      className="underline underline-offset-4 text-sm text-neutral-700 dark:text-neutral-300 hover:text-[#5865F2] transition-colors"
                     >
                       Live
                     </Link>
@@ -68,7 +68,7 @@ export default function CurrentlyWorking({
                       href={github.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline underline-offset-4 text-sm text-neutral-300 hover:text-red-400 transition-colors"
+                      className="underline underline-offset-4 text-sm text-neutral-700 dark:text-neutral-300 hover:text-[#5865F2] transition-colors"
                     >
                       GitHub
                     </Link>

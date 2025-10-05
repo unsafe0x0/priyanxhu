@@ -29,7 +29,7 @@ export default function Experience({ experience }: ExperienceProps) {
               <Badge item={exp.duration} />
             </div>
             {exp.description && (
-              <p className="text-sm text-neutral-300  leading-relaxed">
+              <p className="text-sm text-neutral-700 dark:text-neutral-300  leading-relaxed">
                 {exp.description}
               </p>
             )}
