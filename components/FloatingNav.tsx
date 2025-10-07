@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
-import { SiCodeblocks } from "react-icons/si";
+import { GiAzulFlake } from "react-icons/gi";
 import { TfiLayoutLineSolid } from "react-icons/tfi";
 
 interface SocialLink {
@@ -39,7 +39,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
   return (
     <nav
       aria-label="Floating social dock"
-      className="fixed left-1/2 bottom-1 z-50 transform -translate-x-1/2 flex items-center gap-2 sm:gap-3 bg-white/10 dark:bg-black/10 border border-neutral-200 dark:border-neutral-800 backdrop-blur-xs rounded-full px-3 sm:px-5 py-2.5"
+      className="fixed left-1/2 bottom-1 z-50 transform -translate-x-1/2 flex items-center gap-2 sm:gap-3 bg-white/10 dark:bg-black/10  border border-dashed border-neutral-200 dark:border-neutral-800 backdrop-blur-xs rounded-full px-3 sm:px-5 py-2.5"
     >
       <Link
         href={`mailto:${email}`}
@@ -111,9 +111,9 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
       >
         {mounted &&
           (theme.resolvedTheme === "dark" ? (
-            <SiCodeblocks size={24} />
+            <GiAzulFlake size={24} />
           ) : (
-            <SiCodeblocks size={24} />
+            <GiAzulFlake size={24} />
           ))}
       </button>
     </nav>

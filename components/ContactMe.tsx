@@ -9,7 +9,7 @@ export default function ContactMe() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle"
+    "idle",
   );
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -43,7 +43,7 @@ export default function ContactMe() {
           onChange={(e) => setName(e.target.value)}
           required
           autoComplete="off"
-          className="w-full bg-neutral-50 dark:bg-[#222222] border border-neutral-200 dark:border-neutral-800 px-3 py-2 text-sm text-neutral-700 dark:text-neutral-300 outline-none focus:border-[#5865F2] resize-none"
+          className="w-full bg-neutral-50 dark:bg-[#222222]  border border-dashed border-neutral-200 dark:border-neutral-800 px-3 py-2 text-sm text-neutral-700 dark:text-neutral-300 outline-none focus:border-[#5865F2] resize-none"
         />
         <input
           type="email"
@@ -53,7 +53,7 @@ export default function ContactMe() {
           onChange={(e) => setEmail(e.target.value)}
           required
           autoComplete="off"
-          className="w-full bg-neutral-50 dark:bg-[#222222] border border-neutral-200 dark:border-neutral-800 px-3 py-2 text-sm text-neutral-700 dark:text-neutral-300 outline-none focus:border-[#5865F2] resize-none"
+          className="w-full bg-neutral-50 dark:bg-[#222222]  border border-dashed border-neutral-200 dark:border-neutral-800 px-3 py-2 text-sm text-neutral-700 dark:text-neutral-300 outline-none focus:border-[#5865F2] resize-none"
         />
         <textarea
           name="message"
@@ -63,7 +63,7 @@ export default function ContactMe() {
           required
           rows={4}
           autoComplete="off"
-          className="w-full bg-neutral-50 dark:bg-[#222222] border border-neutral-200 dark:border-neutral-800 px-3 py-2 text-sm text-neutral-700 dark:text-neutral-300 outline-none focus:border-[#5865F2] resize-none"
+          className="w-full bg-neutral-50 dark:bg-[#222222]  border border-dashed border-neutral-200 dark:border-neutral-800 px-3 py-2 text-sm text-neutral-700 dark:text-neutral-300 outline-none focus:border-[#5865F2] resize-none"
         />
         <Button type="submit">
           {status === "idle" && "Send"}

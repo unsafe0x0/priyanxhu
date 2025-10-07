@@ -51,6 +51,7 @@ export const profileData = {
     "Vercel",
     "Render",
     "Linux",
+    "Ai SDK",
     "Machine Learning",
     "Deep Learning",
     "DSA",
