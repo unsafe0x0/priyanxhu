@@ -44,7 +44,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
       <Link
         href={`mailto:${email}`}
         aria-label="Send email"
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2]"
       >
         <RiMailFill size={24} />
       </Link>
@@ -53,7 +53,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2]"
       >
         <AiFillGithub size={24} />
       </Link>
@@ -63,7 +63,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2]"
       >
         <FaLinkedin size={24} />
       </Link>
@@ -73,7 +73,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Twitter"
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2]"
       >
         <FaSquareXTwitter size={24} />
       </Link>
@@ -83,7 +83,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LeetCode"
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2]"
       >
         <SiLeetcode size={24} />
       </Link>
@@ -93,7 +93,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Discord"
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2]"
       >
         <FaDiscord size={24} />
       </Link>
@@ -107,7 +107,7 @@ export default function FloatingNav({ email, links }: FloatingNavProps) {
         type="button"
         aria-label="Toggle theme"
         onClick={toggleTheme}
-        className="p-1 text-neutral-800 dark:text-neutral-100"
+        className="p-1 text-neutral-800 dark:text-neutral-100 hover:text-[#5865F2] cursor-pointer"
       >
         {mounted &&
           (theme.resolvedTheme === "dark" ? (

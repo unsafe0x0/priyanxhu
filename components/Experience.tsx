@@ -16,7 +16,7 @@ interface ExperienceProps {
 export default function Experience({ experience }: ExperienceProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-medium">Experience</h2>
+      <h2 className="text-2xl tracking-wide font-semibold">Experience</h2>
       <div className="space-y-6">
         {experience.map((exp, idx) => (
           <div key={idx} className="space-y-2">

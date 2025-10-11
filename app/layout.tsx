@@ -4,7 +4,10 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Priyanshu Chahar",
@@ -46,7 +49,7 @@ export default function RootLayout({
         href="https://avatars.githubusercontent.com/u/165533860?v=4"
         type="image/x-icon"
       />
-      <body className={inter.className}>
+      <body className={font.className}>
         <ThemeProvider>
           {children}
           <Analytics />

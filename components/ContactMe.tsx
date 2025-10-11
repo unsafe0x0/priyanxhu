@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { LuSendHorizontal } from "react-icons/lu";
+import { VscSend } from "react-icons/vsc";
 import Button from "./Button";
 
 export default function ContactMe() {
@@ -33,7 +33,7 @@ export default function ContactMe() {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-2xl tracking-wide font-medium">Drop a Message</h2>
+      <h2 className="text-2xl tracking-wide font-semibold">Drop a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-3">
         <input
           type="text"
@@ -70,7 +70,7 @@ export default function ContactMe() {
           {status === "sending" && "Sending..."}
           {status === "sent" && "Sent"}
           {status === "error" && "Error"}
-          <LuSendHorizontal />
+          <VscSend />
         </Button>
       </form>
     </section>

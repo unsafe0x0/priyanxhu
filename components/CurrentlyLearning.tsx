@@ -9,7 +9,7 @@ export default function CurrentlyLearning({
 }: CurrentlyLearningProps) {
   return (
     <section className="space-y-3">
-      <h2 className="text-2xl tracking-wide font-medium">Currently Learning</h2>
+      <h2 className="text-2xl tracking-wide font-semibold">Currently Learning</h2>
       <ul className="space-y-1 text-sm text-neutral-700 dark:text-neutral-300">
         {learningItems.map((item, index) => (
           <li

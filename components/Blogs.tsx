@@ -36,7 +36,7 @@ export default function Blogs() {
   return (
     <section className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl tracking-wide font-medium">Latest Blogs</h2>
+        <h2 className="text-2xl tracking-wide font-semibold">Latest Blogs</h2>
       </div>
 
       <div className="space-y-5">

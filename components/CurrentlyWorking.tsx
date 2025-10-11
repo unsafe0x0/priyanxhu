@@ -24,7 +24,7 @@ export default function CurrentlyWorking({
 }: CurrentlyWorkingProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-medium">
+      <h2 className="text-2xl tracking-wide font-semibold">
         Currently Working On
       </h2>
       <div className="space-y-5">

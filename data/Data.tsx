@@ -4,7 +4,7 @@ export const profileData = {
   location: "India",
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `Hey there! I'm Priyanshu aka Unsafezero, a Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
+  about: `Hey there! I'm Priyanshu aka Unsafezero, a 20 yr old Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -17,7 +17,7 @@ export const profileData = {
   ],
   experience: [
     {
-      duration: "1 Year",
+      duration: "1.5 Year",
       position: "Development Experience",
       company: "Self taught & Freelance",
       description:

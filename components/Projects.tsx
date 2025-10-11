@@ -22,7 +22,7 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-medium">Featured Projects</h2>
+      <h2 className="text-2xl tracking-wide font-semibold">Featured Projects</h2>
       <div className="space-y-5">
         {projects.map((project, idx) => (
           <div key={idx} className="space-y-2">

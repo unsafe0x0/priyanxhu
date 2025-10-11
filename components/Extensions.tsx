@@ -19,7 +19,7 @@ interface ExtensionsProps {
 export default function Extensions({ extensions }: ExtensionsProps) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-medium">VS Code Extensions</h2>
+      <h2 className="text-2xl tracking-wide font-semibold">VS Code Extensions</h2>
       <div className="space-y-5">
         {extensions.map((ext, idx) => (
           <div key={idx} className="space-y-2">
