@@ -1,41 +1,27 @@
-"use client";
+import React from "react";
+import { profileData } from "@/data/Data";
 
-import Badge from "./Badge";
-
-interface ExperienceItem {
-  duration: string;
-  position?: string;
-  company: string;
-  description?: string;
-}
-
-interface ExperienceProps {
-  experience: ExperienceItem[];
-}
-
-export default function Experience({ experience }: ExperienceProps) {
+const Experience = () => {
   return (
-    <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-semibold">Experience</h2>
-      <div className="space-y-6">
-        {experience.map((exp, idx) => (
-          <div key={idx} className="space-y-2">
-            <div className="flex items-center gap-3 flex-wrap">
-              <div className="text-md font-medium">
-                {exp.position
-                  ? `${exp.position} · ${exp.company}`
-                  : exp.company}
-              </div>
-              <Badge item={exp.duration} />
+    <div className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Experience</h2>
+      <div className="space-y-3">
+        {profileData.experience.map((exp, index) => (
+          <div
+            key={index}
+            className="border border-foreground/10 rounded-md p-4"
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1">
+              <h3 className="text-lg font-medium">{exp.position}</h3>
+              <span className="text-foreground/60 text-sm">{exp.duration}</span>
             </div>
-            {exp.description && (
-              <p className="text-sm text-neutral-700 dark:text-neutral-300  leading-relaxed">
-                {exp.description}
-              </p>
-            )}
+            <p className="text-foreground/80 mb-1 text-sm">{exp.company}</p>
+            <p className="text-foreground/70 text-base">{exp.description}</p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Experience;

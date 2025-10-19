@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Priyanshu Chahar",
-  title: "Software Developer",
+  whoami: "Software Developer",
   location: "India",
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
@@ -36,6 +36,7 @@ export const profileData = {
     "Fastify",
     "HonoJS",
     "TailwindCSS",
+    "React Native",
     "Prisma",
     "PostgreSQL",
     "MongoDB",
@@ -56,7 +57,6 @@ export const profileData = {
     "Deep Learning",
     "DSA",
   ],
-  currentlyLearning: ["System Design", "Data Structures and Algorithms"],
   projects: [
     {
       name: "Ai SDK",

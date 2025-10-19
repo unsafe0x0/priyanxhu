@@ -1,84 +1,62 @@
-"use client";
-
+import React from "react";
+import { profileData } from "@/data/Data";
+import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 import Badge from "./Badge";
 
-interface CurrentlyWorkingLink {
-  name: string;
-  url: string;
-}
-
-interface CurrentlyWorkingItem {
-  name: string;
-  description?: string;
-  stack: string[];
-  links: CurrentlyWorkingLink[];
-}
-
-interface CurrentlyWorkingProps {
-  currentlyWorking: CurrentlyWorkingItem[];
-}
-
-export default function CurrentlyWorking({
-  currentlyWorking,
-}: CurrentlyWorkingProps) {
+const CurrentlyWorking = () => {
   return (
-    <section className="space-y-6">
-      <h2 className="text-2xl tracking-wide font-semibold">
-        Currently Working On
-      </h2>
-      <div className="space-y-5">
-        {currentlyWorking.map((project, idx) => (
-          <div key={idx} className="space-y-2">
-            <h2 className="text-lg font-medium">{project.name}</h2>
-            {project.description && (
-              <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+    <div className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Currently Working On</h2>
+      <div className="grid grid-cols-1 gap-5">
+        {profileData.currentlyWorking.map((project) => (
+          <div
+            key={project.name}
+            className="border border-foreground/10 rounded-md p-4 flex flex-col h-full"
+          >
+            <div className="flex-1">
+              <h3 className="text-lg font-medium mb-1">{project.name}</h3>
+              <p className="text-foreground/70 mb-3 text-base">
                 {project.description}
               </p>
-            )}
-
-            <div className="flex flex-wrap gap-2">
-              {project.stack.map((item, i) => (
-                <Badge key={i} item={item} />
-              ))}
+              <div className="flex flex-wrap gap-2 mb-2">
+                {project.stack.map((tech) => (
+                  <Badge key={tech} item={tech} />
+                ))}
+              </div>
             </div>
-
-            {(() => {
-              const live = project.links.find(
-                (l) =>
-                  l.name.toLowerCase() === "website" ||
-                  l.name.toLowerCase() === "live",
-              );
-              const github = project.links.find(
-                (l) => l.name.toLowerCase() === "github",
-              );
-              return (
-                <div className="flex gap-3 text-sm text-neutral-700 dark:text-neutral-300">
-                  {live && (
+            <div className="mt-auto">
+              <div className="flex gap-4">
+                {project.links.map((link) =>
+                  link.url.startsWith("/") ? (
                     <Link
-                      href={live.url}
-                      rel="noopener noreferrer"
-                      className="underline underline-offset-4 text-sm text-neutral-700 dark:text-neutral-300 hover:text-[#5865F2] transition-colors"
+                      key={link.name}
+                      href={link.url}
+                      className="flex items-center gap-1 text-foreground/60 hover:text-foreground transition-colors"
                     >
-                      Live
+                      <span>{link.name}</span>
+                      <FiExternalLink size={14} />
                     </Link>
-                  )}
-                  {github && (
-                    <Link
-                      href={github.url}
+                  ) : (
+                    <a
+                      key={link.name}
+                      href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline underline-offset-4 text-sm text-neutral-700 dark:text-neutral-300 hover:text-[#5865F2] transition-colors"
+                      className="flex items-center gap-1 text-foreground/60 hover:text-foreground transition-colors"
                     >
-                      GitHub
-                    </Link>
-                  )}
-                </div>
-              );
-            })()}
+                      <span>{link.name}</span>
+                      <FiExternalLink size={14} />
+                    </a>
+                  ),
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default CurrentlyWorking;

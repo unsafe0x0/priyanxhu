@@ -1,48 +1,28 @@
-"use client";
-
 import React from "react";
-import { profileData } from "@/data/Data";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import CurrentlyWorking from "@/components/CurrentlyWorking";
-import Skills from "@/components/Skills";
-import CurrentlyLearning from "@/components/CurrentlyLearning";
-import FloatingNav from "@/components/FloatingNav";
-import ContactMe from "@/components/ContactMe";
 import Experience from "@/components/Experience";
-import Extensions from "@/components/Extensions";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
 import Blogs from "@/components/Blogs";
-import Footer from "@/components/Footer";
+import CurrentlyWorking from "@/components/CurrentlyWorking";
+import VsCodeExtensions from "@/components/VsCodeExtensions";
+import ContactForm from "@/components/ContactForm";
 
-export default function LandingPage() {
-  const {
-    name,
-    title,
-    about,
-    imageUrl,
-    skills,
-    currentlyLearning,
-    projects,
-    currentlyWorking,
-    experience,
-    vsCodeExtensions,
-    socialLinks,
-    email,
-  } = profileData;
-
+const Landing = () => {
   return (
-    <main className="max-w-2xl mx-auto px-3 pt-10 space-y-10 min-h-screen">
-      <Hero name={name} title={title} about={about} imageUrl={imageUrl} />
-      <Skills skills={skills} />
-      <CurrentlyLearning learningItems={currentlyLearning} />
-      <Projects projects={projects} />
-      <CurrentlyWorking currentlyWorking={currentlyWorking} />
-      <Extensions extensions={vsCodeExtensions} />
-      <Blogs />
-      <Experience experience={experience} />
-      <FloatingNav email={email} links={socialLinks} />
-      <ContactMe />
-      <Footer />
-    </main>
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="max-w-3xl mx-auto px-3 py-8">
+        <Hero />
+        <Skills />
+        <Projects />
+        <Blogs />
+        <CurrentlyWorking />
+        <VsCodeExtensions />
+        <Experience />
+        <ContactForm />
+      </div>
+    </div>
   );
-}
+};
+
+export default Landing;

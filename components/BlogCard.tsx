@@ -28,16 +28,16 @@ export default function BlogCard({ blog }: BlogCardProps) {
   return (
     <div className="space-y-2">
       <Link href={`${blog.url}`} target="_blank" rel="noopener noreferrer">
-        <h2 className="text-lg font-medium text-neutral-900 dark:text-white hover:text-[#5865F2]">
+        <h2 className="text-lg font-medium text-foreground hover:text-foreground/80 transition-colors">
           {blog.title}
         </h2>
       </Link>
 
-      <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+      <p className="text-base text-foreground/70 leading-relaxed">
         {blog.description}
       </p>
 
-      <div className="flex items-center gap-3 text-sm text-neutral-700 dark:text-neutral-300">
+      <div className="flex items-center gap-3 text-base text-foreground/60">
         <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
         <FaDiamond className="inline text-xs" />
         <span>{blog.readTime}</span>

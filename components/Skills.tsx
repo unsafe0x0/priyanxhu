@@ -1,19 +1,18 @@
-"use client";
+import React from "react";
+import { profileData } from "@/data/Data";
 import Badge from "./Badge";
 
-interface SkillsProps {
-  skills: string[];
-}
-
-export default function Skills({ skills }: SkillsProps) {
+const Skills = () => {
   return (
-    <section className="space-y-3">
-      <h2 className="text-2xl tracking-wide font-semibold">What i Know</h2>
+    <div className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">What I Know</h2>
       <div className="flex flex-wrap gap-2">
-        {skills.map((skill, i) => (
-          <Badge key={i} item={skill} />
+        {profileData.skills.map((skill) => (
+          <Badge key={skill} item={skill} />
         ))}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Skills;

@@ -1,21 +1,26 @@
 import React from "react";
 
 interface ButtonProps {
+  type?: "button" | "submit" | "reset";
   children: React.ReactNode;
   onClick?: () => void;
-  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
-const Button = ({ children, onClick, type = "button" }: ButtonProps) => {
+export default function Button({
+  type = "button",
+  children,
+  onClick,
+  disabled,
+}: ButtonProps) {
   return (
     <button
-      onClick={onClick}
       type={type}
-      className="inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] text-white hover:bg-[#4752C4] transition-colors text-sm font-medium cursor-pointer"
+      onClick={onClick}
+      disabled={disabled}
+      className="px-4 py-2 bg-foreground text-background rounded-md hover:opacity-95 transition-opacity disabled:opacity-50 flex items-center gap-2 cursor-pointer"
     >
       {children}
     </button>
   );
-};
-
-export default Button;
+}

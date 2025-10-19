@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const font = Inter({
   subsets: ["latin"],
@@ -50,10 +49,8 @@ export default function RootLayout({
         type="image/x-icon"
       />
       <body className={font.className}>
-        <ThemeProvider>
-          {children}
-          <Analytics />
-        </ThemeProvider>
+        {children}
+        <Analytics />
       </body>
     </html>
   );

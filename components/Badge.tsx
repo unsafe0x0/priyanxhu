@@ -1,11 +1,13 @@
 import React from "react";
 
-const Badge = ({ item }: { item: string }) => {
+interface BadgeProps {
+  item: string;
+}
+
+export default function Badge({ item }: BadgeProps) {
   return (
-    <span className="inline-flex items-center  border border-dashed border-[#282828] bg-[#222222] text-neutral-100 px-2 py-1 text-xs tracking-wide select-none">
+    <span className="px-2 py-1 rounded-md border border-foreground/10 text-sm">
       {item}
     </span>
   );
-};
-
-export default Badge;
+}

@@ -14,6 +14,7 @@ interface Blog {
   readTime: string;
   tags: string[];
 }
+
 const fetchBlogs = async () => {
   const res = await fetch("/api/feed");
   const data = await res.json();
@@ -31,25 +32,22 @@ export default function Blogs() {
     getBlogs();
   }, []);
 
-  console.log(fetchedBlogs);
-
   return (
-    <section className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl tracking-wide font-semibold">Latest Blogs</h2>
-      </div>
+    <div className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Latest Blogs</h2>
 
-      <div className="space-y-5">
+      <div className="space-y-5 mb-5">
         {fetchedBlogs.map((blog) => (
           <BlogCard key={blog.url} blog={blog} />
         ))}
       </div>
 
       {fetchedBlogs.length === 0 && (
-        <div className="text-center py-8 text-neutral-700 dark:text-neutral-300">
+        <div className="text-center py-8 text-foreground/70">
           <p>Unable to fetch blogs</p>
         </div>
       )}
+
       <Button type="button">
         <Link
           href="https://blogs.priyanxhu.me"
@@ -58,6 +56,6 @@ export default function Blogs() {
           View all <FaArrowRight className="inline" />
         </Link>
       </Button>
-    </section>
+    </div>
   );
 }
