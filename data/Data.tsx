@@ -64,7 +64,7 @@ export const profileData = {
         "SDK to easily integrate AI models into your applications with support for multiple providers and models. Easy to use and lightweight.",
       stack: ["Golang", "AI Providers"],
       links: [
-        { name: "Website", url: "/ai" },
+        { name: "Docs", url: "https://github.com/unsafe0x0/ai" },
         { name: "Github", url: "https://github.com/unsafe0x0/ai" },
       ],
     },
@@ -111,12 +111,12 @@ export const profileData = {
   ],
   currentlyWorking: [
     {
-      name: "Halo Ai",
+      name: "Halo",
       description: "Something like v0 and lovable",
       stack: ["NextJS", "AI Providers", "TailwindCSS"],
       links: [
         { name: "Website", url: "/" },
-        { name: "Github", url: "https://github.com/unsafe0x0/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/halo" },
       ],
     },
   ],

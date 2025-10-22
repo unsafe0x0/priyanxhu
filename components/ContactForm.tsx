@@ -42,7 +42,7 @@ const ContactForm = () => {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">Contact Me</h2>
+      <h2 className="text-2xl font-semibold mb-3">Drop a Message</h2>
       <form
         onSubmit={handleSubmit}
         className="border border-foreground/10 rounded-md p-4"

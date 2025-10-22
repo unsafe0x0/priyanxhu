@@ -19,13 +19,13 @@ const Projects = () => {
               <p className="text-foreground/70 mb-3 text-base">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-2">
+              <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
                   <Badge key={tech} item={tech} />
                 ))}
               </div>
             </div>
-            <div className="mt-auto">
+            <div className="mt-4">
               <div className="flex gap-4">
                 {project.links.map((link) =>
                   link.url.startsWith("/") ? (

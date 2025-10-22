@@ -15,11 +15,11 @@ const VsCodeExtensions = () => {
           >
             <div className="flex-1">
               <h3 className="text-lg font-medium mb-1">{ext.name}</h3>
-              <p className="text-foreground/70 mb-3 text-base">
+              <p className="text-foreground/70 text-base">
                 {ext.description}
               </p>
             </div>
-            <div className="mt-auto">
+            <div className="mt-4">
               <div className="flex gap-4">
                 {ext.links.map((link) => (
                   <Link

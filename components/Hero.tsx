@@ -37,7 +37,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
             {profileData.name}
           </h1>
-          <p className="text-lg text-foreground/80 mt-1">
+          <p className="text-base text-foreground/80 mt-1">
             {profileData.whoami}
           </p>
 
@@ -50,7 +50,7 @@ const Hero = () => {
                   href={link.url}
                   className="group relative text-foreground/60 hover:text-foreground transition-colors"
                 >
-                  {Icon && <Icon size={24} />}
+                  {Icon && <Icon size={22} />}
                   <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-foreground text-background text-xs px-2 py-1 rounded whitespace-nowrap z-10">
                     {link.name}
                   </span>
