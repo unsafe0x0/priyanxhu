@@ -2,7 +2,6 @@ import React from "react";
 import { profileData } from "@/data/Data";
 import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
-import Badge from "./Badge";
 
 const Projects = () => {
   return (
@@ -12,16 +11,21 @@ const Projects = () => {
         {profileData.projects.map((project) => (
           <div
             key={project.name}
-            className="border border-foreground/10 rounded-md p-4 flex flex-col h-full"
+            className="border border-neutral-800 rounded-md p-4 flex flex-col h-full bg-neutral-900 ring-2 ring-transparent hover:ring-neutral-800 transition-all duration-200"
           >
             <div className="flex-1">
               <h3 className="text-lg font-medium mb-1">{project.name}</h3>
-              <p className="text-foreground/70 mb-3 text-base">
+              <p className="text-neutral-300 mb-3 text-base">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
-                  <Badge key={tech} item={tech} />
+                  <span
+                    key={tech}
+                    className="px-3 py-1 rounded-md text-sm flex items-center gap-1 bg-neutral-800"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
             </div>
@@ -32,7 +36,7 @@ const Projects = () => {
                     <Link
                       key={link.name}
                       href={link.url}
-                      className="flex items-center gap-1 text-foreground/60 hover:text-foreground transition-colors"
+                      className="flex items-center gap-1 text-neutral-400 hover:text-neutral-100 transition-colors"
                     >
                       <span>{link.name}</span>
                       <FiExternalLink size={14} />
@@ -43,12 +47,12 @@ const Projects = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-foreground/60 hover:text-foreground transition-colors"
+                      className="flex items-center gap-1 text-neutral-400 hover:text-neutral-100 transition-colors"
                     >
                       <span>{link.name}</span>
                       <FiExternalLink size={14} />
                     </a>
-                  ),
+                  )
                 )}
               </div>
             </div>

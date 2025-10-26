@@ -1,6 +1,5 @@
 import React from "react";
 import { profileData } from "@/data/Data";
-import Badge from "./Badge";
 
 const Skills = () => {
   return (
@@ -8,7 +7,12 @@ const Skills = () => {
       <h2 className="text-2xl font-semibold mb-3">What I Know</h2>
       <div className="flex flex-wrap gap-2">
         {profileData.skills.map((skill) => (
-          <Badge key={skill} item={skill} />
+          <span
+            key={skill}
+            className="px-3 py-1 rounded-md text-sm flex items-center gap-1 bg-neutral-900 border border-neutral-800"
+          >
+            {skill}
+          </span>
         ))}
       </div>
     </div>

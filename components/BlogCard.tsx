@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FaDiamond } from "react-icons/fa6";
-import Badge from "./Badge";
 
 interface Blog {
   title: string;
@@ -28,16 +27,16 @@ export default function BlogCard({ blog }: BlogCardProps) {
   return (
     <div className="space-y-2">
       <Link href={`${blog.url}`} target="_blank" rel="noopener noreferrer">
-        <h2 className="text-lg font-medium text-foreground hover:text-foreground/80 transition-colors">
+        <h2 className="text-lg font-medium text-neutral-100 hover:text-neutral-200 transition-colors">
           {blog.title}
         </h2>
       </Link>
 
-      <p className="text-base text-foreground/70 leading-relaxed">
+      <p className="text-base text-neutral-300 leading-relaxed">
         {blog.description}
       </p>
 
-      <div className="flex items-center gap-3 text-base text-foreground/60">
+      <div className="flex items-center gap-3 text-base text-neutral-400">
         <time dateTime={blog.publishedAt}>{formatDate(blog.publishedAt)}</time>
         <FaDiamond className="inline text-xs" />
         <span>{blog.readTime}</span>
@@ -45,7 +44,12 @@ export default function BlogCard({ blog }: BlogCardProps) {
 
       <div className="flex flex-wrap gap-2">
         {blog.tags.map((tag) => (
-          <Badge key={tag} item={tag} />
+          <span
+            key={tag}
+            className="px-3 py-1 rounded-md text-sm flex items-center gap-1 bg-neutral-800"
+          >
+            {tag}
+          </span>
         ))}
       </div>
     </div>

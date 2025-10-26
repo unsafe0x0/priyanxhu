@@ -43,7 +43,7 @@ export default function Blogs() {
       </div>
 
       {fetchedBlogs.length === 0 && (
-        <div className="text-center py-8 text-foreground/70">
+        <div className="text-center py-8 text-neutral-300">
           <p>Unable to fetch blogs</p>
         </div>
       )}

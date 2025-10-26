@@ -45,7 +45,7 @@ const ContactForm = () => {
       <h2 className="text-2xl font-semibold mb-3">Drop a Message</h2>
       <form
         onSubmit={handleSubmit}
-        className="border border-foreground/10 rounded-md p-4"
+        className=""
       >
         <div className="mb-3">
           <label htmlFor="name" className="block text-base font-medium mb-1">
@@ -57,7 +57,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="w-full px-3 py-2 border border-foreground/10 rounded-md bg-background text-foreground focus:outline-none focus:border-foreground/80"
+            className="w-full px-3 py-2 border border-neutral-800 rounded-md bg-neutral-900 text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-neutral-800"
           />
         </div>
         <div className="mb-3">
@@ -72,7 +72,7 @@ const ContactForm = () => {
               setFormData({ ...formData, email: e.target.value })
             }
             required
-            className="w-full px-3 py-2 border border-foreground/10 rounded-md bg-background text-foreground focus:outline-none focus:border-foreground/80"
+            className="w-full px-3 py-2 border border-neutral-800 rounded-md bg-neutral-900 text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-neutral-800"
           />
         </div>
         <div className="mb-3">
@@ -87,7 +87,7 @@ const ContactForm = () => {
             }
             required
             rows={4}
-            className="w-full px-3 py-2 border border-foreground/10 rounded-md bg-background text-foreground focus:outline-none focus:border-foreground/80 resize-none"
+            className="w-full px-3 py-2 border border-neutral-800 rounded-md bg-neutral-900 text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-neutral-800 resize-none"
           />
         </div>
         <div className="flex items-center gap-3">

@@ -12,7 +12,6 @@ export const profileData = {
     { name: "CodeForces", url: "https://codeforces.com/profile/unsafezero" },
     { name: "LinkedIn", url: "https://linkedin.com/in/priyannxhuu" },
     { name: "Discord", url: "https://discord.com/users/unsafezero" },
-    { name: "Peerlist", url: "https://peerlist.io/unsafezero" },
     { name: "Youtube", url: "https://youtube.com/@unsafezero" },
   ],
   experience: [
@@ -38,11 +37,11 @@ export const profileData = {
     "TailwindCSS",
     "React Native",
     "Prisma",
+    "Redis",
     "PostgreSQL",
     "MongoDB",
     "Golang",
     "Gin",
-    "Wails",
     "GORM",
     "C++",
     "Python",
@@ -53,6 +52,7 @@ export const profileData = {
     "Render",
     "Linux",
     "Ai SDK",
+    "AI Providers",
     "Machine Learning",
     "Deep Learning",
     "DSA",
@@ -112,7 +112,7 @@ export const profileData = {
   currentlyWorking: [
     {
       name: "Halo",
-      description: "Something like v0 and lovable",
+      description: "something ai powered",
       stack: ["NextJS", "AI Providers", "TailwindCSS"],
       links: [
         { name: "Website", url: "/" },

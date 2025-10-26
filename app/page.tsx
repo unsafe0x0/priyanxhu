@@ -10,7 +10,7 @@ import ContactForm from "@/components/ContactForm";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen">
       <div className="max-w-3xl mx-auto px-3 py-8">
         <Hero />
         <Skills />

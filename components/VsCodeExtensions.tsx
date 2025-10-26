@@ -11,13 +11,11 @@ const VsCodeExtensions = () => {
         {profileData.vsCodeExtensions.map((ext) => (
           <div
             key={ext.name}
-            className="border border-foreground/10 rounded-md p-4 flex flex-col h-full"
+            className="border border-neutral-800 rounded-md p-4 flex flex-col h-full bg-neutral-900 ring-2 ring-transparent hover:ring-neutral-800 transition-all duration-200"
           >
             <div className="flex-1">
               <h3 className="text-lg font-medium mb-1">{ext.name}</h3>
-              <p className="text-foreground/70 text-base">
-                {ext.description}
-              </p>
+              <p className="text-neutral-300 text-base">{ext.description}</p>
             </div>
             <div className="mt-4">
               <div className="flex gap-4">
@@ -25,7 +23,7 @@ const VsCodeExtensions = () => {
                   <Link
                     key={link.name}
                     href={link.url}
-                    className="flex items-center gap-1 text-foreground/60 hover:text-foreground transition-colors"
+                    className="flex items-center gap-1 text-neutral-400 hover:text-neutral-100 transition-colors"
                   >
                     <span>{link.name}</span>
                     <FiExternalLink size={14} />
