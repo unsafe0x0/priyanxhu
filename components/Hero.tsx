@@ -37,10 +37,10 @@ const Hero = () => {
         />
 
         <div className="flex-1 md:text-left">
-          <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
+          <h1 className="text-3xl md:text-4xl font-semibold">
             {profileData.name}
           </h1>
-          <p className="text-base text-neutral-200 mt-1">
+          <p className="text-base font-medium text-neutral-200 mt-1">
             {profileData.whoami}
           </p>
 
@@ -51,6 +51,7 @@ const Hero = () => {
                 <Link
                   key={link.name}
                   href={link.url}
+                  target="_blank"
                   className="group relative text-neutral-400 hover:text-neutral-100 transition-colors"
                 >
                   {Icon && (

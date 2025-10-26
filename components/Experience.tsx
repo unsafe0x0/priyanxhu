@@ -13,7 +13,7 @@ const Experience = () => {
           >
             <div className="flex justify-between items-center mb-1">
               <h3 className="text-lg font-medium">{exp.position}</h3>
-              <span className="text-neutral-400 text-sm px-2 py-1 rounded-md bg-neutral-800">
+              <span className="text-neutral-400 text-sm font-medium px-2 py-1 rounded-md bg-neutral-800">
                 {exp.duration}
               </span>
             </div>

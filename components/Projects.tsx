@@ -22,7 +22,7 @@ const Projects = () => {
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-md text-sm flex items-center gap-1 bg-neutral-800"
+                    className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-800"
                   >
                     {tech}
                   </span>
@@ -52,7 +52,7 @@ const Projects = () => {
                       <span>{link.name}</span>
                       <FiExternalLink size={14} />
                     </a>
-                  )
+                  ),
                 )}
               </div>
             </div>

@@ -9,7 +9,7 @@ const Skills = () => {
         {profileData.skills.map((skill) => (
           <span
             key={skill}
-            className="px-3 py-1 rounded-md text-sm flex items-center gap-1 bg-neutral-900 border border-neutral-800"
+            className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800"
           >
             {skill}
           </span>

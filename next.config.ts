@@ -9,14 +9,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/feed",
-        destination: "https://blogs.priyanxhu.me/api/feed",
-      },
-    ];
-  },
 };
 
 export default nextConfig;

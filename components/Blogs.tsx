@@ -23,14 +23,37 @@ const fetchBlogs = async () => {
 
 export default function Blogs() {
   const [fetchedBlogs, setFetchedBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getBlogs = async () => {
-      const blogs = await fetchBlogs();
-      setFetchedBlogs(blogs);
+      try {
+        const blogs = await fetchBlogs();
+        setFetchedBlogs(blogs);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
     };
     getBlogs();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold mb-3">Latest Blogs</h2>
+        <div className="space-y-5">
+          <div className="">
+            <h3 className="text-lg font-medium mb-1">Loading...</h3>
+            <p className="text-neutral-300 text-base">
+              Loading blog content...
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="mb-8">

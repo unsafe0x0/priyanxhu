@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Button from "./Button";
-import { VscSend } from "react-icons/vsc";
+import { LuSendHorizontal } from "react-icons/lu";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -43,10 +43,7 @@ const ContactForm = () => {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-semibold mb-3">Drop a Message</h2>
-      <form
-        onSubmit={handleSubmit}
-        className=""
-      >
+      <form onSubmit={handleSubmit} className="">
         <div className="mb-3">
           <label htmlFor="name" className="block text-base font-medium mb-1">
             Name
@@ -93,7 +90,7 @@ const ContactForm = () => {
         <div className="flex items-center gap-3">
           <Button type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send"}
-            <VscSend size={18} />
+            <LuSendHorizontal size={18} />
           </Button>
           {submitStatus === "success" && (
             <p className="text-green-400 text-sm">Message sent successfully!</p>
