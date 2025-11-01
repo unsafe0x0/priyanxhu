@@ -4,7 +4,7 @@ import { profileData } from "@/data/Data";
 const Experience = () => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">Experience</h2>
+      <h2 className="text-2xl font-medium mb-3">Experience</h2>
       <div className="space-y-3">
         {profileData.experience.map((exp, index) => (
           <div

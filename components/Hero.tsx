@@ -37,7 +37,7 @@ const Hero = () => {
         />
 
         <div className="flex-1 md:text-left">
-          <h1 className="text-3xl md:text-4xl font-semibold">
+          <h1 className="text-3xl md:text-4xl font-medium">
             {profileData.name}
           </h1>
           <p className="text-base font-medium text-neutral-200 mt-1">

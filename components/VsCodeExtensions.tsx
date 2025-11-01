@@ -6,7 +6,7 @@ import Link from "next/link";
 const VsCodeExtensions = () => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">VS Code Extensions</h2>
+      <h2 className="text-2xl font-medium mb-3">VS Code Extensions</h2>
       <div className="grid grid-cols-1 gap-5">
         {profileData.vsCodeExtensions.map((ext) => (
           <div

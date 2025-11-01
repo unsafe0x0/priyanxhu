@@ -6,7 +6,7 @@ import Link from "next/link";
 const CurrentlyWorking = () => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">Currently Working On</h2>
+      <h2 className="text-2xl font-medium mb-3">Currently Working On</h2>
       <div className="grid grid-cols-1 gap-5">
         {profileData.currentlyWorking.map((project) => (
           <div

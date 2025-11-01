@@ -42,7 +42,7 @@ export default function Blogs() {
   if (loading) {
     return (
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3">Latest Blogs</h2>
+        <h2 className="text-2xl font-medium mb-3">Latest Blogs</h2>
         <div className="space-y-5">
           <div className="">
             <h3 className="text-lg font-medium mb-1">Loading...</h3>
@@ -57,7 +57,7 @@ export default function Blogs() {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">Latest Blogs</h2>
+      <h2 className="text-2xl font-medium mb-3">Latest Blogs</h2>
 
       <div className="space-y-5 mb-5">
         {fetchedBlogs.map((blog) => (

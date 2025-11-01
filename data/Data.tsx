@@ -33,9 +33,10 @@ export const profileData = {
     "BunJS",
     "ExpressJS",
     "Fastify",
-    "HonoJS",
     "TailwindCSS",
+    "Expo",
     "React Native",
+    "React Query",
     "Prisma",
     "Redis",
     "PostgreSQL",
@@ -117,6 +118,22 @@ export const profileData = {
       links: [
         { name: "Website", url: "/" },
         { name: "Github", url: "https://github.com/unsafe0x0/halo" },
+      ],
+    },
+    {
+      name: "Paperly",
+      description:
+        "android and ios app for online stationery shopping and printing",
+      stack: [
+        "React Native",
+        "TailwindCSS",
+        "NodeJS",
+        "ExpressJS",
+        "PostgreSQL",
+      ],
+      links: [
+        { name: "Website", url: "/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/paperly" },
       ],
     },
   ],
