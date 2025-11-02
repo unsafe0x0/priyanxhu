@@ -82,7 +82,7 @@ export const profileData = {
     {
       name: "Tpotora",
       description:
-        "A web app for showcasing and discovering projects built by TPOT(tech part of twitter) developers.",
+        "A web app for showcasing and discovering projects built for TPOT(tech part of twitter) developers.",
       stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth"],
       links: [
         { name: "Website", url: "https://tpotora.vercel.app/" },
