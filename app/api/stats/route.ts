@@ -34,17 +34,23 @@ export async function GET(request: NextRequest) {
     const weekAgo = new Date(todayDate.getTime() - 7 * 24 * 60 * 60 * 1000);
     const weekAgoStr = weekAgo.toISOString().split("T")[0];
 
+    const githubToken = process.env.GITHUB_TOKEN;
+    const headers = {
+      "User-Agent": "priyanxhu.me",
+      ...(githubToken && { Authorization: `token ${githubToken}` }),
+    };
+
     const [weekCommitsRes, todayCommitsRes] = await Promise.all([
       fetch(
         `https://api.github.com/search/commits?q=author:${username}+committer-date:>${weekAgoStr}`,
         {
-          headers: { "User-Agent": "priyanxhu-portfolio" },
+          headers,
         },
       ),
       fetch(
         `https://api.github.com/search/commits?q=author:${username}+committer-date:${todayStr}`,
         {
-          headers: { "User-Agent": "priyanxhu-portfolio" },
+          headers,
         },
       ),
     ]);

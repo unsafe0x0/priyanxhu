@@ -80,6 +80,16 @@ export const profileData = {
       ],
     },
     {
+      name: "Tpotora",
+      description:
+        "A web app for showcasing and discovering projects built by TPOT(tech part of twitter) developers.",
+      stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth"],
+      links: [
+        { name: "Website", url: "https://tpotora.vercel.app/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/tpotora" },
+      ],
+    },
+    {
       name: "XeroChat",
       description:
         "AI powered chat application with multiple LLM models featuring secure authentication and persistent conversation history, quick access to previous prompts and responses.",
