@@ -52,7 +52,7 @@ const CurrentlyWorking = () => {
                       <span>{link.name}</span>
                       <FiExternalLink size={14} />
                     </a>
-                  )
+                  ),
                 )}
               </div>
             </div>

@@ -1,28 +1,27 @@
 import React from "react";
 import { profileData } from "@/data/Data";
 import { FaGithub, FaLinkedin, FaYoutube, FaDiscord } from "react-icons/fa";
-import { SiLeetcode, SiCodeforces } from "react-icons/si";
-import { MdEmail } from "react-icons/md";
+import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { LuSend } from "react-icons/lu";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "./Button";
 
 const Hero = () => {
   const socialIcons = {
-    Email: MdEmail,
     GitHub: FaGithub,
     Twitter: FaSquareXTwitter,
     LinkedIn: FaLinkedin,
     Youtube: FaYoutube,
     Discord: FaDiscord,
+    CodeChef: SiCodechef,
     LeetCode: SiLeetcode,
     CodeForces: SiCodeforces,
   };
 
-  const links = [
-    { name: "Email", url: `mailto:${profileData.email}` },
-    ...profileData.socialLinks,
-  ];
+  const links = [...profileData.socialLinks];
 
   return (
     <section className="mb-8">
@@ -71,6 +70,28 @@ const Hero = () => {
       </div>
 
       <p className="text-neutral-300 mt-5 text-base">{profileData.about}</p>
+
+      <div className="mt-5 flex items-center flex-wrap gap-3">
+        <Button variant="secondary">
+          <Link
+            href={"mailto:" + profileData.email}
+            className="flex items-center gap-2"
+          >
+            Mail
+            <MdEmail />
+          </Link>
+        </Button>
+        <Button>
+          <Link
+            target="_blank"
+            href={profileData.calcom}
+            className="flex items-center gap-2"
+          >
+            Get in Touch
+            <LuSend />
+          </Link>
+        </Button>
+      </div>
     </section>
   );
 };

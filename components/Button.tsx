@@ -1,6 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
+  variant?: "primary" | "secondary";
   type?: "button" | "submit" | "reset";
   children: React.ReactNode;
   onClick?: () => void;
@@ -8,17 +9,23 @@ interface ButtonProps {
 }
 
 export default function Button({
+  variant = "primary",
   type = "button",
   children,
   onClick,
   disabled,
 }: ButtonProps) {
+  const variantClasses = {
+    primary: "bg-foreground text-background",
+    secondary: "bg-neutral-800 text-foreground",
+  };
+
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className="px-4 py-2 bg-foreground text-background rounded-md hover:opacity-95 transition-opacity disabled:opacity-50 flex items-center gap-2 cursor-pointer text-base font-normal"
+      className={`px-4 py-2 ${variantClasses[variant]} rounded-md hover:opacity-95 transition-opacity disabled:opacity-50 flex items-center gap-2 cursor-pointer text-base font-normal`}
     >
       {children}
     </button>
