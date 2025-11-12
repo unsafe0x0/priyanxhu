@@ -4,7 +4,7 @@ import { profileData } from "@/data/Data";
 const Experience = () => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-medium mb-3">Experience</h2>
+      <h2 className="text-2xl font-semibold mb-3">Experience</h2>
       <div className="space-y-3">
         {profileData.experience.map((exp, index) => (
           <div
@@ -13,7 +13,7 @@ const Experience = () => {
           >
             <div className="flex justify-between items-center mb-1">
               <h3 className="text-lg font-medium">{exp.position}</h3>
-              <span className="text-neutral-400 text-sm font-medium px-2 py-1 rounded-md bg-neutral-800">
+              <span className="text-neutral-400 text-sm font-normal px-2 py-1 rounded-md bg-neutral-800">
                 {exp.duration}
               </span>
             </div>

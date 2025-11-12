@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Priyanshu Chahar",
-  whoami: "Software Developer",
+  whoami: "Full Stack Developer",
   location: "India",
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",

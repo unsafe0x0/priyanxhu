@@ -6,7 +6,7 @@ import Link from "next/link";
 const CurrentlyWorking = () => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-medium mb-3">Currently Working On</h2>
+      <h2 className="text-2xl font-semibold mb-3">Currently Working On</h2>
       <div className="grid grid-cols-1 gap-5">
         {profileData.currentlyWorking.map((project) => (
           <div
@@ -22,7 +22,7 @@ const CurrentlyWorking = () => {
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-800"
+                    className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-800"
                   >
                     {tech}
                   </span>
@@ -52,7 +52,7 @@ const CurrentlyWorking = () => {
                       <span>{link.name}</span>
                       <FiExternalLink size={14} />
                     </a>
-                  ),
+                  )
                 )}
               </div>
             </div>

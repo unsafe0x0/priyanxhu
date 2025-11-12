@@ -37,10 +37,10 @@ const Hero = () => {
         />
 
         <div className="flex-1 md:text-left">
-          <h1 className="text-3xl md:text-4xl font-medium">
+          <h1 className="text-3xl md:text-4xl font-semibold">
             {profileData.name}
           </h1>
-          <p className="text-base font-medium text-neutral-200 mt-1">
+          <p className="text-xl font-medium text-neutral-200 mt-1">
             {profileData.whoami}
           </p>
 
@@ -56,7 +56,7 @@ const Hero = () => {
                 >
                   {Icon && (
                     <Icon
-                      size={32}
+                      size={34}
                       className="p-1 rounded-md bg-neutral-900 border border-neutral-800"
                     />
                   )}

@@ -46,21 +46,21 @@ const CodeStats = () => {
   return (
     <div className="mb-8">
       <div className="flex flex-col gap-3">
-        <h2 className="text-lg font-medium">Today Stats</h2>
+        <h2 className="text-xl font-semibold">Today Stats</h2>
         <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
             {data.today} Code Time
           </span>
-          <span className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
             {data.todayCommits} Commits
           </span>
         </div>
-        <h2 className="text-lg font-medium">This Week Stats</h2>
+        <h2 className="text-xl font-semibold">This Week Stats</h2>
         <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
             {data.week} Code Time
           </span>
-          <span className="px-3 py-1 rounded-md text-sm font-medium flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
             {data.weekCommits} Commits
           </span>
         </div>
