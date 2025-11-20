@@ -9,11 +9,11 @@ const Experience = () => {
         {profileData.experience.map((exp, index) => (
           <div
             key={index}
-            className="border border-neutral-800 rounded-md p-4 flex flex-col h-full bg-neutral-900 ring-2 ring-transparent hover:ring-neutral-800 transition-all duration-200"
+            className="border border-border rounded-md p-4 flex flex-col h-full ring-2 ring-transparent hover:ring-border transition-all duration-200"
           >
             <div className="flex justify-between items-center mb-1">
               <h3 className="text-lg font-medium">{exp.position}</h3>
-              <span className="text-neutral-400 text-sm font-normal px-2 py-1 rounded-md bg-neutral-800">
+              <span className="text-neutral-400 text-sm font-normal px-2 py-1 rounded-md bg-accent border border-border">
                 {exp.duration}
               </span>
             </div>

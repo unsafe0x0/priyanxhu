@@ -11,7 +11,7 @@ const VsCodeExtensions = () => {
         {profileData.vsCodeExtensions.map((ext) => (
           <div
             key={ext.name}
-            className="border border-neutral-800 rounded-md p-4 flex flex-col h-full bg-neutral-900 ring-2 ring-transparent hover:ring-neutral-800 transition-all duration-200"
+            className="border border-border rounded-md p-4 flex flex-col h-full ring-2 ring-transparent hover:ring-border transition-all duration-200"
           >
             <div className="flex-1">
               <h3 className="text-lg font-medium mb-1">{ext.name}</h3>

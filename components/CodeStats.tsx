@@ -48,19 +48,19 @@ const CodeStats = () => {
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-semibold">Today Stats</h2>
         <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
             {data.today} Code Time
           </span>
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
             {data.todayCommits} Commits
           </span>
         </div>
         <h2 className="text-xl font-semibold">This Week Stats</h2>
         <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
             {data.week} Code Time
           </span>
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-900 border border-neutral-800">
+          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
             {data.weekCommits} Commits
           </span>
         </div>

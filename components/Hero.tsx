@@ -56,7 +56,7 @@ const Hero = () => {
                   {Icon && (
                     <Icon
                       size={34}
-                      className="p-1 rounded-md bg-neutral-900 border border-neutral-800"
+                      className="p-1 rounded-md bg-accent border border-border"
                     />
                   )}
                   <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-neutral-100 text-neutral-800 text-xs px-2 py-1 rounded whitespace-nowrap z-10">

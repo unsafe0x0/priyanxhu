@@ -54,7 +54,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="w-full px-3 py-2 border border-neutral-800 rounded-md bg-neutral-900 text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-neutral-800"
+            className="w-full px-3 py-2 border border-border rounded-md text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-border"
           />
         </div>
         <div className="mb-3">
@@ -69,7 +69,7 @@ const ContactForm = () => {
               setFormData({ ...formData, email: e.target.value })
             }
             required
-            className="w-full px-3 py-2 border border-neutral-800 rounded-md bg-neutral-900 text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-neutral-800"
+            className="w-full px-3 py-2 border border-border rounded-md text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-border"
           />
         </div>
         <div className="mb-3">
@@ -84,7 +84,7 @@ const ContactForm = () => {
             }
             required
             rows={4}
-            className="w-full px-3 py-2 border border-neutral-800 rounded-md bg-neutral-900 text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-neutral-800 resize-none"
+            className="w-full px-3 py-2 border border-border rounded-md text-neutral-100 focus:outline-none ring-2 ring-transparent focus:ring-border resize-none"
           />
         </div>
         <div className="flex items-center gap-3">

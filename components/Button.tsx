@@ -17,7 +17,7 @@ export default function Button({
 }: ButtonProps) {
   const variantClasses = {
     primary: "bg-foreground text-background",
-    secondary: "bg-neutral-800 text-foreground",
+    secondary: "bg-accent text-foreground",
   };
 
   return (
@@ -25,7 +25,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`px-4 py-2 ${variantClasses[variant]} rounded-md hover:opacity-95 transition-opacity disabled:opacity-50 flex items-center gap-2 cursor-pointer text-base font-normal`}
+      className={`px-4 py-2 ${variantClasses[variant]} rounded-md hover:opacity-95 transition-opacity disabled:opacity-50 flex items-center gap-2 cursor-pointer text-base font-normal border border-border`}
     >
       {children}
     </button>

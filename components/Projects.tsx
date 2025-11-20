@@ -11,7 +11,7 @@ const Projects = () => {
         {profileData.projects.map((project) => (
           <div
             key={project.name}
-            className="border border-neutral-800 rounded-md p-4 flex flex-col h-full bg-neutral-900 ring-2 ring-transparent hover:ring-neutral-800 transition-all duration-200"
+            className="border border-border rounded-md p-4 flex flex-col h-full ring-2 ring-transparent hover:ring-border transition-all duration-200"
           >
             <div className="flex-1">
               <h3 className="text-lg font-medium mb-1">{project.name}</h3>
@@ -22,7 +22,7 @@ const Projects = () => {
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-800"
+                    className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border"
                   >
                     {tech}
                   </span>
@@ -42,7 +42,7 @@ const Projects = () => {
                       <FiExternalLink size={14} />
                     </Link>
                   ) : (
-                    <a
+                    <Link
                       key={link.name}
                       href={link.url}
                       target="_blank"
@@ -51,7 +51,7 @@ const Projects = () => {
                     >
                       <span>{link.name}</span>
                       <FiExternalLink size={14} />
-                    </a>
+                    </Link>
                   ),
                 )}
               </div>

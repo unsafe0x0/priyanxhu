@@ -46,7 +46,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
         {blog.tags.map((tag) => (
           <span
             key={tag}
-            className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-neutral-800"
+            className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border"
           >
             {tag}
           </span>
