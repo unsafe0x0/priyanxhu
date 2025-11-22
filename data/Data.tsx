@@ -5,7 +5,7 @@ export const profileData = {
   email: "unsafezero@gmail.com",
   calcom: "https://cal.com/unsafezero/15min",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `Hey there! I'm Priyanshu aka Unsafezero, a 20 yr old Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
+  about: `Hey there! I'm Priyanshu aka Unsafezero, a 21 yr old Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.I'm currently looking for opportunities to work.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
@@ -48,6 +48,7 @@ export const profileData = {
     "GORM",
     "C++",
     "Python",
+    "FastAPI",
     "Git",
     "Github",
     "Postman",
@@ -56,8 +57,7 @@ export const profileData = {
     "Linux",
     "Ai SDK",
     "AI Providers",
-    "Machine Learning",
-    "Deep Learning",
+    "AiML",
     "DSA",
   ],
   projects: [
@@ -79,6 +79,15 @@ export const profileData = {
       links: [
         { name: "Website", url: "https://coredump.vercel.app/" },
         { name: "Github", url: "https://github.com/unsafe0x0/CoreDump" },
+      ],
+    },
+    {
+      name: "Dither",
+      description: "Dither web app for generating dithering images",
+      stack: ["NextJS", "TailwindCSS"],
+      links: [
+        { name: "Website", url: "https://dither-pvt.vercel.app/" },
+        { name: "Github", url: "https://github.com/xerohard/dither" },
       ],
     },
     {
@@ -121,27 +130,37 @@ export const profileData = {
         },
       ],
     },
-  ],
-  currentlyWorking: [
     {
       name: "Halo",
-      description: "something ai powered",
-      stack: ["NextJS", "AI Providers", "TailwindCSS"],
+      description: "Ai powered interview preparation app",
+      stack: [
+        "NextJS",
+        "AI Providers",
+        "TailwindCSS",
+        "MongoDB",
+        "NextAuth",
+        "Prisma",
+      ],
       links: [
-        { name: "Website", url: "/" },
+        { name: "Website", url: "https://halo-ai-two.vercel.app/" },
         { name: "Github", url: "https://github.com/unsafe0x0/halo" },
       ],
     },
+  ],
+  currentlyWorking: [
     {
       name: "Paperly",
       description:
-        "android and ios app for online stationery shopping and printing",
+        "android, ios app and web app for online stationery shopping and printing",
       stack: [
         "React Native",
         "TailwindCSS",
         "NodeJS",
         "ExpressJS",
-        "PostgreSQL",
+        "MongoDB",
+        "Razorpay",
+        "NextAuth",
+        "NextJS",
       ],
       links: [
         { name: "Website", url: "/" },
