@@ -3,11 +3,14 @@ import { profileData } from "@/data/Data";
 import { FaGithub, FaLinkedin, FaYoutube, FaDiscord } from "react-icons/fa";
 import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { LuSend } from "react-icons/lu";
-import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "./Button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 const Hero = () => {
   const socialIcons = {
@@ -24,74 +27,57 @@ const Hero = () => {
   const links = [...profileData.socialLinks];
 
   return (
-    <section className="mb-8">
-      <div className="flex flex-col md:flex-row items-start gap-6">
+    <section className="">
+      <div className="flex flex-col md:flex-row items-start gap-5">
         <Image
           src={profileData.imageUrl}
           alt={profileData.name}
-          className="w-28 h-28 object-cover rounded-md"
+          className="w-28 h-28 object-cover rounded"
           width={112}
           height={112}
           unoptimized
         />
 
         <div className="flex-1 md:text-left">
-          <h1 className="text-3xl md:text-4xl font-semibold">
+          <h1 className="text-4xl md:text-5xl font-bold text-card-foreground">
             {profileData.name}
           </h1>
-          <p className="text-xl font-medium text-neutral-200 mt-1">
+          <p className="text-xl font-medium text-card-foreground/70 mt-2">
             {profileData.whoami}
           </p>
 
-          <div className="flex flex-wrap gap-2 mt-2">
-            {links.map((link) => {
-              const Icon = socialIcons[link.name as keyof typeof socialIcons];
-              return (
-                <Link
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  className="group relative text-neutral-400 hover:text-neutral-100 transition-colors"
-                >
-                  {Icon && (
-                    <Icon
-                      size={34}
-                      className="p-1 rounded-md bg-accent border border-border"
-                    />
-                  )}
-                  <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-neutral-100 text-neutral-800 text-xs px-2 py-1 rounded whitespace-nowrap z-10">
-                    {link.name}
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
+          <TooltipProvider>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {links.map((link) => {
+                const Icon = socialIcons[link.name as keyof typeof socialIcons];
+                return (
+                  <Tooltip key={link.name}>
+                    <TooltipTrigger asChild>
+                      <Link
+                        href={link.url}
+                        target="_blank"
+                        className="group relative"
+                      >
+                        {Icon && (
+                          <Icon
+                            size={34}
+                            className="p-1 rounded bg-card border border-border"
+                          />
+                        )}
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>{link.name}</TooltipContent>
+                  </Tooltip>
+                );
+              })}
+            </div>
+          </TooltipProvider>
         </div>
       </div>
 
-      <p className="text-neutral-300 mt-5 text-base">{profileData.about}</p>
-
-      <div className="mt-5 flex items-center flex-wrap gap-3">
-        <Button variant="secondary">
-          <Link
-            href={"mailto:" + profileData.email}
-            className="flex items-center gap-2"
-          >
-            Mail
-            <MdEmail />
-          </Link>
-        </Button>
-        <Button>
-          <Link
-            target="_blank"
-            href={profileData.calcom}
-            className="flex items-center gap-2"
-          >
-            Get in Touch
-            <LuSend />
-          </Link>
-        </Button>
-      </div>
+      <p className="text-card-foreground/70 mt-5 text-base md:text-lg">
+        {profileData.about}
+      </p>
     </section>
   );
 };

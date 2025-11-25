@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import BlogCard from "./BlogCard";
-import Button from "./Button";
+import { Button } from "./ui/button";
 
 interface Blog {
   title: string;
@@ -41,23 +41,23 @@ export default function Blogs() {
 
   if (loading) {
     return (
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3">Latest Blogs</h2>
+      <section className="">
+        <h2 className="text-3xl font-semibold mb-5">Latest Blogs</h2>
         <div className="space-y-5">
           <div className="">
             <h3 className="text-lg font-medium mb-1">Loading...</h3>
-            <p className="text-neutral-300 text-base">
+            <p className="text-foreground/70 text-base md:text-lg">
               Loading blog content...
             </p>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">Latest Blogs</h2>
+    <section className="">
+      <h2 className="text-3xl font-semibold mb-5">Latest Blogs</h2>
 
       <div className="space-y-5 mb-5">
         {fetchedBlogs.map((blog) => (
@@ -66,19 +66,19 @@ export default function Blogs() {
       </div>
 
       {fetchedBlogs.length === 0 && (
-        <div className="text-center py-8 text-neutral-300">
+        <div className="text-center py-8 text-foreground/70">
           <p>Unable to fetch blogs</p>
         </div>
       )}
 
-      <Button type="button">
+      <Button type="button" className="shadow-none">
         <Link
           href="https://blogs.priyanxhu.me"
           className="inline-flex items-center gap-2"
         >
-          View all <FaArrowRight className="inline" />
+          View All <FaArrowRight className="inline" />
         </Link>
       </Button>
-    </div>
+    </section>
   );
 }

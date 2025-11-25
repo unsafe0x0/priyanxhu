@@ -1,28 +1,38 @@
 import React from "react";
 import { profileData } from "@/data/Data";
+import { Badge } from "./ui/badge";
+import { Card, CardContent } from "./ui/card";
 
 const Experience = () => {
   return (
-    <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-3">Experience</h2>
-      <div className="space-y-3">
+    <section className="">
+      <h2 className="text-3xl font-semibold mb-5">Experience</h2>
+      <div className="space-y-4">
         {profileData.experience.map((exp, index) => (
-          <div
+          <Card
             key={index}
-            className="border border-border rounded-md p-4 flex flex-col h-full ring-2 ring-transparent hover:ring-border transition-all duration-200"
+            className="border border-border rounded flex flex-col h-full ring-2 ring-transparent hover:ring-border transition-all duration-200 shadow-none"
           >
-            <div className="flex justify-between items-center mb-1">
-              <h3 className="text-lg font-medium">{exp.position}</h3>
-              <span className="text-neutral-400 text-sm font-normal px-2 py-1 rounded-md bg-accent border border-border">
-                {exp.duration}
-              </span>
-            </div>
-            <p className="text-neutral-200 mb-1 text-sm">{exp.company}</p>
-            <p className="text-neutral-300 text-base">{exp.description}</p>
-          </div>
+            <CardContent className="px-5 py-0 flex flex-col h-full">
+              <div className="flex justify-between items-start gap-3 mb-2">
+                <h3 className="text-lg font-bold tracking-tight">
+                  {exp.position}
+                </h3>
+                <Badge className="px-3 py-1 rounded text-xs font-medium whitespace-nowrap">
+                  {exp.duration}
+                </Badge>
+              </div>
+              <p className="text-card-foreground/80 mb-2 text-base md:text-lg font-medium">
+                {exp.company}
+              </p>
+              <p className="text-card-foreground/65 text-base md:text-lg">
+                {exp.description}
+              </p>
+            </CardContent>
+          </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

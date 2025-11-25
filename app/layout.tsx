@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 
 const font = Hanken_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -49,7 +50,7 @@ export default function RootLayout({
         type="image/x-icon"
       />
       <body className={font.className}>
-        {children}
+        <ThemeProvider> {children} </ThemeProvider>
         <Analytics />
       </body>
     </html>

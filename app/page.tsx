@@ -1,29 +1,31 @@
 import React from "react";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CodeTime from "@/components/CodeStats";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Blogs from "@/components/Blogs";
+import Contact from "@/components/Contact";
 import CurrentlyWorking from "@/components/CurrentlyWorking";
 import VsCodeExtensions from "@/components/VsCodeExtensions";
-import ContactForm from "@/components/ContactForm";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen">
-      <div className="max-w-3xl mx-auto px-3 py-8">
+    <>
+      <Navbar />
+      <main className="max-w-4xl mx-auto min-h-screen w-full px-2 space-y-10 pb-10 md:pb-16 pt-5">
         <Hero />
         <CodeTime />
         <Skills />
         <Projects />
-        <Blogs />
+        <Experience />
         <CurrentlyWorking />
         <VsCodeExtensions />
-        <Experience />
-        <ContactForm />
-      </div>
-    </div>
+        <Blogs />
+        <Contact />
+      </main>
+    </>
   );
 };
 

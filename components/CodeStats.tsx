@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Badge } from "./ui/badge";
 
 interface CodingStats {
   today: string;
@@ -37,35 +38,43 @@ const CodeStats = () => {
 
   if (error) {
     return (
-      <div className="mb-8">
-        <p className="text-neutral-300">Error loading coding stats: {error}</p>
-      </div>
+      <section className="">
+        <p className="text-muted">Error loading coding stats: {error}</p>
+      </section>
     );
   }
 
   return (
-    <div className="mb-8">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-xl font-semibold">Today Stats</h2>
-        <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
-            {data.today} Code Time
-          </span>
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
-            {data.todayCommits} Commits
-          </span>
+    <section className="">
+      <div className="flex flex-col gap-5">
+        <div>
+          <h2 className="text-2xl font-bold mb-3 tracking-tight">
+            Today Stats
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            <Badge className="rounded font-medium px-2 py-1">
+              {data.today} Code Time
+            </Badge>
+            <Badge className="rounded font-medium px-2 py-1">
+              {data.todayCommits} Commits
+            </Badge>
+          </div>
         </div>
-        <h2 className="text-xl font-semibold">This Week Stats</h2>
-        <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
-            {data.week} Code Time
-          </span>
-          <span className="px-3 py-1 rounded-md text-sm font-normal flex items-center gap-1 text-neutral-300 bg-accent border border-border">
-            {data.weekCommits} Commits
-          </span>
+        <div>
+          <h2 className="text-2xl font-bold mb-3 tracking-tight">
+            This Week Stats
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            <Badge className="rounded font-medium px-2 py-1">
+              {data.week} Code Time
+            </Badge>
+            <Badge className="rounded font-medium px-2 py-1">
+              {data.weekCommits} Commits
+            </Badge>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
