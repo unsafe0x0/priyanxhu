@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import CodeTime from "@/components/CodeStats";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -16,7 +15,6 @@ const Landing = () => {
       <Navbar />
       <main className="max-w-4xl mx-auto min-h-screen w-full px-2 space-y-10 pb-10 md:pb-16 pt-5">
         <Hero />
-        <CodeTime />
         <Skills />
         <Projects />
         <Experience />
