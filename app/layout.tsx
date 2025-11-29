@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 
-const font = Hanken_Grotesk({
+const font = Geist({
   subsets: ["latin"],
   weight: ["400", "500"],
 });
@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning={true} className="dark">
       <link
         rel="shortcut icon"
         href="https://avatars.githubusercontent.com/u/165533860?v=4"

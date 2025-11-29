@@ -42,7 +42,7 @@ export default function Blogs() {
   if (loading) {
     return (
       <section className="">
-        <h2 className="text-3xl font-semibold mb-5">Latest Blogs</h2>
+        <h2 className="text-2xl font-semibold mb-5">Latest Blogs</h2>
         <div className="space-y-5">
           <div className="">
             <h3 className="text-lg font-medium mb-1">Loading...</h3>
@@ -57,11 +57,13 @@ export default function Blogs() {
 
   return (
     <section className="">
-      <h2 className="text-3xl font-semibold mb-5">Latest Blogs</h2>
+      <h2 className="text-2xl font-semibold mb-5">Latest Blogs</h2>
 
       <div className="space-y-5 mb-5">
         {fetchedBlogs.map((blog) => (
-          <BlogCard key={blog.url} blog={blog} />
+          <div key={blog.url}>
+            <BlogCard blog={blog} />
+          </div>
         ))}
       </div>
 
@@ -71,14 +73,16 @@ export default function Blogs() {
         </div>
       )}
 
-      <Button type="button" className="shadow-none">
-        <Link
-          href="https://blogs.priyanxhu.me"
-          className="inline-flex items-center gap-2"
-        >
-          View All <FaArrowRight className="inline" />
-        </Link>
-      </Button>
+      <div>
+        <Button type="button" className="shadow-none">
+          <Link
+            href="https://blogs.priyanxhu.me"
+            className="inline-flex items-center gap-2"
+          >
+            View All <FaArrowRight className="inline" />
+          </Link>
+        </Button>
+      </div>
     </section>
   );
 }

@@ -11,7 +11,9 @@ const Navbar = () => {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
 
+  useEffect(() => {
     const updateTime = () => {
       const now = new Date();
       const hours = String(now.getHours()).padStart(2, "0");
@@ -33,7 +35,15 @@ const Navbar = () => {
         className=""
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        {theme === "light" ? <LuMoon size={24} /> : <LuSun size={24} />}
+        {mounted ? (
+          theme === "light" ? (
+            <LuMoon size={24} />
+          ) : (
+            <LuSun size={24} />
+          )
+        ) : (
+          <div style={{ width: 24, height: 24 }} />
+        )}
       </button>
     </nav>
   );

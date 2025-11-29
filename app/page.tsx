@@ -13,7 +13,7 @@ const Landing = () => {
   return (
     <>
       <Navbar />
-      <main className="max-w-4xl mx-auto min-h-screen w-full px-2 space-y-10 pb-10 md:pb-16 pt-5">
+      <main className="max-w-4xl mx-auto min-h-screen w-full px-2 space-y-10 pb-14 md:pb-20 pt-5">
         <Hero />
         <Skills />
         <Projects />

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { profileData } from "@/data/Data";
 import { FaGithub, FaLinkedin, FaYoutube, FaDiscord } from "react-icons/fa";
@@ -29,17 +30,19 @@ const Hero = () => {
   return (
     <section className="">
       <div className="flex flex-col md:flex-row items-start gap-5">
-        <Image
-          src={profileData.imageUrl}
-          alt={profileData.name}
-          className="w-28 h-28 object-cover rounded"
-          width={112}
-          height={112}
-          unoptimized
-        />
+        <div>
+          <Image
+            src={profileData.imageUrl}
+            alt={profileData.name}
+            className="w-28 h-28 object-cover rounded"
+            width={112}
+            height={112}
+            unoptimized
+          />
+        </div>
 
         <div className="flex-1 md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold text-card-foreground">
+          <h1 className="text-3xl font-bold text-card-foreground">
             {profileData.name}
           </h1>
           <p className="text-xl font-medium text-card-foreground/70 mt-2">
@@ -48,26 +51,28 @@ const Hero = () => {
 
           <TooltipProvider>
             <div className="flex flex-wrap gap-2 mt-2">
-              {links.map((link) => {
+              {links.map((link, index) => {
                 const Icon = socialIcons[link.name as keyof typeof socialIcons];
                 return (
-                  <Tooltip key={link.name}>
-                    <TooltipTrigger asChild>
-                      <Link
-                        href={link.url}
-                        target="_blank"
-                        className="group relative"
-                      >
-                        {Icon && (
-                          <Icon
-                            size={34}
-                            className="p-1 rounded bg-card border border-border"
-                          />
-                        )}
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>{link.name}</TooltipContent>
-                  </Tooltip>
+                  <div key={link.name}>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Link
+                          href={link.url}
+                          target="_blank"
+                          className="group relative"
+                        >
+                          {Icon && (
+                            <Icon
+                              size={34}
+                              className="p-1 rounded bg-card border border-border"
+                            />
+                          )}
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent>{link.name}</TooltipContent>
+                    </Tooltip>
+                  </div>
                 );
               })}
             </div>

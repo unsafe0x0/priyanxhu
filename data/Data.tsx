@@ -5,7 +5,7 @@ export const profileData = {
   email: "unsafezero@gmail.com",
   calcom: "https://cal.com/unsafezero/15min",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
-  about: `Hey there! I'm Priyanshu aka Unsafezero, a 21 yr old Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.I'm currently looking for opportunities to work.`,
+  about: `Hey there! I'm Priyanshu aka Unsafezero, a 21 yr old Software Developer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
   socialLinks: [
     { name: "GitHub", url: "https://github.com/unsafe0x0" },
     { name: "Twitter", url: "https://twitter.com/unsafezero" },
