@@ -6,7 +6,7 @@ import { Badge } from "./ui/badge";
 const Skills = () => {
   return (
     <section className="">
-      <h2 className="text-2xl font-semibold mb-5">What I Know</h2>
+      <h2 className="text-2xl font-semibold mb-5">Skills & Tools</h2>
       <div className="flex flex-wrap gap-2.5">
         {profileData.skills.map((skill) => (
           <div key={skill}>

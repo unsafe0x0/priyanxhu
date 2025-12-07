@@ -1,3 +1,5 @@
+import { describe } from "node:test";
+
 export const profileData = {
   name: "Priyanshu Chahar",
   whoami: "Full Stack Developer",
@@ -40,6 +42,7 @@ export const profileData = {
     "React Native",
     "React Query",
     "Prisma",
+    "Drizzle",
     "Redis",
     "PostgreSQL",
     "MongoDB",
@@ -72,6 +75,13 @@ export const profileData = {
       ],
     },
     {
+      name: "Heloq",
+      description:
+        "A minimal, fast, type-safe token library with HMAC-SHA512 signing",
+      stack: ["TypeScript"],
+      links: [{ name: "Github", url: "https://github.com/unsafe0x0/heloq" }],
+    },
+    {
       name: "CoreDump",
       description:
         "Track coding activity across projects with detailed language breakdowns and daily and weekly time summaries.",
@@ -82,12 +92,12 @@ export const profileData = {
       ],
     },
     {
-      name: "Dither",
-      description: "Dither web app for generating dithering images",
-      stack: ["NextJS", "TailwindCSS"],
+      name: "Unsafezero",
+      description: "Experimental one page projects",
+      stack: ["NextJS", "TailwindCSS", "Required Libraries"],
       links: [
-        { name: "Website", url: "https://dither-pvt.vercel.app/" },
-        { name: "Github", url: "https://github.com/xerohard/dither" },
+        { name: "Website", url: "https://unsafezero.vercel.app/" },
+        { name: "Github", url: "https://github.com/unsafe0x0/Unsafezero" },
       ],
     },
     {
@@ -100,16 +110,16 @@ export const profileData = {
         { name: "Github", url: "https://github.com/unsafe0x0/tpotora" },
       ],
     },
-    {
-      name: "XeroChat",
-      description:
-        "AI powered chat application with multiple LLM models featuring secure authentication and persistent conversation history, quick access to previous prompts and responses.",
-      stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth", "AI Providers"],
-      links: [
-        { name: "Website", url: "https://xerochat.tech/" },
-        { name: "Github", url: "https://github.com/unsafe0x0/xerochat" },
-      ],
-    },
+    // {
+    //   name: "XeroChat",
+    //   description:
+    //     "AI powered chat application with multiple LLM models featuring secure authentication and persistent conversation history, quick access to previous prompts and responses.",
+    //   stack: ["NextJS", "TailwindCSS", "MongoDB", "NextAuth", "AI Providers"],
+    //   links: [
+    //     { name: "Website", url: "https://xerochat.tech/" },
+    //     { name: "Github", url: "https://github.com/unsafe0x0/xerochat" },
+    //   ],
+    // },
     {
       name: "Dokxy",
       description:

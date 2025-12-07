@@ -18,7 +18,7 @@ export default function ThemeProvider({
       attribute="class"
       defaultTheme={defaultTheme}
       enableSystem={enableSystem}
-      storageKey="halo-theme"
+      storageKey="theme"
       forcedTheme={undefined}
       enableColorScheme={false}
     >

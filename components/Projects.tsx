@@ -29,7 +29,7 @@ const Projects = () => {
 
   return (
     <section className="">
-      <h2 className="text-2xl font-semibold mb-5">Featured Projects</h2>
+      <h2 className="text-2xl font-semibold mb-5">Selected Works</h2>
       <div className="grid grid-cols-1 gap-4">
         {profileData.projects
           .slice(0, showAll ? undefined : 3)
