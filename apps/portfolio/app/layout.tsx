@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 
-const font = Geist({
+const font = Inter({
   subsets: ["latin"],
   weight: ["400", "500"],
 });
