@@ -1,0 +1,6 @@
+export { Hero } from './hero'
+export { Skills } from './skills'
+export { Projects } from './projects'
+export { Extensions } from './extensions'
+export { QuickLinks } from './quick-links'
+export { Footer } from './footer'
