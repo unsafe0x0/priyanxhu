@@ -1,6 +1,6 @@
-export { Hero } from './hero'
-export { Skills } from './skills'
-export { Projects } from './projects'
-export { Extensions } from './extensions'
-export { QuickLinks } from './quick-links'
-export { Footer } from './footer'
+export { Extensions } from "./extensions";
+export { Footer } from "./footer";
+export { Hero } from "./hero";
+export { Projects } from "./projects";
+export { QuickLinks } from "./quick-links";
+export { Skills } from "./skills";
