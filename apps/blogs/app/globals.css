@@ -1,121 +1,121 @@
 @import "tailwindcss";
 
 :root {
-	--background: #161616;
-	--foreground: #f0f0f0;
+  --background: #161616;
+  --foreground: #f0f0f0;
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-bodyFont: var(--font-bodyFont);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-bodyFont: var(--font-bodyFont);
 }
 
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: var(--font-bodyFont);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-bodyFont);
 }
 
 * {
-	scrollbar-width: none;
-	-ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 *::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 @keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slide-in-from-bottom {
-	from {
-		opacity: 0;
-		transform: translateY(16px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slide-in-from-top {
-	from {
-		opacity: 0;
-		transform: translateY(-16px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scale-in {
-	from {
-		opacity: 0;
-		transform: scale(0.95);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-in {
-	animation-duration: 0.4s;
-	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-	animation-fill-mode: both;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
 }
 
 .fade-in {
-	animation-name: fade-in;
+  animation-name: fade-in;
 }
 
 .slide-in-from-bottom-4 {
-	animation-name: slide-in-from-bottom;
+  animation-name: slide-in-from-bottom;
 }
 
 .slide-in-from-top-4 {
-	animation-name: slide-in-from-top;
+  animation-name: slide-in-from-top;
 }
 
 .scale-in {
-	animation-name: scale-in;
+  animation-name: scale-in;
 }
 
 .line-clamp-2 {
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .line-clamp-3 {
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 ::selection {
-	background-color: rgba(193, 95, 60, 0.3);
-	color: #ffffff;
+  background-color: rgba(193, 95, 60, 0.3);
+  color: #ffffff;
 }
 
 .hljs {
-	background: transparent !important;
-	color: #e6edf3 !important;
+  background: transparent !important;
+  color: #e6edf3 !important;
 }
 
 pre .hljs {
-	background: transparent !important;
+  background: transparent !important;
 }
 
 .hljs-keyword,
@@ -123,88 +123,88 @@ pre .hljs {
 .hljs-literal,
 .hljs-title,
 .hljs-section {
-	color: #ff7b72 !important;
+  color: #ff7b72 !important;
 }
 
 .hljs-string,
 .hljs-template-literal {
-	color: #a5d6ff !important;
+  color: #a5d6ff !important;
 }
 
 .hljs-title.class_,
 .hljs-class .hljs-title,
 .hljs-type,
 .hljs-built_in {
-	color: #ffa657 !important;
+  color: #ffa657 !important;
 }
 
 .hljs-function,
 .hljs-title.function_ {
-	color: #d2a8ff !important;
+  color: #d2a8ff !important;
 }
 
 .hljs-variable,
 .hljs-property,
 .hljs-attr {
-	color: #79c0ff !important;
+  color: #79c0ff !important;
 }
 
 .hljs-number,
 .hljs-regexp,
 .hljs-symbol {
-	color: #79c0ff !important;
+  color: #79c0ff !important;
 }
 
 .hljs-comment,
 .hljs-quote {
-	color: #8b949e !important;
-	font-style: italic;
+  color: #8b949e !important;
+  font-style: italic;
 }
 
 .hljs-tag,
 .hljs-name {
-	color: #7ee787 !important;
+  color: #7ee787 !important;
 }
 
 .hljs-selector-id,
 .hljs-selector-class {
-	color: #ffa657 !important;
+  color: #ffa657 !important;
 }
 
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-	color: #79c0ff !important;
+  color: #79c0ff !important;
 }
 
 .hljs-doctag,
 .hljs-meta {
-	color: #a5d6ff !important;
+  color: #a5d6ff !important;
 }
 
 .hljs-emphasis {
-	font-style: italic;
+  font-style: italic;
 }
 
 .hljs-strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .hljs-addition {
-	color: #aff5b4 !important;
-	background-color: #033a16 !important;
+  color: #aff5b4 !important;
+  background-color: #033a16 !important;
 }
 
 .hljs-deletion {
-	color: #ffdcd7 !important;
-	background-color: #67060c !important;
+  color: #ffdcd7 !important;
+  background-color: #67060c !important;
 }
 
 .prose p {
-	word-break: break-word;
-	overflow-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose img {
-	border-radius: 0.5rem;
-	border: 1px solid #282828;
+  border-radius: 0.5rem;
+  border: 1px solid #282828;
 }
