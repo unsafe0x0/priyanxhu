@@ -1,5 +1,15 @@
 const blogsData = [
   {
+    title: "How a CPU Works",
+    description:
+      "A look inside your computer's brain: understanding the fetch-execute cycle, pipelining, and memory hierarchy.",
+    url: "https://blogs.priyanxhu.me/cpu-working",
+    slug: "cpu-working",
+    publishedAt: "2025-12-28",
+    readTime: "15 min read",
+    tags: ["CPU", "Computer", "Hardware", "Instruction Set", "ALU"],
+  },
+  {
     title: "Sharding: How Databases Scale with Data Partitioning",
     description:
       "An overview of sharding, its benefits, types, and when to use it for scalable database management.",
