@@ -24,7 +24,7 @@ export default function Header() {
             <div className="h-4 w-px bg-[#282828]" />
             <div className="flex items-center gap-3">
               <Link
-                href="https://github.com/priyanxhu"
+                href="https://github.com/unsafe0x0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400"
