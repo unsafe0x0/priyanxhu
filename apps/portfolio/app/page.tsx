@@ -1,3 +1,4 @@
+import Experience from "@/components/experience";
 import Extensions from "@/components/extensions";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
@@ -7,15 +8,19 @@ import React from "react";
 
 const PortfolioPage = () => {
   return (
-    <>
-      <main className="flex flex-col items-center justify-center space-y-12 max-w-4xl mx-auto px-2 pb-6 pt-4">
-        <Hero />
-        <Skills />
-        <Projects />
-        <Extensions />
+    <main className="min-h-screen bg-background text-foreground font-mono selection:bg-primary selection:text-primary-foreground p-4 md:p-8">
+      <div className="max-w-4xl mx-auto space-y-16 py-4">
+        <div className="space-y-24">
+          <Hero />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Extensions />
+        </div>
+
         <Footer />
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 

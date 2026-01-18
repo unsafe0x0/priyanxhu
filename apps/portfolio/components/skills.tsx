@@ -1,14 +1,21 @@
 import { profileData } from "@/data/profile";
 import React from "react";
-import Badge from "./badge";
 
 const Skills = () => {
   return (
-    <section className="flex flex-col items-start justify-start gap-5 w-full">
-      <h2 className="text-2xl font-semibold">skills & tools</h2>
+    <section className="space-y-6 w-full">
+      <h2 className="text-xl font-bold uppercase tracking-tight text-foreground">
+        Skills
+      </h2>
+
       <div className="flex flex-wrap gap-2">
         {profileData.skills.map((skill) => (
-          <Badge key={skill}>{skill}</Badge>
+          <div
+            key={skill}
+            className="border border-border bg-card px-3 py-1.5 text-[10px] uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors cursor-crosshair font-mono font-medium"
+          >
+            {skill}
+          </div>
         ))}
       </div>
     </section>

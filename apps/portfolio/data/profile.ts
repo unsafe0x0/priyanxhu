@@ -153,4 +153,18 @@ export const profileData = {
       ],
     },
   ],
+  experience: [
+    {
+      company: "programmers.ai",
+      role: "Software Engineer Intern",
+      startDate: "Jan 2026",
+      endDate: "Present",
+    },
+    {
+      company: "Self-Employed",
+      role: "Freelance Developer",
+      startDate: "Jan 2025",
+      endDate: "Present",
+    },
+  ],
 };

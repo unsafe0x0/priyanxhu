@@ -1,44 +1,62 @@
 import { profileData } from "@/data/profile";
 import React from "react";
-import Badge from "./badge";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col items-start justify-start gap-5 w-full">
-      <h2 className="text-2xl font-semibold">things i've built</h2>
-      <ul className="flex flex-col items-start justify-start w-full">
+    <section className="space-y-6 w-full">
+      <h2 className="text-xl font-bold uppercase tracking-tight text-foreground">
+        Projects
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {profileData.projects.map((project, index) => (
-          <li
+          <div
             key={project.name}
-            className={`flex flex-col items-start justify-start gap-2 w-full border-x border-border p-3 ${
-              index === 0 ? "border-t border-b" : "border-b"
-            }`}
+            className="group border border-border bg-card p-5 transition-all duration-300 flex flex-col justify-between"
           >
-            <p className="text-base font-normal lowercase">{project.name}</p>
-            <p className="text-base font-normal text-muted-foreground lowercase">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {project.stack.map((tech) => (
-                <Badge key={tech}>{tech}</Badge>
-              ))}
+            <div className="space-y-4">
+              <div className="flex justify-between items-start">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold uppercase tracking-tight group-hover:text-primary transition-colors">
+                    {project.name}
+                  </h3>
+                </div>
+
+                <div className="flex gap-3">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] uppercase tracking-widest hover:text-primary border border-transparent hover:border-primary px-1 transition-all"
+                    >
+                      [{link.name}]
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                {project.description}
+              </p>
             </div>
-            <div className="flex gap-2">
-              {project.links.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-normal underline hover:text-chart-2 lowercase"
-                >
-                  {link.name}
-                </a>
-              ))}
+
+            <div className="mt-6 pt-4 border-t border-dashed border-border">
+              <div className="flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[10px] uppercase tracking-wider text-muted-foreground border border-border px-1.5 py-0.5"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };

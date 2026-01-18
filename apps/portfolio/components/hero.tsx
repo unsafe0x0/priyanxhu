@@ -1,6 +1,6 @@
+import { ThemeToggle } from "@/components/theme-toggle";
 import { profileData } from "@/data/profile";
 import Image from "next/image";
-import { ThemeToggle } from "./theme-toggle";
 
 const Hero = () => {
   const stackImages = [
@@ -14,30 +14,41 @@ const Hero = () => {
   ];
 
   return (
-    <section className="flex flex-col justify-start items-start w-full">
-      <div className="flex justify-end w-full">
+    <section className="relative w-full flex flex-col gap-8">
+      <div className="absolute top-0 right-0 z-10">
         <ThemeToggle />
       </div>
-      <div className="flex flex-col md:flex-row items-start justify-start gap-5">
-        <Image
-          src={profileData.imageUrl}
-          alt={profileData.name}
-          width={120}
-          height={120}
-          unoptimized
-          draggable={false}
-        />
-        <div className="flex flex-col items-start justify-start gap-1">
-          <h1 className="text-2xl font-bold">{profileData.name}</h1>
-          <p className="text-xl font-medium">{profileData.whoami}</p>
-          <ul className="flex flex-wrap gap-2 items-center">
+
+      <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="relative group w-full max-w-30 shrink-0">
+          <div className="aspect-square w-full bg-muted overflow-hidden border border-border grayscale hover:grayscale-0 transition-all duration-500 bg-cover bg-center">
+            <Image
+              src={profileData.imageUrl}
+              alt={profileData.name}
+              width={400}
+              height={400}
+              className="object-cover w-full h-full"
+              priority
+              draggable={false}
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2 pt-2">
+          <h1 className="text-3xl font-bold uppercase tracking-tight text-foreground">
+            {profileData.name}
+          </h1>
+          <h2 className="text-sm text-muted-foreground uppercase tracking-widest font-medium">
+            {profileData.whoami}
+          </h2>
+          <ul className="flex flex-wrap gap-2 items-center mt-1">
             {stackImages.map((image) => (
               <li key={image.id}>
                 {image.invertOnDark ? (
                   <div
                     role="img"
                     aria-label={image.image}
-                    className="h-5 w-5 bg-current"
+                    className="h-5 w-5 bg-foreground"
                     style={{
                       maskImage: `url(${image.image})`,
                       maskSize: "contain",
@@ -64,32 +75,40 @@ const Hero = () => {
           </ul>
         </div>
       </div>
-      <p className="text-base font-normal text-muted-foreground mt-2 lowercase">
-        {profileData.about}
-      </p>
-      <ul className="flex flex-wrap gap-2 mt-2">
-        {profileData.socialLinks.map((link) => (
-          <li key={link.name}>
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-chart-2 lowercase"
-            >
-              {link.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <p className="text-base font-normal text-muted-foreground mt-2">
-        wants to work with me or have a career opportunity mail me at{" "}
-        <a
-          href={`mailto:${profileData.email}`}
-          className="text-primary underline hover:text-chart-2"
-        >
-          {profileData.email}
-        </a>
-      </p>
+
+      <div className="space-y-6">
+        <div className="text-sm text-muted-foreground leading-relaxed max-w-3xl">
+          <p>{profileData.about}</p>
+        </div>
+
+        <div className="space-y-3">
+          <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground font-semibold">
+            Socials
+          </div>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+            <li>
+              <a
+                href={`mailto:${profileData.email}`}
+                className="hover:text-primary transition-colors uppercase tracking-tight flex items-center gap-2 group"
+              >
+                Email
+              </a>
+            </li>
+            {profileData.socialLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors uppercase tracking-tight flex items-center gap-2 group hover:underline"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </section>
   );
 };

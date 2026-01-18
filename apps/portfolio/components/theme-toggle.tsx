@@ -11,7 +11,11 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="text-sm text-muted-foreground">theme</div>;
+    return (
+      <div className="text-xs uppercase tracking-widest text-muted-foreground">
+        [LOADING]
+      </div>
+    );
   }
 
   const toggleTheme = () => {
@@ -22,9 +26,9 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+      className="text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors cursor-pointer border border-transparent hover:border-primary px-2 py-1"
     >
-      {theme}
+      [{theme === "light" ? "Light" : "Dark"}]
     </button>
   );
 }
