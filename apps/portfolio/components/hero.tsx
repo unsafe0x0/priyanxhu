@@ -3,16 +3,6 @@ import { profileData } from "@/data/profile";
 import Image from "next/image";
 
 const Hero = () => {
-  const stackImages = [
-    { id: 1, image: "/typescript.svg" },
-    { id: 2, image: "/nextjs.svg", invertOnDark: true },
-    { id: 3, image: "/react.svg" },
-    { id: 4, image: "/nodejs.svg" },
-    { id: 5, image: "/expressjs.svg", invertOnDark: true },
-    { id: 6, image: "/postgresql.svg" },
-    { id: 7, image: "/mongodb.svg" },
-  ];
-
   return (
     <section className="relative w-full flex flex-col gap-8">
       <div className="absolute top-0 right-0 z-10">
@@ -42,12 +32,12 @@ const Hero = () => {
             {profileData.whoami}
           </h2>
           <ul className="flex flex-wrap gap-2 items-center mt-1">
-            {stackImages.map((image) => (
-              <li key={image.id}>
+            {profileData.stackImages.map((image) => (
+              <li key={image.name}>
                 {image.invertOnDark ? (
                   <div
                     role="img"
-                    aria-label={image.image}
+                    aria-label={image.name}
                     className="h-5 w-5 bg-foreground"
                     style={{
                       maskImage: `url(${image.image})`,
@@ -63,7 +53,7 @@ const Hero = () => {
                 ) : (
                   <Image
                     src={image.image}
-                    alt={image.image}
+                    alt={image.name}
                     width={20}
                     height={20}
                     unoptimized

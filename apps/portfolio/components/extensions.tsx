@@ -9,7 +9,7 @@ const Extensions = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {profileData.vsCodeExtensions.map((extension, index) => (
+        {profileData.vsCodeExtensions.map((extension) => (
           <div
             key={extension.name}
             className="group border border-border bg-card p-5 transition-all duration-300 flex flex-col justify-between"
@@ -20,7 +20,6 @@ const Extensions = () => {
                   <h3 className="text-lg font-bold uppercase tracking-tight group-hover:text-primary transition-colors">
                     {extension.name}
                   </h3>
-                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground" />
                 </div>
 
                 <div className="flex gap-3">

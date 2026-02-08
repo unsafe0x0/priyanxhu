@@ -153,6 +153,15 @@ export const profileData = {
       ],
     },
   ],
+  stackImages: [
+    { name: "TypeScript", image: "/typescript.svg" },
+    { name: "Next.js", image: "/nextjs.svg", invertOnDark: true },
+    { name: "React", image: "/react.svg" },
+    { name: "Node.js", image: "/nodejs.svg" },
+    { name: "Express.js", image: "/expressjs.svg", invertOnDark: true },
+    { name: "PostgreSQL", image: "/postgresql.svg" },
+    { name: "MongoDB", image: "/mongodb.svg" },
+  ],
   experience: [
     {
       company: "programmers.ai",
