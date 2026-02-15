@@ -54,23 +54,6 @@ export const profileData = {
   ],
   projects: [
     {
-      name: "Ai SDK",
-      description:
-        "SDK to easily integrate AI models into your applications with support for multiple providers and models. Easy to use and lightweight.",
-      stack: ["Golang", "AI Providers"],
-      links: [
-        { name: "Docs", url: "https://github.com/unsafe0x0/ai" },
-        { name: "Github", url: "https://github.com/unsafe0x0/ai" },
-      ],
-    },
-    {
-      name: "Heloq",
-      description:
-        "A minimal, fast, type-safe token library with HMAC-SHA512 signing",
-      stack: ["TypeScript"],
-      links: [{ name: "Github", url: "https://github.com/unsafe0x0/heloq" }],
-    },
-    {
       name: "CoreDump",
       description:
         "Track coding activity across projects with detailed language breakdowns and daily and weekly time summaries.",
@@ -89,26 +72,26 @@ export const profileData = {
         { name: "Github", url: "https://github.com/unsafe0x0/Unsafezero" },
       ],
     },
-    {
-      name: "Dokxy",
-      description:
-        "Doctor patient appointment management system with features like appointment booking, patient records, and doctor profiles.",
-      stack: [
-        "NextJS",
-        "TailwindCSS",
-        "NodeJS",
-        "Fastify",
-        "MongoDB",
-        "Cloudinary",
-      ],
-      links: [
-        { name: "Website", url: "https://dokxy.vercel.app/" },
-        {
-          name: "Github",
-          url: "https://github.com/unsafe0x0/healthcare-api",
-        },
-      ],
-    },
+    // {
+    //   name: "Dokxy",
+    //   description:
+    //     "Doctor patient appointment management system with features like appointment booking, patient records, and doctor profiles.",
+    //   stack: [
+    //     "NextJS",
+    //     "TailwindCSS",
+    //     "NodeJS",
+    //     "Fastify",
+    //     "MongoDB",
+    //     "Cloudinary",
+    //   ],
+    //   links: [
+    //     { name: "Website", url: "https://dokxy.vercel.app/" },
+    //     {
+    //       name: "Github",
+    //       url: "https://github.com/unsafe0x0/healthcare-api",
+    //     },
+    //   ],
+    // },
     {
       name: "Halo",
       description: "Ai powered interview preparation app",
@@ -124,6 +107,23 @@ export const profileData = {
         { name: "Website", url: "https://halo-ai-two.vercel.app/" },
         { name: "Github", url: "https://github.com/unsafe0x0/halo" },
       ],
+    },
+    {
+      name: "Ai SDK",
+      description:
+        "SDK to easily integrate AI models into your applications with support for multiple providers and models. Easy to use and lightweight.",
+      stack: ["Golang", "AI Providers"],
+      links: [
+        { name: "Docs", url: "https://github.com/unsafe0x0/ai" },
+        { name: "Github", url: "https://github.com/unsafe0x0/ai" },
+      ],
+    },
+    {
+      name: "Heloq",
+      description:
+        "A minimal, fast, type-safe token library with HMAC-SHA512 signing",
+      stack: ["TypeScript"],
+      links: [{ name: "Github", url: "https://github.com/unsafe0x0/heloq" }],
     },
   ],
   vsCodeExtensions: [
