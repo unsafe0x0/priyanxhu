@@ -4,7 +4,6 @@ export const profileData = {
   email: "unsafezero@gmail.com",
   imageUrl: "https://avatars.githubusercontent.com/u/165533860?v=4",
   about: `Hey there! I'm Priyanshu aka Unsafezero, a Software Engineer skilled at building impactful solutions and learning new technologies. I specialize in full stack development using TypeScript, NextJS, NodeJS, ExpressJS, MongoDB, and PostgreSQL.`,
-  contactText: "wants to work with me or have a career opportunity mail me at",
   skills: [
     "JavaScript",
     "TypeScript",
@@ -153,26 +152,11 @@ export const profileData = {
       ],
     },
   ],
-  stackImages: [
-    { name: "TypeScript", image: "/typescript.svg" },
-    { name: "Next.js", image: "/nextjs.svg", invertOnDark: true },
-    { name: "React", image: "/react.svg" },
-    { name: "Node.js", image: "/nodejs.svg" },
-    { name: "Express.js", image: "/expressjs.svg", invertOnDark: true },
-    { name: "PostgreSQL", image: "/postgresql.svg" },
-    { name: "MongoDB", image: "/mongodb.svg" },
-  ],
   experience: [
     {
       company: "programmers.ai",
       role: "Software Engineer Intern",
       startDate: "Jan 2026",
-      endDate: "Present",
-    },
-    {
-      company: "Self-Employed",
-      role: "Freelance Developer",
-      startDate: "Jan 2025",
       endDate: "Present",
     },
   ],

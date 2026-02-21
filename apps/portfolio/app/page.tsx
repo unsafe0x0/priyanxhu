@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/contact-section";
 export default function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground flex justify-center pb-16 pt-10 px-4 sm:px-8">
-      <div className="w-full max-w-xl flex flex-col gap-16 sm:gap-20">
+      <div className="w-full max-w-xl flex flex-col gap-12 sm:gap-14">
         <HeroSection />
         <ExperienceSection />
         <SkillsSection />

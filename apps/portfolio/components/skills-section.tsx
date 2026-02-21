@@ -3,9 +3,7 @@ import { profileData } from "@/data/profile";
 export function SkillsSection() {
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-        Skills
-      </h2>
+      <h2 className="text-base font-semibold text-muted-foreground">Skills</h2>
       <ul className="flex flex-wrap gap-2">
         {profileData.skills.map((skill, i) => (
           <li

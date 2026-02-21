@@ -3,7 +3,7 @@ import { profileData } from "@/data/profile";
 export function ExperienceSection() {
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+      <h2 className="text-base font-semibold text-muted-foreground">
         Experience
       </h2>
       <div className="flex flex-col gap-6">

@@ -3,7 +3,7 @@ import { profileData } from "@/data/profile";
 export function ProjectsSection() {
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+      <h2 className="text-base font-semibold text-muted-foreground">
         Projects
       </h2>
       <div className="flex flex-col gap-8">
@@ -19,7 +19,7 @@ export function ProjectsSection() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-muted-foreground hover:text-foreground no-underline"
+                      className="text-xs text-muted-foreground hover:text-foreground hover:underline"
                     >
                       [{link.name}]
                     </a>

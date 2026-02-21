@@ -9,7 +9,7 @@ export function ExtensionsSection() {
 
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+      <h2 className="text-base font-semibold text-muted-foreground">
         VS Code Extensions
       </h2>
       <div className="flex flex-col gap-6">
@@ -25,7 +25,7 @@ export function ExtensionsSection() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-muted-foreground hover:text-foreground underline decoration-border underline-offset-4"
+                      className="text-xs text-muted-foreground hover:text-foreground hover:underline"
                     >
                       [{link.name}]
                     </a>
