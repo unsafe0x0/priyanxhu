@@ -1,44 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { profileData } from "@/data/profile";
 
-const geistSans = Geist({
+const inter = Inter({
   variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Priyanshu Chahar",
-  description:
-    "Priyanshu Chahar – Software Developer. Building things that works.",
-  metadataBase: new URL("https://priyanxhu.me"),
-  openGraph: {
-    title: "Priyanshu Chahar",
-    description:
-      "Priyanshu Chahar – Software Developer. Building things that works.",
-    url: "https://priyanxhu.me",
-    siteName: "Priyanshu Chahar",
-    images: [
-      {
-        url: "https://priyanxhu.me/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Priyanshu Chahar – Software Developer",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
+  description: "Software Developer. Building utilitarian software.",
+  icons: {
+    icon: profileData.imageUrl,
   },
-  keywords: ["Priyanshu Chahar", "unsafezero", "unsafe0x0", "priyanxhu.me"],
-  authors: [{ name: "Priyanshu Chahar", url: "https://priyanxhu.me" }],
-  creator: "Priyanshu Chahar",
-  publisher: "Priyanshu Chahar",
 };
 
 export default function RootLayout({
@@ -48,15 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <link
-        rel="shortcut icon"
-        href="https://avatars.githubusercontent.com/u/165533860?v=4"
-        type="image/x-icon"
-      />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} font-sans antialiased text-sm sm:text-base`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,27 +1,21 @@
-import Experience from "@/components/experience";
-import Extensions from "@/components/extensions";
-import Footer from "@/components/footer";
-import Hero from "@/components/hero";
-import Projects from "@/components/projects";
-import Skills from "@/components/skills";
-import React from "react";
+import { HeroSection } from "@/components/hero-section";
+import { ExperienceSection } from "@/components/experience-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { SkillsSection } from "@/components/skills-section";
+import { ExtensionsSection } from "@/components/extensions-section";
+import { ContactSection } from "@/components/contact-section";
 
-const PortfolioPage = () => {
+export default function Page() {
   return (
-    <main className="min-h-screen bg-background text-foreground font-mono selection:bg-primary selection:text-primary-foreground p-4 md:p-8">
-      <div className="max-w-4xl mx-auto space-y-16 py-4">
-        <div className="space-y-24">
-          <Hero />
-          <Experience />
-          <Skills />
-          <Projects />
-          <Extensions />
-        </div>
-
-        <Footer />
+    <main className="min-h-screen bg-background text-foreground flex justify-center pb-16 pt-10 px-4 sm:px-8">
+      <div className="w-full max-w-xl flex flex-col gap-16 sm:gap-20">
+        <HeroSection />
+        <ExperienceSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExtensionsSection />
+        <ContactSection />
       </div>
     </main>
   );
-};
-
-export default PortfolioPage;
+}
